@@ -1,0 +1,305 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  LEARNER
+  ADMIN
+  INSTRUCTOR
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  TRUE_FALSE
+  FILL_IN_BLANK
+  MATCHING
+  ORDERING
+}
+
+enum ExerciseType {
+  LISTENING
+  WRITING
+  SPEAKING
+  READING
+  GRAMMAR_DRILL
+}
+
+enum BookmarkType {
+  LESSON
+  GRAMMAR
+  VOCABULARY
+}
+
+model User {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email         String    @unique
+  name          String?
+  avatarUrl     String?
+  role          UserRole  @default(LEARNER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  progress          UserProgress[]
+  flashcards        Flashcard[]
+  achievements      UserAchievement[]
+  aiChats           AIChat[]
+  notes             Note[]
+  bookmarks         Bookmark[]
+
+  @@map("users")
+}
+
+model CEFRLevel {
+  id          String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  code        String @unique @db.VarChar(2)
+  name        String @db.VarChar(100)
+  description String?
+  order       Int    @default(0)
+
+  lessons Lesson[]
+  exams   Exam[]
+
+  @@map("cefr_levels")
+}
+
+model Lesson {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  cefrLevelId       String   @db.Uuid
+  title             String   @db.VarChar(255)
+  description       String?
+  order             Int      @default(0)
+  content           Json?    @default("{}")
+  estimatedMinutes  Int      @default(15)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  cefrLevel     CEFRLevel       @relation(fields: [cefrLevelId], references: [id], onDelete: Cascade)
+  grammarTopics GrammarTopic[]
+  vocabulary    VocabularyWord[]
+  quizzes       Quiz[]
+  exercises     Exercise[]
+  progress      UserProgress[]
+  notes         Note[]
+  bookmarks     Bookmark[]
+
+  @@index([cefrLevelId])
+  @@map("lessons")
+}
+
+model GrammarTopic {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lessonId    String  @db.Uuid
+  title       String  @db.VarChar(255)
+  explanation String
+  examples    Json?   @default("[]")
+  order       Int     @default(0)
+
+  lesson    Lesson      @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  bookmarks Bookmark[]
+
+  @@index([lessonId])
+  @@map("grammar_topics")
+}
+
+model VocabularyWord {
+  id                 String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lessonId           String  @db.Uuid
+  german             String  @db.VarChar(255)
+  englishTranslation String  @db.VarChar(255)
+  arabicTranslation  String? @db.VarChar(255)
+  article            String? @db.VarChar(10)
+  plural             String? @db.VarChar(255)
+  exampleSentence    String?
+  audioUrl           String?
+
+  lesson     Lesson       @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  flashcards Flashcard[]
+  bookmarks  Bookmark[]
+
+  @@index([lessonId])
+  @@map("vocabulary_words")
+}
+
+model Flashcard {
+  id               String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId           String    @db.Uuid
+  vocabularyWordId String    @db.Uuid
+  easeFactor       Float     @default(2.5)
+  interval         Int       @default(0)
+  dueDate          DateTime  @default(now())
+  reps             Int       @default(0)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vocabularyWord VocabularyWord @relation(fields: [vocabularyWordId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, vocabularyWordId])
+  @@index([userId])
+  @@index([dueDate])
+  @@map("flashcards")
+}
+
+model Quiz {
+  id           String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lessonId     String  @db.Uuid
+  title        String  @db.VarChar(255)
+  description  String?
+  timeLimit    Int?    @default(600)
+  passingScore Int     @default(70)
+  createdAt    DateTime @default(now())
+
+  lesson    Lesson         @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questions QuizQuestion[]
+
+  @@index([lessonId])
+  @@map("quizzes")
+}
+
+model QuizQuestion {
+  id             String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  quizId         String       @db.Uuid
+  type           QuestionType @default(MULTIPLE_CHOICE)
+  prompt         String
+  options        Json?        @default("[]")
+  correctAnswer  String
+  order          Int          @default(0)
+  points         Int          @default(1)
+
+  quiz Quiz @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  @@index([quizId])
+  @@map("quiz_questions")
+}
+
+model Exercise {
+  id           String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lessonId     String       @db.Uuid
+  type         ExerciseType @default(GRAMMAR_DRILL)
+  instructions String
+  content      Json?        @default("{}")
+  answerKey    Json?        @default("[]")
+  order        Int          @default(0)
+
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@index([lessonId])
+  @@map("exercises")
+}
+
+model UserProgress {
+  id                String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId            String    @db.Uuid
+  lessonId          String    @db.Uuid
+  completed         Boolean   @default(false)
+  score             Int?      @default(0)
+  lastAccessed      DateTime  @updatedAt
+  timeSpentSeconds  Int       @default(0)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+  @@index([lessonId])
+  @@map("user_progress")
+}
+
+model Achievement {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title       String  @db.VarChar(255)
+  description String
+  icon        String?
+  criteria    Json?   @default("{}")
+  points      Int     @default(0)
+
+  users UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId        String   @db.Uuid
+  achievementId String   @db.Uuid
+  awardedAt     DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+  @@map("user_achievements")
+}
+
+model Exam {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  cefrLevelId   String   @db.Uuid
+  title         String   @db.VarChar(255)
+  description   String?
+  duration      Int      @default(60)
+  totalMarks    Int      @default(100)
+  passingMarks  Int      @default(60)
+  createdAt     DateTime @default(now())
+
+  cefrLevel CEFRLevel @relation(fields: [cefrLevelId], references: [id], onDelete: Cascade)
+
+  @@index([cefrLevelId])
+  @@map("exams")
+}
+
+model AIChat {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @db.Uuid
+  role      String   @db.VarChar(20)
+  content   String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("ai_chats")
+}
+
+model Note {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @db.Uuid
+  lessonId  String?  @db.Uuid
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson Lesson? @relation(fields: [lessonId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([lessonId])
+  @@map("notes")
+}
+
+model Bookmark {
+  id               String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId           String       @db.Uuid
+  lessonId         String?      @db.Uuid
+  grammarTopicId   String?      @db.Uuid
+  vocabularyWordId String?      @db.Uuid
+  type             BookmarkType
+  createdAt        DateTime     @default(now())
+
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson           Lesson?         @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  grammarTopic     GrammarTopic?   @relation(fields: [grammarTopicId], references: [id], onDelete: Cascade)
+  vocabularyWord   VocabularyWord? @relation(fields: [vocabularyWordId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+  @@map("bookmarks")
+}
