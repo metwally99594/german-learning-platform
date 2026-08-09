@@ -14,7 +14,7 @@ export function MuendlichHub({ parts }: MuendlichHubProps) {
         {parts.map((part) => (
           <li key={part.part}>
             <Link
-              href={`/muendlich/${part.part}`}
+              href={`/mündlich/${part.part}`}
               className="block rounded-lg border p-4 transition-colors hover:bg-accent"
             >
               <h2 className="text-lg font-semibold">{part.title}</h2>

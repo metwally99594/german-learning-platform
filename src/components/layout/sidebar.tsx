@@ -21,7 +21,7 @@ const navItems = [
   { title: "Lessons", href: "/lessons", icon: BookOpen },
   { title: "Flashcards", href: "/flashcards", icon: Brain },
   { title: "Quizzes", href: "/quizzes", icon: ClipboardList },
-  { title: "C1 Mündlich", href: "/muendlich", icon: Mic },
+  { title: "C1 Mündlich", href: "/mündlich", icon: Mic },
   { title: "Achievements", href: "/achievements", icon: Trophy },
   { title: "AI Chat", href: "/ai-chat", icon: MessageSquare },
 ];

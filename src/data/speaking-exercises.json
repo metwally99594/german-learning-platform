@@ -2,8 +2,8 @@
   "exercises": [
     {
       "id": "00000000-0000-4000-a000-000000000001",
-      "part": "präsentation",
-      "prompt": "Bücher geben Anleitungen zum Glücklich sein. Was ist für Sie Glück, und welchen Stellenwert hat es in Ihrem Leben? Erläutern Sie Ihre Vorstellungen.",
+      "part": "präsentation-a",
+      "prompt": "Bücher geben Anleitungen zum Glücklich sein, und von manchen Menschen wird behauptet, sie hätten das Glück gepachtet. Was ist für Sie Glück, und welchen Stellenwert hat es in Ihrem Leben? Erläutern Sie Ihre Vorstellungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -50,7 +50,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000002",
-      "part": "präsentation",
+      "part": "präsentation-a",
       "prompt": "Würden Sie auch arbeiten, wenn Sie finanziell nicht darauf angewiesen wären? Schildern Sie Ihre Gedanken zum Thema arbeitsfreies Leben.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -98,8 +98,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000003",
-      "part": "präsentation",
-      "prompt": "In Deutschland werden Bräuche aus anderen Kulturkreisen wie Halloween oder Holi immer populärer. Schildern Sie Ihre Überlegungen zur Übernahme von fremden Bräuchen.",
+      "part": "präsentation-a",
+      "prompt": "Halloween oder das indische Frühlingsfest Holi – in Deutschland werden Bräuche aus anderen Kulturkreisen immer populärer. Schildern Sie Ihre Überlegungen zur Übernahme von fremden Bräuchen. Berichten Sie auch von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -146,8 +146,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000004",
-      "part": "präsentation",
-      "prompt": "Unsere Eltern und Großeltern können aus eigener Erfahrung von historischen Ereignissen berichten. Erachten Sie persönliche Schilderungen als vertrauenswürdige Quelle für Geschichtswissen?",
+      "part": "präsentation-a",
+      "prompt": "Unsere Eltern und Großeltern können aus eigener Erfahrung von historischen Ereignissen berichten. Erachten Sie persönliche Schilderungen als vertrauenswürdige Quelle für Geschichtswissen? Legen Sie Ihre Überlegungen zu dieser Frage dar.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -194,8 +194,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000005",
-      "part": "präsentation",
-      "prompt": "Heutzutage werden im Spitzensport sehr hohe Gagen bezahlt. Finden Sie es richtig, dass Spitzensportler so viel Geld verdienen? Erläutern Sie Ihren Standpunkt.",
+      "part": "präsentation-a",
+      "prompt": "Heutzutage werden im Spitzensport sehr hohe Gagen bezahlt. Finden Sie es richtig, dass Spitzensportler, z.B. Tennisspieler oder Fußballer, so viel Geld verdienen? Erläutern Sie Ihren Standpunkt. Oder: Finden Sie es gerecht, dass Spitzensportler so viel verdienen?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -242,8 +242,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000006",
-      "part": "präsentation",
-      "prompt": "Wie kann Architektur das Aussehen von Städten prägen? Geben Sie Beispiele und erläutern Sie Ihre Einschätzung.",
+      "part": "präsentation-a",
+      "prompt": "Sind Sie gegen das Spiel Lotto und für die Entfernung dieses Spiels und seiner Arten? Was sind die Gründe? Erklären Sie Ihre Sichtweise und Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -290,8 +290,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000007",
-      "part": "präsentation",
-      "prompt": "Welche Berufsgruppe halten Sie für besonders wichtig? Begründen Sie Ihre Meinung anhand konkreter Beispiele.",
+      "part": "präsentation-a",
+      "prompt": "Wie kann Architektur das Aussehen von Städten prägen? Geben Sie Beispiele.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -338,8 +338,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000008",
-      "part": "präsentation",
-      "prompt": "Wie sind Abfallentsorgung und Recycling in Ihrem Herkunftsland organisiert? Welche Unterschiede gibt es zu Deutschland? Berichten Sie.",
+      "part": "präsentation-a",
+      "prompt": "Welche Berufsgruppe halten Sie für besonders wichtig? Begründen Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -386,8 +386,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000009",
-      "part": "präsentation",
-      "prompt": "Welche Rolle spielt der Tierschutz in einem Land Ihrer Wahl? Erläutern Sie dies anhand von Beispielen.",
+      "part": "präsentation-a",
+      "prompt": "Welche Berufe haben ein besonders hohes, welche ein besonders niedriges Prestige in Ihrem Herkunftsland (oder einem anderen Land Ihrer Wahl)? Wie kommen solche Prestigeunterschiede Ihrer Meinung nach zustande?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -434,8 +434,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000a",
-      "part": "präsentation",
-      "prompt": "Manche Menschen behaupten, der medizinische Fortschritt sei mehr Fluch als Segen. Teilen Sie diese Ansicht? Begründen Sie Ihren Standpunkt.",
+      "part": "präsentation-a",
+      "prompt": "Wie sind Abfallentsorgung und Recycling in Ihrem Herkunftsland organisiert? Welche Unterschiede gibt es zu Deutschland? Berichten Sie.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -482,8 +482,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000b",
-      "part": "präsentation",
-      "prompt": "Immer wieder gehen Menschen auf die Straße, um die Öffentlichkeit auf bestimmte Anliegen aufmerksam zu machen. Betrachten Sie Demonstrationen als wirksames Mittel zur Meinungsäußerung?",
+      "part": "präsentation-a",
+      "prompt": "Welche Rolle spielt der Tierschutz in einem Land Ihrer Wahl? Erläutern Sie dies anhand von Beispielen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -530,8 +530,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000c",
-      "part": "präsentation",
-      "prompt": "Was macht für Sie einen erfolgreichen Menschen aus? Schildern Sie Ihre Überlegungen zu dieser Frage.",
+      "part": "präsentation-a",
+      "prompt": "Wie informieren die Medien in einem Land Ihrer Wahl über aktuelle Themen? Inwieweit vertrauen Sie der Berichterstattung? Erläutern Sie Ihre Haltung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -578,8 +578,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000d",
-      "part": "präsentation",
-      "prompt": "Fernsehserien und Serien zum Herunterladen liegen zurzeit sehr im Trend. Wie erklären Sie sich die Faszination, die von Serien ausgeht? Berichten Sie von Ihren Erfahrungen.",
+      "part": "präsentation-a",
+      "prompt": "Ist Altersvorsorge allein Aufgabe des Staates oder sollte jeder auch selbst dafür sorgen, dass er im Alter seinen Lebensunterhalt bestreiten kann? Legen Sie Ihre Überlegungen zu dieser Frage dar.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -626,8 +626,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000e",
-      "part": "präsentation",
-      "prompt": "Heutzutage scheint es schick zu sein, sich extrem beschäftigt oder gestresst zu zeigen. Welchen Stellenwert sollte Untätigkeit haben? Erläutern Sie Ihre Ansicht.",
+      "part": "präsentation-a",
+      "prompt": "Für den Skisport werden Lebensräume der Tierwelt zerstört. Mountainbiker fahren durch die Wälder, Klettertouristen verschmutzen das Hochgebirge. Ist Sport in sensiblen Umgebungen zu verantworten? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -674,8 +674,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000f",
-      "part": "präsentation",
-      "prompt": "In vielen Industrieländern findet das Konzept des städtischen Gartenbaus immer mehr Anklang. Denken Sie, dass Selbstversorgung durch Dachgärten sinnvoll ist?",
+      "part": "präsentation-a",
+      "prompt": "Manche Menschen behaupten, der medizinische Fortschritt sei mehr Fluch als Segen. Teilen Sie diese Ansicht? Begründen Sie Ihren Standpunkt anhand von Beispielen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -722,8 +722,8 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000010",
-      "part": "präsentation",
-      "prompt": "Welche Bedeutung hat die Musik in Ihrem Herkunftsland? Warum ist Musik wichtig für den einzelnen Menschen und für die Gesellschaft?",
+      "part": "präsentation-b",
+      "prompt": "Sind Sie der Meinung, dass jede oder jeder Jugendliche sich sozial engagieren sollte? Erläutern Sie Ihre Meinung. Sie können auch von eigenen Erfahrungen berichten.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -766,12 +766,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 16
+      "order": 1
     },
     {
       "id": "00000000-0000-4000-a000-000000000011",
-      "part": "präsentation",
-      "prompt": "Welche Rolle spielt der Naturschutz in Ihrem Herkunftsland? Welche Maßnahmen werden ergriffen, um die Natur zu schützen, und wie effektiv sind sie?",
+      "part": "präsentation-b",
+      "prompt": "Mitunter wird der Vorwurf erhoben, unsere Gesellschaft sei kinderfeindlich. Entspricht das Ihrem persönlichen Empfinden? Schildern Sie Erfahrungen und Beobachtungen. Sie können auch mit der Einstellung gegenüber Kindern in einem Land Ihrer Wahl vergleichen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -814,12 +814,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 17
+      "order": 2
     },
     {
       "id": "00000000-0000-4000-a000-000000000012",
-      "part": "präsentation",
-      "prompt": "Beschreiben Sie das Bildungssystem in einem Land Ihrer Wahl. Was funktioniert gut, und wo sehen Sie Verbesserungsbedarf?",
+      "part": "präsentation-b",
+      "prompt": "Viele Menschen vertrauen Heilpraktikern, während andere sie als Scharlatane abtun. Sind Sie der Ansicht, dass das Heilen allein Ärztinnen und Ärzten vorbehalten sein sollte? Erläutern Sie Ihre Haltung. Berichten Sie auch von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -862,12 +862,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 18
+      "order": 3
     },
     {
       "id": "00000000-0000-4000-a000-000000000013",
-      "part": "präsentation",
-      "prompt": "Vertreten Sie die Auffassung, dass Sportvereine dem Allgemeinwohl dienen und staatlich gefördert werden sollten? Schildern Sie Ihre Gedanken.",
+      "part": "präsentation-b",
+      "prompt": "Sind Sie der Meinung, dass Kinder auf dem Land eine schönere Kindheit haben als solche, die in einer Großstadt aufwachsen? Begründen Sie Ihre Ansicht und berichten Sie von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -910,12 +910,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 19
+      "order": 4
     },
     {
       "id": "00000000-0000-4000-a000-000000000014",
-      "part": "präsentation",
-      "prompt": "Viele Städte leiden unter dem ständig zunehmenden Straßenverkehr. Manche Bürger fordern ein vollständiges Verbot von Privatautos in Städten. Erläutern Sie Ihre Haltung.",
+      "part": "präsentation-b",
+      "prompt": "Immer wieder gehen Menschen auf die Straße, um die Öffentlichkeit auf bestimmte Anliegen aufmerksam zu machen. Betrachten Sie Demonstrationen als wirksames Mittel zur Meinungsäußerung? Erläutern Sie Ihre Haltung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -958,12 +958,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 20
+      "order": 5
     },
     {
       "id": "00000000-0000-4000-a000-000000000015",
-      "part": "präsentation",
-      "prompt": "Welche historischen Ereignisse sind Ihrer Meinung nach besonders wichtig? Begründen Sie Ihre Meinung.",
+      "part": "präsentation-b",
+      "prompt": "Soll es ein generelles Handyverbot an den Schulen geben? Erläutern Sie Ihre Haltung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -1006,12 +1006,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 21
+      "order": 6
     },
     {
       "id": "00000000-0000-4000-a000-000000000016",
-      "part": "präsentation",
-      "prompt": "Wie kann man eine Sprache gut lernen? Geben Sie Tipps und begründen Sie aus Ihrer Erfahrung.",
+      "part": "präsentation-b",
+      "prompt": "Was macht für Sie einen erfolgreichen Menschen aus? Schildern Sie Ihre Überlegungen zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -1054,12 +1054,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 22
+      "order": 7
     },
     {
       "id": "00000000-0000-4000-a000-000000000017",
-      "part": "präsentation",
-      "prompt": "Denken Sie, dass Schwierigkeiten vor allem Chancen sind? Begründen Sie Ihren Standpunkt.",
+      "part": "präsentation-b",
+      "prompt": "Sind Sie der Meinung, dass der Staat die Kunst fördern sollte? Begründen Sie Ihre Haltung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -1102,12 +1102,12 @@
           "maxPoints": 2
         }
       ],
-      "order": 23
+      "order": 8
     },
     {
       "id": "00000000-0000-4000-a000-000000000018",
-      "part": "präsentation",
-      "prompt": "Traditionelle und religiöse Feste werden zunehmend kommerzialisiert. Sehen Sie darin einen Grund, solche Feste gar nicht mehr zu feiern? Erläutern Sie Ihre Ansicht.",
+      "part": "präsentation-b",
+      "prompt": "Sind Sie der Ansicht, dass Kinder unter allen Umständen für die Pflege ihrer Eltern zuständig sind? Legen Sie Ihre Haltung zu dieser Frage dar. Spiel-Trends: Wandel mit der Zeit. Welchen Stellenwert sollte das Spiel im Leben eines Menschen haben?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
@@ -1150,10 +1150,1018 @@
           "maxPoints": 2
         }
       ],
-      "order": 24
+      "order": 9
     },
     {
       "id": "00000000-0000-4000-a000-000000000019",
+      "part": "präsentation-b",
+      "prompt": "Wenn Sie eine andere Person 24 Stunden lang sein würden: Was würden Sie tun? Warum? Stellen Sie sich vor.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 10
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001a",
+      "part": "präsentation-b",
+      "prompt": "Kunst ist jahrhundertelang von Mäzenen und nicht vom Staat gefördert worden. Sind Sie der Meinung, dass Kunstförderung eine private Angelegenheit ist? Begründen Sie Ihre Haltung zu dieser Frage.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001b",
+      "part": "präsentation-b",
+      "prompt": "Fernsehserien und Serien zum Herunterladen liegen zurzeit sehr im Trend; manche Menschen schauen sie täglich. Wie erklären Sie sich die Faszination, die von Serien ausgeht? Berichten Sie von Ihren Erfahrungen und Beobachtungen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001c",
+      "part": "präsentation-b",
+      "prompt": "Heutzutage scheint es schick zu sein, sich extrem beschäftigt oder gestresst zu zeigen. Selbst Entspannungszeiten sind häufig durchorganisiert, und Nichtstun ist verpönt. Welchen Stellenwert sollte Untätigkeit haben? Erläutern Sie Ihre Ansicht.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001d",
+      "part": "präsentation-b",
+      "prompt": "Manche Menschen möchten sich den Zwängen entziehen und suchen alternative Lebensformen in einer fremden Umgebung. Ist Aussteigen für Sie eine nachvollziehbare Haltung? Begründen Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 14
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001e",
+      "part": "präsentation-b",
+      "prompt": "Der Zeitpunkt, zu dem Frauen in Deutschland ihr erstes Kind bekommen, verschiebt sich immer weiter nach hinten. Sehen Sie darin eine positive Entwicklung? Erläutern Sie Ihre Meinung zu dieser Frage.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 15
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001f",
+      "part": "präsentation-c",
+      "prompt": "Für jüngere Menschen ist das Duzen ganz normal, während ältere Menschen eher beim Sie bleiben. Sind Sie der Meinung, dass das Siezen überholt ist? Schildern Sie Ihre Meinung. Vergleichen Sie mit einem Land Ihrer Wahl.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 1
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000020",
+      "part": "präsentation-c",
+      "prompt": "Tierversuche: Sollten Tierversuche verboten werden? Erläutern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 2
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000021",
+      "part": "präsentation-c",
+      "prompt": "Welche positiven und negativen Funktionen hat Werbung? Erläutern Sie dies anhand von Beispielen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000022",
+      "part": "präsentation-c",
+      "prompt": "Beschreiben Sie ein Werk aus der Literatur. Wie schätzen Sie seine Bedeutung ein?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000023",
+      "part": "präsentation-c",
+      "prompt": "Welche Bedeutung hat die Musik in Ihrem Herkunftsland (oder einem Land Ihrer Wahl)? Warum ist Musik wichtig für den einzelnen Menschen und für die Gesellschaft?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 5
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000024",
+      "part": "präsentation-c",
+      "prompt": "Welche Rolle spielt der Naturschutz in Ihrem Herkunftsland (oder einem Land Ihrer Wahl)? Welche Maßnahmen werden ergriffen, um die Natur zu schützen, und wie effektiv sind sie?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 6
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000025",
+      "part": "präsentation-c",
+      "prompt": "Wir leben immer länger, und die Pflege im Alter wird zu einem wichtigen Thema. Sind Sie der Auffassung, dass der Staat für die Betreuung alter Menschen verantwortlich ist? Legen Sie Ihre Ansichten dar und stellen Sie Vergleiche mit einem Land Ihrer Wahl an.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000026",
+      "part": "präsentation-c",
+      "prompt": "In vielen Industrieländern findet das Konzept des städtischen Gartenbaus immer mehr Anklang. Denken Sie, dass Selbstversorgung durch Anbau auf Dachgärten und an Fassaden sinnvoll ist? Schildern Sie Ihre Überlegungen zu diesem Thema.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000027",
+      "part": "präsentation-c",
+      "prompt": "Beschreiben Sie das Bildungssystem in einem Land Ihrer Wahl. Was funktioniert gut und wo sehen Sie Verbesserungsbedarf?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 9
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000028",
+      "part": "präsentation-c",
+      "prompt": "Welche Rollen haben Männer und Frauen in einem Land Ihrer Wahl in der Gesellschaft und in der Familie? Erläutern Sie Ihre Beobachtungen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 10
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000029",
+      "part": "präsentation-c",
+      "prompt": "Vertreten Sie die Auffassung, dass Sportvereine dem Allgemeinwohl dienen und von der öffentlichen Hand staatlich gefördert werden sollten? Schildern Sie Ihre Gedanken zu dieser Frage.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002a",
+      "part": "präsentation-c",
+      "prompt": "Für Konsumgüter gibt es heute fast überall bequeme Ratenzahlung. Ist Sparen für besondere Ankäufe wie zum Beispiel Möbel oder ein Auto noch zeitgemäß? Legen Sie Ihre Ansichten und Beobachtungen dar.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002b",
+      "part": "präsentation-c",
+      "prompt": "Sollten Jungen und Mädchen gleich erzogen werden? Legen Sie Ihre Meinung zu diesem Thema dar. Berichten Sie auch von eigenen Erfahrungen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002c",
+      "part": "präsentation-c",
+      "prompt": "Oft hört man, dass die Mode dazu beitrage, die eigene Persönlichkeit zu betonen. Stimmen Sie der Aussage zu? Welchen Stellenwert hat Mode in Ihrem Leben?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 14
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002d",
+      "part": "präsentation-c",
+      "prompt": "Sollten Politikerinnen und Politiker auf teure Statussymbole wie Rolex, Schmuck oder teure Autos und Kleidung verzichten? Begründen Sie Ihre Haltung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 15
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002e",
       "part": "diskussion",
       "prompt": "Wege entstehen dadurch, dass man sie geht.",
       "stimulus": null,
@@ -1201,7 +2209,7 @@
       "order": 1
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001a",
+      "id": "00000000-0000-4000-a000-00000000002f",
       "part": "diskussion",
       "prompt": "Lügen ist immer besser als die Wahrheit.",
       "stimulus": null,
@@ -1249,7 +2257,7 @@
       "order": 2
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001b",
+      "id": "00000000-0000-4000-a000-000000000030",
       "part": "diskussion",
       "prompt": "Über Geschmack muss man nicht streiten.",
       "stimulus": null,
@@ -1297,7 +2305,7 @@
       "order": 3
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001c",
+      "id": "00000000-0000-4000-a000-000000000031",
       "part": "diskussion",
       "prompt": "Höflichkeit ist eine Kunst, die wir zeigen sollten.",
       "stimulus": null,
@@ -1345,7 +2353,7 @@
       "order": 4
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001d",
+      "id": "00000000-0000-4000-a000-000000000032",
       "part": "diskussion",
       "prompt": "Wir brauchen Ernährungserziehung.",
       "stimulus": null,
@@ -1393,7 +2401,7 @@
       "order": 5
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001e",
+      "id": "00000000-0000-4000-a000-000000000033",
       "part": "diskussion",
       "prompt": "Glück ist kostenlos, aber unbezahlbar.",
       "stimulus": null,
@@ -1441,7 +2449,7 @@
       "order": 6
     },
     {
-      "id": "00000000-0000-4000-a000-00000000001f",
+      "id": "00000000-0000-4000-a000-000000000034",
       "part": "diskussion",
       "prompt": "Freunde sind auch Familie, die man aussuchen kann.",
       "stimulus": null,
@@ -1489,7 +2497,7 @@
       "order": 7
     },
     {
-      "id": "00000000-0000-4000-a000-000000000020",
+      "id": "00000000-0000-4000-a000-000000000035",
       "part": "diskussion",
       "prompt": "Jedes Kind ist gewissermaßen ein Genie, und jedes Genie ist gewissermaßen ein Kind.",
       "stimulus": null,
@@ -1537,7 +2545,7 @@
       "order": 8
     },
     {
-      "id": "00000000-0000-4000-a000-000000000021",
+      "id": "00000000-0000-4000-a000-000000000036",
       "part": "diskussion",
       "prompt": "Es gibt eine Menge Menschen, aber noch viel mehr Gesichter.",
       "stimulus": null,
@@ -1585,7 +2593,7 @@
       "order": 9
     },
     {
-      "id": "00000000-0000-4000-a000-000000000022",
+      "id": "00000000-0000-4000-a000-000000000037",
       "part": "diskussion",
       "prompt": "Träume nicht von deinem Leben, lebe deinen Traum.",
       "stimulus": null,
@@ -1633,7 +2641,7 @@
       "order": 10
     },
     {
-      "id": "00000000-0000-4000-a000-000000000023",
+      "id": "00000000-0000-4000-a000-000000000038",
       "part": "diskussion",
       "prompt": "Das Handy bedeutet Verlust an Freiheit.",
       "stimulus": null,
@@ -1681,7 +2689,7 @@
       "order": 11
     },
     {
-      "id": "00000000-0000-4000-a000-000000000024",
+      "id": "00000000-0000-4000-a000-000000000039",
       "part": "diskussion",
       "prompt": "Stärke bedeutet Wissen, nicht immer stark sein.",
       "stimulus": null,
@@ -1729,7 +2737,7 @@
       "order": 12
     },
     {
-      "id": "00000000-0000-4000-a000-000000000025",
+      "id": "00000000-0000-4000-a000-00000000003a",
       "part": "diskussion",
       "prompt": "Wenn zwei sich streiten, freut sich der Dritte.",
       "stimulus": null,
@@ -1777,7 +2785,7 @@
       "order": 13
     },
     {
-      "id": "00000000-0000-4000-a000-000000000026",
+      "id": "00000000-0000-4000-a000-00000000003b",
       "part": "diskussion",
       "prompt": "Statt die Gleichheit zu holen, sollte man zur Vielfalt raten.",
       "stimulus": null,
@@ -1825,7 +2833,7 @@
       "order": 14
     },
     {
-      "id": "00000000-0000-4000-a000-000000000027",
+      "id": "00000000-0000-4000-a000-00000000003c",
       "part": "diskussion",
       "prompt": "Erfahrung ist etwas, was man bekommt, nachdem man es gebraucht hätte.",
       "stimulus": null,
@@ -1873,7 +2881,7 @@
       "order": 15
     },
     {
-      "id": "00000000-0000-4000-a000-000000000028",
+      "id": "00000000-0000-4000-a000-00000000003d",
       "part": "diskussion",
       "prompt": "Konkurrenz ist gesund.",
       "stimulus": null,
@@ -1921,7 +2929,7 @@
       "order": 16
     },
     {
-      "id": "00000000-0000-4000-a000-000000000029",
+      "id": "00000000-0000-4000-a000-00000000003e",
       "part": "diskussion",
       "prompt": "Im Internet kann man mehr Informationen finden als in Büchern.",
       "stimulus": null,
@@ -1969,7 +2977,7 @@
       "order": 17
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002a",
+      "id": "00000000-0000-4000-a000-00000000003f",
       "part": "diskussion",
       "prompt": "Die Schule ist nur für Bildung, nicht für Erziehung.",
       "stimulus": null,
@@ -2017,7 +3025,7 @@
       "order": 18
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002b",
+      "id": "00000000-0000-4000-a000-000000000040",
       "part": "diskussion",
       "prompt": "Nur tote Fische schwimmen mit dem Strom.",
       "stimulus": null,
@@ -2065,7 +3073,7 @@
       "order": 19
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002c",
+      "id": "00000000-0000-4000-a000-000000000041",
       "part": "diskussion",
       "prompt": "Es ist nicht leicht, andere von seiner Meinung zu überzeugen.",
       "stimulus": null,
@@ -2113,7 +3121,7 @@
       "order": 20
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002d",
+      "id": "00000000-0000-4000-a000-000000000042",
       "part": "diskussion",
       "prompt": "Hat die Mehrheit immer Recht?",
       "stimulus": null,
@@ -2161,7 +3169,7 @@
       "order": 21
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002e",
+      "id": "00000000-0000-4000-a000-000000000043",
       "part": "diskussion",
       "prompt": "Die Zeit ist wertvoller als Geld.",
       "stimulus": null,
@@ -2209,7 +3217,7 @@
       "order": 22
     },
     {
-      "id": "00000000-0000-4000-a000-00000000002f",
+      "id": "00000000-0000-4000-a000-000000000044",
       "part": "diskussion",
       "prompt": "Ein nebliger Morgen ist noch kein wolkiger Tag.",
       "stimulus": null,
@@ -2257,7 +3265,7 @@
       "order": 23
     },
     {
-      "id": "00000000-0000-4000-a000-000000000030",
+      "id": "00000000-0000-4000-a000-000000000045",
       "part": "diskussion",
       "prompt": "Genug ist besser als zu viel.",
       "stimulus": null,
@@ -2305,7 +3313,7 @@
       "order": 24
     },
     {
-      "id": "00000000-0000-4000-a000-000000000031",
+      "id": "00000000-0000-4000-a000-000000000046",
       "part": "diskussion",
       "prompt": "Kein Mensch ist so reich, dass er nicht seinen Nachbarn bräuchte.",
       "stimulus": null,
@@ -2353,7 +3361,7 @@
       "order": 25
     },
     {
-      "id": "00000000-0000-4000-a000-000000000032",
+      "id": "00000000-0000-4000-a000-000000000047",
       "part": "diskussion",
       "prompt": "Man kann im Leben alles erreichen, was man sich vornimmt.",
       "stimulus": null,
@@ -2401,7 +3409,7 @@
       "order": 26
     },
     {
-      "id": "00000000-0000-4000-a000-000000000033",
+      "id": "00000000-0000-4000-a000-000000000048",
       "part": "diskussion",
       "prompt": "Papier ist geduldig.",
       "stimulus": null,
@@ -2449,7 +3457,7 @@
       "order": 27
     },
     {
-      "id": "00000000-0000-4000-a000-000000000034",
+      "id": "00000000-0000-4000-a000-000000000049",
       "part": "diskussion",
       "prompt": "Spielen ist nur für Kinder.",
       "stimulus": null,
@@ -2497,7 +3505,7 @@
       "order": 28
     },
     {
-      "id": "00000000-0000-4000-a000-000000000035",
+      "id": "00000000-0000-4000-a000-00000000004a",
       "part": "diskussion",
       "prompt": "Wer nicht kann, will auch nicht.",
       "stimulus": null,
@@ -2545,7 +3553,7 @@
       "order": 29
     },
     {
-      "id": "00000000-0000-4000-a000-000000000036",
+      "id": "00000000-0000-4000-a000-00000000004b",
       "part": "diskussion",
       "prompt": "Bildung ist die mächtigste Waffe, um die Welt zu verändern.",
       "stimulus": null,
@@ -2593,7 +3601,7 @@
       "order": 30
     },
     {
-      "id": "00000000-0000-4000-a000-000000000037",
+      "id": "00000000-0000-4000-a000-00000000004c",
       "part": "diskussion",
       "prompt": "Wissen ist Macht.",
       "stimulus": null,
@@ -2641,7 +3649,7 @@
       "order": 31
     },
     {
-      "id": "00000000-0000-4000-a000-000000000038",
+      "id": "00000000-0000-4000-a000-00000000004d",
       "part": "diskussion",
       "prompt": "Schönheit ist der Schlüssel zum Erfolg.",
       "stimulus": null,
@@ -2689,7 +3697,7 @@
       "order": 32
     },
     {
-      "id": "00000000-0000-4000-a000-000000000039",
+      "id": "00000000-0000-4000-a000-00000000004e",
       "part": "diskussion",
       "prompt": "Jeder will länger leben, aber nicht älter werden.",
       "stimulus": null,
@@ -2737,7 +3745,7 @@
       "order": 33
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003a",
+      "id": "00000000-0000-4000-a000-00000000004f",
       "part": "diskussion",
       "prompt": "Das Leben ist komisch ohne Freude, aber schön mit Ernst.",
       "stimulus": null,
@@ -2785,7 +3793,7 @@
       "order": 34
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003b",
+      "id": "00000000-0000-4000-a000-000000000050",
       "part": "diskussion",
       "prompt": "Eine Reise von tausend Meilen fängt mit dem ersten Schritt an.",
       "stimulus": null,
@@ -2833,7 +3841,7 @@
       "order": 35
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003c",
+      "id": "00000000-0000-4000-a000-000000000051",
       "part": "diskussion",
       "prompt": "Die Hoffnung führt uns weiter als die Furcht.",
       "stimulus": null,
@@ -2881,7 +3889,7 @@
       "order": 36
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003d",
+      "id": "00000000-0000-4000-a000-000000000052",
       "part": "diskussion",
       "prompt": "Das Gras wächst nicht schneller, wenn man daran zieht.",
       "stimulus": null,
@@ -2929,7 +3937,7 @@
       "order": 37
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003e",
+      "id": "00000000-0000-4000-a000-000000000053",
       "part": "diskussion",
       "prompt": "Man kann nicht denken, wenn man es eilig hat.",
       "stimulus": null,
@@ -2977,7 +3985,7 @@
       "order": 38
     },
     {
-      "id": "00000000-0000-4000-a000-00000000003f",
+      "id": "00000000-0000-4000-a000-000000000054",
       "part": "diskussion",
       "prompt": "Erziehen heißt vorleben, alles andere ist höchstens Dressur.",
       "stimulus": null,
@@ -3025,7 +4033,7 @@
       "order": 39
     },
     {
-      "id": "00000000-0000-4000-a000-000000000040",
+      "id": "00000000-0000-4000-a000-000000000055",
       "part": "diskussion",
       "prompt": "Was dem Schwarm nicht nützt, nützt auch der einzelnen Biene nicht.",
       "stimulus": null,
@@ -3073,9 +4081,9 @@
       "order": 40
     },
     {
-      "id": "00000000-0000-4000-a000-000000000041",
+      "id": "00000000-0000-4000-a000-000000000056",
       "part": "diskussion",
-      "prompt": "Die Familie ist vor allen eine solidarische Gemeinschaft.",
+      "prompt": "Die Familie ist vor allem eine solidarische Gemeinschaft.",
       "stimulus": null,
       "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
       "prepTimeSeconds": 60,
@@ -3121,7 +4129,7 @@
       "order": 41
     },
     {
-      "id": "00000000-0000-4000-a000-000000000042",
+      "id": "00000000-0000-4000-a000-000000000057",
       "part": "diskussion",
       "prompt": "Beziehungen sind wichtiger als Können.",
       "stimulus": null,
@@ -3169,7 +4177,7 @@
       "order": 42
     },
     {
-      "id": "00000000-0000-4000-a000-000000000043",
+      "id": "00000000-0000-4000-a000-000000000058",
       "part": "diskussion",
       "prompt": "Man kann das Leben ändern, wenn man seine Denkweise ändert.",
       "stimulus": null,
@@ -3217,7 +4225,7 @@
       "order": 43
     },
     {
-      "id": "00000000-0000-4000-a000-000000000044",
+      "id": "00000000-0000-4000-a000-000000000059",
       "part": "diskussion",
       "prompt": "Soziale Netzwerke machen einsame Menschen einsamer.",
       "stimulus": null,
@@ -3265,7 +4273,7 @@
       "order": 44
     },
     {
-      "id": "00000000-0000-4000-a000-000000000045",
+      "id": "00000000-0000-4000-a000-00000000005a",
       "part": "diskussion",
       "prompt": "Fernsehen ist Zeitverschwendung.",
       "stimulus": null,
@@ -3313,7 +4321,7 @@
       "order": 45
     },
     {
-      "id": "00000000-0000-4000-a000-000000000046",
+      "id": "00000000-0000-4000-a000-00000000005b",
       "part": "diskussion",
       "prompt": "Der Kluge gibt nach – eine traurige Wahrheit, sie begründet die Weltherrschaft der Dummheit.",
       "stimulus": null,
@@ -3361,7 +4369,7 @@
       "order": 46
     },
     {
-      "id": "00000000-0000-4000-a000-000000000047",
+      "id": "00000000-0000-4000-a000-00000000005c",
       "part": "diskussion",
       "prompt": "Das Geld macht Menschen attraktiv.",
       "stimulus": null,
@@ -3409,7 +4417,7 @@
       "order": 47
     },
     {
-      "id": "00000000-0000-4000-a000-000000000048",
+      "id": "00000000-0000-4000-a000-00000000005d",
       "part": "diskussion",
       "prompt": "Geld verschafft Unabhängigkeit, aber zu wissen, dass man auch ohne leben kann, verschafft Freiheit.",
       "stimulus": null,
@@ -3457,7 +4465,7 @@
       "order": 48
     },
     {
-      "id": "00000000-0000-4000-a000-000000000049",
+      "id": "00000000-0000-4000-a000-00000000005e",
       "part": "meinung",
       "prompt": "Sind Sie gegen das Spiel Lotto und für die Entfernung dieses Spiels und seiner Arten? Erklären Sie Ihre Sichtweise und Meinung.",
       "stimulus": null,
@@ -3505,7 +4513,7 @@
       "order": 1
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004a",
+      "id": "00000000-0000-4000-a000-00000000005f",
       "part": "meinung",
       "prompt": "Sind Sie der Meinung, dass jede oder jeder Jugendliche sich sozial engagieren sollte? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
@@ -3553,7 +4561,7 @@
       "order": 2
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004b",
+      "id": "00000000-0000-4000-a000-000000000060",
       "part": "meinung",
       "prompt": "Soll es ein generelles Handyverbot an den Schulen geben? Äußern Sie Ihre Meinung.",
       "stimulus": null,
@@ -3601,7 +4609,7 @@
       "order": 3
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004c",
+      "id": "00000000-0000-4000-a000-000000000061",
       "part": "meinung",
       "prompt": "Sollte der Staat die Kunst fördern? Begründen Sie Ihre Meinung.",
       "stimulus": null,
@@ -3649,7 +4657,7 @@
       "order": 4
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004d",
+      "id": "00000000-0000-4000-a000-000000000062",
       "part": "meinung",
       "prompt": "Sind Sie der Ansicht, dass Kinder unter allen Umständen für die Pflege ihrer Eltern zuständig sind? Legen Sie Ihre Meinung dar.",
       "stimulus": null,
@@ -3697,7 +4705,7 @@
       "order": 5
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004e",
+      "id": "00000000-0000-4000-a000-000000000063",
       "part": "meinung",
       "prompt": "Sollten Tierversuche verboten werden? Äußern Sie Ihre Meinung.",
       "stimulus": null,
@@ -3745,7 +4753,7 @@
       "order": 6
     },
     {
-      "id": "00000000-0000-4000-a000-00000000004f",
+      "id": "00000000-0000-4000-a000-000000000064",
       "part": "meinung",
       "prompt": "Sind Sie der Auffassung, dass der Staat für die Betreuung alter Menschen verantwortlich ist? Legen Sie Ihre Ansichten dar.",
       "stimulus": null,
@@ -3793,7 +4801,7 @@
       "order": 7
     },
     {
-      "id": "00000000-0000-4000-a000-000000000050",
+      "id": "00000000-0000-4000-a000-000000000065",
       "part": "meinung",
       "prompt": "Sollten Jungen und Mädchen gleich erzogen werden? Legen Sie Ihre Meinung zu diesem Thema dar.",
       "stimulus": null,
@@ -3841,7 +4849,7 @@
       "order": 8
     },
     {
-      "id": "00000000-0000-4000-a000-000000000051",
+      "id": "00000000-0000-4000-a000-000000000066",
       "part": "meinung",
       "prompt": "Sollten Politikerinnen und Politiker auf teure Statussymbole wie Rolex oder teure Autos verzichten? Begründen Sie Ihre Haltung.",
       "stimulus": null,
@@ -3889,7 +4897,7 @@
       "order": 9
     },
     {
-      "id": "00000000-0000-4000-a000-000000000052",
+      "id": "00000000-0000-4000-a000-000000000067",
       "part": "meinung",
       "prompt": "Sollten wir aus Umweltschutzgründen auf Reisen verzichten? Legen Sie Ihre Ansichten zu dieser Frage dar.",
       "stimulus": null,
@@ -3937,7 +4945,7 @@
       "order": 10
     },
     {
-      "id": "00000000-0000-4000-a000-000000000053",
+      "id": "00000000-0000-4000-a000-000000000068",
       "part": "meinung",
       "prompt": "Sind Sie der Meinung, dass man eine Fremdsprache nur in dem jeweiligen Land richtig gut lernen kann? Schildern Sie Ihre Erfahrungen.",
       "stimulus": null,
@@ -3985,7 +4993,7 @@
       "order": 11
     },
     {
-      "id": "00000000-0000-4000-a000-000000000054",
+      "id": "00000000-0000-4000-a000-000000000069",
       "part": "meinung",
       "prompt": "Sollte Sport ein fester Bestandteil des Bildungsangebotes sein? Erläutern Sie Ihren Standpunkt.",
       "stimulus": null,
@@ -4033,7 +5041,7 @@
       "order": 12
     },
     {
-      "id": "00000000-0000-4000-a000-000000000055",
+      "id": "00000000-0000-4000-a000-00000000006a",
       "part": "meinung",
       "prompt": "Denken Sie, dass eine solche Überwachung durch Kameras an öffentlichen Plätzen notwendig ist? Begründen Sie Ihren Standpunkt.",
       "stimulus": null,
@@ -4081,7 +5089,7 @@
       "order": 13
     },
     {
-      "id": "00000000-0000-4000-a000-000000000056",
+      "id": "00000000-0000-4000-a000-00000000006b",
       "part": "meinung",
       "prompt": "Befürworten Sie die allgemeine Verwendung von Kreditkarten? Sehen Sie darin auch Gefahren? Legen Sie Argumente dar.",
       "stimulus": null,
@@ -4129,7 +5137,7 @@
       "order": 14
     },
     {
-      "id": "00000000-0000-4000-a000-000000000057",
+      "id": "00000000-0000-4000-a000-00000000006c",
       "part": "meinung",
       "prompt": "Sind Sie der Meinung, dass in der Schule immer noch traditionelle Rollenbilder von Mann und Frau vermittelt werden? Berichten Sie von Erfahrungen.",
       "stimulus": null,
@@ -4177,7 +5185,7 @@
       "order": 15
     },
     {
-      "id": "00000000-0000-4000-a000-000000000058",
+      "id": "00000000-0000-4000-a000-00000000006d",
       "part": "meinung",
       "prompt": "Sollte man seine Gemütsverfassung auch in der Öffentlichkeit zeigen? Begründen Sie Ihre Haltung.",
       "stimulus": null,
@@ -4225,7 +5233,7 @@
       "order": 16
     },
     {
-      "id": "00000000-0000-4000-a000-000000000059",
+      "id": "00000000-0000-4000-a000-00000000006e",
       "part": "meinung",
       "prompt": "Ist Altersvorsorge allein Aufgabe des Staates oder sollte jeder auch selbst dafür sorgen? Legen Sie Ihre Überlegungen dar.",
       "stimulus": null,
@@ -4273,7 +5281,7 @@
       "order": 17
     },
     {
-      "id": "00000000-0000-4000-a000-00000000005a",
+      "id": "00000000-0000-4000-a000-00000000006f",
       "part": "meinung",
       "prompt": "Ist Sport in sensiblen Umgebungen zu verantworten? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
@@ -4321,7 +5329,7 @@
       "order": 18
     },
     {
-      "id": "00000000-0000-4000-a000-00000000005b",
+      "id": "00000000-0000-4000-a000-000000000070",
       "part": "meinung",
       "prompt": "Ist Fitness-Training eitle Selbstoptimierung oder berechtigter Wunsch nach guter körperlicher Verfassung? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
@@ -4369,7 +5377,7 @@
       "order": 19
     },
     {
-      "id": "00000000-0000-4000-a000-00000000005c",
+      "id": "00000000-0000-4000-a000-000000000071",
       "part": "meinung",
       "prompt": "Brauchen Kinder Märchen? Glauben Sie, dass Kinder fantasievolle Geschichten brauchen? Erzählen Sie von Ihrer Erfahrung.",
       "stimulus": null,
@@ -4417,7 +5425,7 @@
       "order": 20
     },
     {
-      "id": "00000000-0000-4000-a000-00000000005d",
+      "id": "00000000-0000-4000-a000-000000000072",
       "part": "bildbeschreibung",
       "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil erneuerbarer Energien in Deutschland 2010–2025\".",
       "stimulus": "Grafik: Anteil erneuerbarer Energien in Deutschland von 2010 bis 2025.",
@@ -4437,28 +5445,28 @@
       ],
       "rubric": [
         {
-          "criterion": "Struktur",
-          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "criterion": "Beschreibung",
+          "description": "Sachliche, chronologische Beschreibung",
           "maxPoints": 2
         },
         {
-          "criterion": "Argumentation",
-          "description": "Logische Argumente mit Beispielen",
+          "criterion": "Interpretation",
+          "description": "Vermutungen und Ursachen nennen",
           "maxPoints": 2
         },
         {
           "criterion": "Wortschatz",
-          "description": "C1-typische Redemittel und Nuancen",
+          "description": "Fachbegriffe, Prozentangaben, Steigerungen",
           "maxPoints": 2
         },
         {
-          "criterion": "Satzstrukturen",
-          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "criterion": "Struktur",
+          "description": "Überleitungen zwischen Beschreibung und Deutung",
           "maxPoints": 2
         },
         {
           "criterion": "Flüssigkeit",
-          "description": "Wenige Pausen und Füllwörter",
+          "description": "Flüssige, selbstständige Rede",
           "maxPoints": 2
         }
       ],

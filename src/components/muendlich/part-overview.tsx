@@ -7,10 +7,19 @@ export type PartOverviewProps = {
   exercises: Exercise[];
 };
 
+const partTitles: Record<SpeakingPart, string> = {
+  "präsentation-a": "Präsentation A",
+  "präsentation-b": "Präsentation B",
+  "präsentation-c": "Präsentation C",
+  diskussion: "Diskussion",
+  bildbeschreibung: "Bildbeschreibung",
+  meinung: "Meinung äußern",
+};
+
 export function PartOverview({ part, exercises }: PartOverviewProps) {
   return (
     <div className="space-y-6 px-4 py-8">
-      <h1 className="text-3xl font-bold capitalize">{part}</h1>
+      <h1 className="text-3xl font-bold">{partTitles[part]}</h1>
       <ul className="space-y-3">
         {exercises.map((exercise) => {
           const content = exercise.content as Record<string, unknown> | null;
@@ -19,7 +28,7 @@ export function PartOverview({ part, exercises }: PartOverviewProps) {
           return (
             <li key={exercise.id}>
               <Link
-                href={`/muendlich/${part}/${exercise.id}`}
+                href={`/mündlich/${part}/${exercise.id}`}
                 className="block rounded-lg border p-4 transition-colors hover:bg-accent"
               >
                 <p className="font-medium">{prompt}</p>

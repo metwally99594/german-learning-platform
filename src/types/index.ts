@@ -13,7 +13,13 @@ export type DashboardStat = {
   trend?: string;
 };
 
-export type SpeakingPart = "präsentation" | "diskussion" | "bildbeschreibung" | "meinung";
+export type SpeakingPart =
+  | "präsentation-a"
+  | "präsentation-b"
+  | "präsentation-c"
+  | "diskussion"
+  | "bildbeschreibung"
+  | "meinung";
 
 export type RubricItem = {
   criterion: string;

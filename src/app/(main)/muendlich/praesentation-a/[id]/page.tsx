@@ -10,11 +10,11 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   return {
-    title: `Präsentation ${id}`,
+    title: `Präsentation A ${id}`,
   };
 }
 
-export default async function PräsentationDetailPage({ params }: PageProps) {
+export default async function PraesentationADetailPage({ params }: PageProps) {
   const { id } = await params;
   const exercise = await getSpeakingExerciseById(id);
 

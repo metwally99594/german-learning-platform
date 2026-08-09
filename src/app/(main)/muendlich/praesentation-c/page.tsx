@@ -5,12 +5,12 @@ import { getSpeakingExercisesByPart } from "@/server/actions/speaking-actions";
 import { SpeakingPart } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Präsentation",
-  description: "C1 presentation prompts.",
+  title: "Präsentation C",
+  description: "C1 presentation prompts set C.",
 };
 
-export default async function PräsentationPage() {
-  const part: SpeakingPart = "präsentation";
+export default async function PraesentationCPage() {
+  const part: SpeakingPart = "präsentation-c";
   const exercises = await getSpeakingExercisesByPart(part);
 
   if (exercises.length === 0) {
