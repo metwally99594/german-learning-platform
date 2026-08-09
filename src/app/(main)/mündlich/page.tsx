@@ -1,0 +1,43 @@
+import { Metadata } from "next";
+import { MündlichHub } from "@/components/mündlich/mündlich-hub";
+import { SpeakingPartSummary } from "@/types";
+
+export const metadata: Metadata = {
+  title: "C1 Mündlich",
+  description: "Practise the four tasks of the German C1 speaking exam.",
+};
+
+const parts: SpeakingPartSummary[] = [
+  {
+    part: "präsentation",
+    title: "Präsentation",
+    description: "Present a complex topic for around three minutes with clear structure.",
+    estimatedMinutes: 6,
+  },
+  {
+    part: "diskussion",
+    title: "Diskussion",
+    description: "Discuss a statement or problem and weigh different viewpoints.",
+    estimatedMinutes: 5,
+  },
+  {
+    part: "bildbeschreibung",
+    title: "Bildbeschreibung",
+    description: "Describe and interpret a picture, chart or diagram.",
+    estimatedMinutes: 5,
+  },
+  {
+    part: "meinung",
+    title: "Meinung äußern",
+    description: "React to a short text or quote and argue your position.",
+    estimatedMinutes: 5,
+  },
+];
+
+export default function MündlichPage() {
+  return (
+    <div className="space-y-8 px-4 py-8">
+      <MündlichHub parts={parts} />
+    </div>
+  );
+}

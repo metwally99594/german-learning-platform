@@ -9,6 +9,7 @@ import {
   Home,
   LayoutDashboard,
   MessageSquare,
+  Mic,
   Settings,
   Trophy,
 } from "lucide-react";
@@ -21,6 +22,7 @@ const navItems = [
   { title: "Lessons", href: "/lessons", icon: BookOpen },
   { title: "Flashcards", href: "/flashcards", icon: Brain },
   { title: "Quizzes", href: "/quizzes", icon: ClipboardList },
+  { title: "C1 Mündlich", href: "/mündlich", icon: Mic },
   { title: "Achievements", href: "/achievements", icon: Trophy },
   { title: "AI Chat", href: "/ai-chat", icon: MessageSquare },
 ];
