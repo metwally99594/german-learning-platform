@@ -1,5 +1,14 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { isSupabasePlaceholderConfig } from "@/lib/supabase/config";
+
+const PROTECTED_PATH_PREFIXES = ["/dashboard", "/mündlich"];
+
+function isProtectedPath(pathname: string) {
+  return PROTECTED_PATH_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
+}
 
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
@@ -9,12 +18,18 @@ export async function updateSession(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  if (!supabaseUrl || supabaseUrl === "https://your-project.supabase.co" || !supabaseKey || supabaseKey === "your-anon-key") {
-    // Allow the app to render during Phase 1 before real Supabase credentials are configured.
+  if (isSupabasePlaceholderConfig()) {
+    if (process.env.NODE_ENV === "production" && isProtectedPath(request.nextUrl.pathname)) {
+      // Fail closed: never serve protected routes in production without real Supabase config.
+      const loginUrl = new URL("/login", request.url);
+      loginUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+    // Allow the app to render locally during Phase 1 before real Supabase credentials are configured.
     return supabaseResponse;
   }
 
-  const supabase = createServerClient(supabaseUrl, supabaseKey, {
+  const supabase = createServerClient(supabaseUrl!, supabaseKey!, {
     cookies: {
       getAll() {
         return request.cookies.getAll();
@@ -32,7 +47,15 @@ export async function updateSession(request: NextRequest) {
   });
 
   // Refresh session if expired
-  await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user && isProtectedPath(request.nextUrl.pathname)) {
+    const loginUrl = new URL("/login", request.url);
+    loginUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
+    return NextResponse.redirect(loginUrl);
+  }
 
   return supabaseResponse;
 }

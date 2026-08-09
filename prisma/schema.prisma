@@ -36,6 +36,11 @@ enum BookmarkType {
   VOCABULARY
 }
 
+// User.id MUST equal the Supabase auth.users.id for the corresponding account.
+// There is no DB trigger enforcing this — the app is responsible for syncing
+// it (see src/lib/auth/session.ts requireUserId, which upserts this row using
+// the Supabase auth uid). The dbgenerated default below only applies when an
+// app-level insert omits `id`; every real insert must pass the Supabase uid.
 model User {
   id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   email         String    @unique

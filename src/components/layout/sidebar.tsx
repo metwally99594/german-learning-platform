@@ -6,7 +6,6 @@ import {
   BookOpen,
   Brain,
   ClipboardList,
-  Home,
   LayoutDashboard,
   MessageSquare,
   Mic,

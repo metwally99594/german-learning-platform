@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { Exercise } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { requireUserId, NotAuthenticatedError } from "@/lib/auth/session";
 import { SpeakingPart } from "@/types";
 import fallbackData from "@/data/speaking-exercises.json";
 
@@ -75,16 +76,34 @@ export async function getSpeakingExerciseById(id: string): Promise<Exercise | nu
 }
 
 export async function updateSpeakingProgress({
-  userId,
   score,
   timeSpentSeconds,
   completed = true,
 }: {
-  userId: string;
   score?: number;
   timeSpentSeconds?: number;
   completed?: boolean;
 }) {
+  if (score !== undefined && (!Number.isFinite(score) || score < 0 || score > 100)) {
+    return { error: "Score must be between 0 and 100." };
+  }
+  if (
+    timeSpentSeconds !== undefined &&
+    (!Number.isFinite(timeSpentSeconds) || timeSpentSeconds < 0 || timeSpentSeconds > 6 * 60 * 60)
+  ) {
+    return { error: "Invalid time spent." };
+  }
+
+  let userId: string;
+  try {
+    userId = await requireUserId();
+  } catch (error) {
+    if (error instanceof NotAuthenticatedError) {
+      return { error: "You must be signed in to save progress." };
+    }
+    return { error: "Failed to verify your account. Please try again." };
+  }
+
   try {
     const lesson = await prisma.lesson.findFirst({
       where: { title: C1_SPEAKING_LESSON_TITLE },
