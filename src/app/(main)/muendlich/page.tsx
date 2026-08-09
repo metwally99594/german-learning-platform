@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { MündlichHub } from "@/components/mündlich/mündlich-hub";
+import { MuendlichHub } from "@/components/muendlich/muendlich-hub";
 import { SpeakingPartSummary } from "@/types";
 
 export const metadata: Metadata = {
@@ -34,10 +34,10 @@ const parts: SpeakingPartSummary[] = [
   },
 ];
 
-export default function MündlichPage() {
+export default function MuendlichPage() {
   return (
     <div className="space-y-8 px-4 py-8">
-      <MündlichHub parts={parts} />
+      <MuendlichHub parts={parts} />
     </div>
   );
 }

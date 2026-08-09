@@ -30,22 +30,22 @@ All routes live under the existing `(main)` group so they automatically use `She
 
 | Route | Purpose |
 |-------|---------|
-| `/mündlich` | Landing / hub: choose a part, see streak, points, last session. |
-| `/mündlich/präsentation` | List of presentation prompts. |
-| `/mündlich/präsentation/[id]` | Practice screen for one prompt. |
-| `/mündlich/diskussion` | List of discussion prompts. |
-| `/mündlich/diskussion/[id]` | Practice screen for one prompt. |
-| `/mündlich/bildbeschreibung` | List of image-description prompts. |
-| `/mündlich/bildbeschreibung/[id]` | Practice screen for one prompt. |
-| `/mündlich/meinung` | List of opinion prompts. |
-| `/mündlich/meinung/[id]` | Practice screen for one prompt. |
+| `/muendlich` | Landing / hub: choose a part, see streak, points, last session. |
+| `/muendlich/präsentation` | List of presentation prompts. |
+| `/muendlich/präsentation/[id]` | Practice screen for one prompt. |
+| `/muendlich/diskussion` | List of discussion prompts. |
+| `/muendlich/diskussion/[id]` | Practice screen for one prompt. |
+| `/muendlich/bildbeschreibung` | List of image-description prompts. |
+| `/muendlich/bildbeschreibung/[id]` | Practice screen for one prompt. |
+| `/muendlich/meinung` | List of opinion prompts. |
+| `/muendlich/meinung/[id]` | Practice screen for one prompt. |
 
 ### Sidebar nav
 
 Add one entry to `src/components/layout/sidebar.tsx`:
 
 ```ts
-{ title: "C1 Mündlich", href: "/mündlich", icon: Mic }
+{ title: "C1 Mündlich", href: "/muendlich", icon: Mic }
 ```
 
 `Mic` is imported from `lucide-react`.
@@ -54,43 +54,43 @@ Add one entry to `src/components/layout/sidebar.tsx`:
 
 - Sidebar link.
 - Dashboard "Continue speaking practice" card (future, optional).
-- `/mündlich` hero card grid for each part.
+- `/muendlich` hero card grid for each part.
 
 ---
 
 ## 3. Component Architecture
 
-All new components live under `src/components/mündlich/`.
+All new components live under `src/components/muendlich/`.
 
 ### Container / hub components
 
 | Component | File | Props | Responsibility |
 |-----------|------|-------|----------------|
-| `MündlichHub` | `src/components/mündlich/mündlich-hub.tsx` | `parts: SpeakingPartSummary[]` | Renders part cards, streak, points, session length selector. |
-| `PartOverview` | `src/components/mündlich/part-overview.tsx` | `part: SpeakingPart; exercises: Exercise[]` | Lists prompts for a part with difficulty/duration badges. |
+| `MuendlichHub` | `src/components/muendlich/muendlich-hub.tsx` | `parts: SpeakingPartSummary[]` | Renders part cards, streak, points, session length selector. |
+| `PartOverview` | `src/components/muendlich/part-overview.tsx` | `part: SpeakingPart; exercises: Exercise[]` | Lists prompts for a part with difficulty/duration badges. |
 
 ### Practice components
 
 | Component | File | Props | Responsibility |
 |-----------|------|-------|----------------|
-| `SpeakingSession` | `src/components/mündlich/speaking-session.tsx` | `exercise: Exercise; sessionMins?: number` | Orchestrates prep timer, recorder, playback, reveal, self-rating. |
-| `PromptCard` | `src/components/mündlich/prompt-card.tsx` | `title, stimulus?, prompt, instructions` | Shows prompt and any image/quote stimulus. |
-| `PrepTimer` | `src/components/mündlich/prep-timer.tsx` | `seconds: number; onComplete` | Countdown for preparation phase. |
-| `RecordingControls` | `src/components/mündlich/recording-controls.tsx` | `isRecording, isPaused, onStart, onStop, onPause, elapsedMs` | Big record/stop/pause buttons with visual feedback. |
-| `AudioPlayback` | `src/components/mündlich/audio-playback.tsx` | `blob: Blob` | Renders `<audio>` with playback speed control. |
-| `ModelAnswerPanel` | `src/components/mündlich/model-answer-panel.tsx` | `modelAnswer, phrases, rubric` | Collapsible tabs for model answer, Redemittel, and rubric. |
-| `SelfAssessment` | `src/components/mündlich/self-assessment.tsx` | `rubric: RubricItem[]; onRate` | Checklist rubric with yes/mostly/no per criterion. |
-| `SessionSummary` | `src/components/mündlich/session-summary.tsx` | `points, badges, duration, nextHref?` | End-of-prompt recap. |
-| `FocusModeToggle` | `src/components/mündlich/focus-mode-toggle.tsx` | `enabled, onChange` | Switch that hides sidebar/footer decorations. |
-| `BreakReminder` | `src/components/mündlich/break-reminder.tsx` | `open, onDismiss, onTakeBreak` | Dialog shown after ~10 min or each part. |
+| `SpeakingSession` | `src/components/muendlich/speaking-session.tsx` | `exercise: Exercise; sessionMins?: number` | Orchestrates prep timer, recorder, playback, reveal, self-rating. |
+| `PromptCard` | `src/components/muendlich/prompt-card.tsx` | `title, stimulus?, prompt, instructions` | Shows prompt and any image/quote stimulus. |
+| `PrepTimer` | `src/components/muendlich/prep-timer.tsx` | `seconds: number; onComplete` | Countdown for preparation phase. |
+| `RecordingControls` | `src/components/muendlich/recording-controls.tsx` | `isRecording, isPaused, onStart, onStop, onPause, elapsedMs` | Big record/stop/pause buttons with visual feedback. |
+| `AudioPlayback` | `src/components/muendlich/audio-playback.tsx` | `blob: Blob` | Renders `<audio>` with playback speed control. |
+| `ModelAnswerPanel` | `src/components/muendlich/model-answer-panel.tsx` | `modelAnswer, phrases, rubric` | Collapsible tabs for model answer, Redemittel, and rubric. |
+| `SelfAssessment` | `src/components/muendlich/self-assessment.tsx` | `rubric: RubricItem[]; onRate` | Checklist rubric with yes/mostly/no per criterion. |
+| `SessionSummary` | `src/components/muendlich/session-summary.tsx` | `points, badges, duration, nextHref?` | End-of-prompt recap. |
+| `FocusModeToggle` | `src/components/muendlich/focus-mode-toggle.tsx` | `enabled, onChange` | Switch that hides sidebar/footer decorations. |
+| `BreakReminder` | `src/components/muendlich/break-reminder.tsx` | `open, onDismiss, onTakeBreak` | Dialog shown after ~10 min or each part. |
 
 ### Hooks
 
 | Hook | File | Responsibility |
 |------|------|----------------|
-| `useMediaRecorder` | `src/components/mündlich/use-media-recorder.ts` | Wraps `MediaRecorder` + `getUserMedia`, returns `start/stop/pause/blob/error`. |
-| `useCountdown` | `src/components/mündlich/use-countdown.ts` | Generic countdown with pause/resume and completion callback. |
-| `useSessionTimer` | `src/components/mündlich/use-session-timer.ts` | Tracks total session time and triggers break reminders. |
+| `useMediaRecorder` | `src/components/muendlich/use-media-recorder.ts` | Wraps `MediaRecorder` + `getUserMedia`, returns `start/stop/pause/blob/error`. |
+| `useCountdown` | `src/components/muendlich/use-countdown.ts` | Generic countdown with pause/resume and completion callback. |
+| `useSessionTimer` | `src/components/muendlich/use-session-timer.ts` | Tracks total session time and triggers break reminders. |
 
 ### Types (add to `src/types/index.ts`)
 
@@ -392,7 +392,7 @@ On the hub, let the learner pick a commitment before starting:
 ### Phase 1 — Scaffold & data
 
 - Add `SpeakingPart`, `RubricItem`, and `SpeakingExerciseContent` types to `src/types/index.ts`.
-- Create route folders under `src/app/(main)/mündlich/` and stub pages.
+- Create route folders under `src/app/(main)/muendlich/` and stub pages.
 - Add sidebar nav entry `C1 Mündlich` with `Mic` icon.
 - Seed C1 speaking lesson + `Exercise` records via a script in `scripts/seed-speaking.ts` (or SQL) using the JSON shapes above.
 
@@ -401,7 +401,7 @@ On the hub, let the learner pick a commitment before starting:
 - Build `useMediaRecorder` hook with permission handling.
 - Build `PrepTimer`, `RecordingControls`, `AudioPlayback`.
 - Build `SpeakingSession` that wires timer → record → playback → reveal.
-- Implement `/mündlich/[part]/[id]` pages with dynamic data fetch via a server action.
+- Implement `/muendlich/[part]/[id]` pages with dynamic data fetch via a server action.
 
 ### Phase 3 — Self-assessment & feedback
 
@@ -421,7 +421,7 @@ On the hub, let the learner pick a commitment before starting:
 - Arabic RTL layout verification.
 - Keyboard shortcuts (Space to start/stop recording when focused).
 - Accessible labels and focus states.
-- Optional: add a `/mündlich/settings` page for default session length.
+- Optional: add a `/muendlich/settings` page for default session length.
 
 ---
 

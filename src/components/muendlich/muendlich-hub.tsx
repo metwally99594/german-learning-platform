@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { SpeakingPartSummary } from "@/types";
 
-export type MündlichHubProps = {
+export type MuendlichHubProps = {
   parts: SpeakingPartSummary[];
 };
 
-export function MündlichHub({ parts }: MündlichHubProps) {
+export function MuendlichHub({ parts }: MuendlichHubProps) {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">C1 Mündliche Prüfung</h1>
@@ -14,7 +14,7 @@ export function MündlichHub({ parts }: MündlichHubProps) {
         {parts.map((part) => (
           <li key={part.part}>
             <Link
-              href={`/mündlich/${part.part}`}
+              href={`/muendlich/${part.part}`}
               className="block rounded-lg border p-4 transition-colors hover:bg-accent"
             >
               <h2 className="text-lg font-semibold">{part.title}</h2>

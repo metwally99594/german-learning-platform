@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SpeakingSession } from "@/components/mündlich/speaking-session";
+import { SpeakingSession } from "@/components/muendlich/speaking-session";
 import { getSpeakingExerciseById } from "@/server/actions/speaking-actions";
 
 type PageProps = {

@@ -19,7 +19,7 @@ export function PartOverview({ part, exercises }: PartOverviewProps) {
           return (
             <li key={exercise.id}>
               <Link
-                href={`/mündlich/${part}/${exercise.id}`}
+                href={`/muendlich/${part}/${exercise.id}`}
                 className="block rounded-lg border p-4 transition-colors hover:bg-accent"
               >
                 <p className="font-medium">{prompt}</p>

@@ -2,7 +2,7 @@ import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { isSupabasePlaceholderConfig } from "@/lib/supabase/config";
 
-const PROTECTED_PATH_PREFIXES = ["/dashboard", "/mündlich"];
+const PROTECTED_PATH_PREFIXES = ["/dashboard", "/muendlich"];
 
 function isProtectedPath(pathname: string) {
   return PROTECTED_PATH_PREFIXES.some(

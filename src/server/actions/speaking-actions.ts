@@ -138,7 +138,7 @@ export async function updateSpeakingProgress({
       },
     });
 
-    revalidatePath("/mündlich");
+    revalidatePath("/muendlich");
     return { success: true };
   } catch (error) {
     return {
