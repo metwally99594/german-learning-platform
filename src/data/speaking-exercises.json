@@ -1,14 +1,14 @@
 {
   "exercises": [
     {
-      "id": "pra-1",
+      "id": "00000000-0000-4000-a000-000000000001",
       "part": "präsentation",
-      "prompt": "Präsentieren Sie, wie sich die digitale Kommunikation auf zwischenmenschliche Beziehungen auswirkt.",
+      "prompt": "Bücher geben Anleitungen zum Glücklich sein. Was ist für Sie Glück, und welchen Stellenwert hat es in Ihrem Leben? Erläutern Sie Ihre Vorstellungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
       "prepTimeSeconds": 180,
       "responseTimeSeconds": 180,
-      "modelAnswer": "Im Folgenden möchte ich darlegen, wie die digitale Kommunikation unsere Beziehungen verändert. Zunächst einmal ermöglicht sie einen ständigen Austausch über räumliche Distanzen hinweg. Ein zentrales Argument ist jedoch, dass dieser Austausch oft oberflächlich bleibt, da nonverbale Signale verloren gehen. Andererseits können soziale Medien auch Gemeinschaften stärken, die sonst isoliert wären. Zusammenfassend lässt sich sagen, dass die Qualität der Kommunikation entscheidender ist als die Quantität der Nachrichten.",
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
       "usefulPhrases": [
         "Im Folgenden möchte ich darlegen, dass…",
         "Ein zentrales Argument ist…",
@@ -16,26 +16,1151 @@
         "Zusammenfassend lässt sich sagen, dass…"
       ],
       "hints": [
-        "Verwenden Sie Konjunktiv II für Hypothesen.",
+        "Begründen Sie Ihre Position mit Beispielen.",
         "Gehen Sie auf Gegenargumente ein."
       ],
       "rubric": [
-        { "criterion": "Struktur", "description": "Einleitung, Hauptteil, Schluss erkennbar", "maxPoints": 2 },
-        { "criterion": "Argumentation", "description": "Klare These, Belege, Gegenargument", "maxPoints": 2 },
-        { "criterion": "Wortschatz", "description": "C1-typische Redemittel und Nuancen", "maxPoints": 2 },
-        { "criterion": "Satzstrukturen", "description": "Komplexe Sätze, Konnektoren, Konjunktiv", "maxPoints": 2 },
-        { "criterion": "Flüssigkeit", "description": "Wenige Pausen und Füllwörter", "maxPoints": 2 }
-      ]
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 1
     },
     {
-      "id": "dis-1",
+      "id": "00000000-0000-4000-a000-000000000002",
+      "part": "präsentation",
+      "prompt": "Würden Sie auch arbeiten, wenn Sie finanziell nicht darauf angewiesen wären? Schildern Sie Ihre Gedanken zum Thema arbeitsfreies Leben.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 2
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000003",
+      "part": "präsentation",
+      "prompt": "In Deutschland werden Bräuche aus anderen Kulturkreisen wie Halloween oder Holi immer populärer. Schildern Sie Ihre Überlegungen zur Übernahme von fremden Bräuchen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000004",
+      "part": "präsentation",
+      "prompt": "Unsere Eltern und Großeltern können aus eigener Erfahrung von historischen Ereignissen berichten. Erachten Sie persönliche Schilderungen als vertrauenswürdige Quelle für Geschichtswissen?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000005",
+      "part": "präsentation",
+      "prompt": "Heutzutage werden im Spitzensport sehr hohe Gagen bezahlt. Finden Sie es richtig, dass Spitzensportler so viel Geld verdienen? Erläutern Sie Ihren Standpunkt.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 5
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000006",
+      "part": "präsentation",
+      "prompt": "Wie kann Architektur das Aussehen von Städten prägen? Geben Sie Beispiele und erläutern Sie Ihre Einschätzung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 6
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000007",
+      "part": "präsentation",
+      "prompt": "Welche Berufsgruppe halten Sie für besonders wichtig? Begründen Sie Ihre Meinung anhand konkreter Beispiele.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000008",
+      "part": "präsentation",
+      "prompt": "Wie sind Abfallentsorgung und Recycling in Ihrem Herkunftsland organisiert? Welche Unterschiede gibt es zu Deutschland? Berichten Sie.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000009",
+      "part": "präsentation",
+      "prompt": "Welche Rolle spielt der Tierschutz in einem Land Ihrer Wahl? Erläutern Sie dies anhand von Beispielen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 9
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000a",
+      "part": "präsentation",
+      "prompt": "Manche Menschen behaupten, der medizinische Fortschritt sei mehr Fluch als Segen. Teilen Sie diese Ansicht? Begründen Sie Ihren Standpunkt.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 10
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000b",
+      "part": "präsentation",
+      "prompt": "Immer wieder gehen Menschen auf die Straße, um die Öffentlichkeit auf bestimmte Anliegen aufmerksam zu machen. Betrachten Sie Demonstrationen als wirksames Mittel zur Meinungsäußerung?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000c",
+      "part": "präsentation",
+      "prompt": "Was macht für Sie einen erfolgreichen Menschen aus? Schildern Sie Ihre Überlegungen zu dieser Frage.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000d",
+      "part": "präsentation",
+      "prompt": "Fernsehserien und Serien zum Herunterladen liegen zurzeit sehr im Trend. Wie erklären Sie sich die Faszination, die von Serien ausgeht? Berichten Sie von Ihren Erfahrungen.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000e",
+      "part": "präsentation",
+      "prompt": "Heutzutage scheint es schick zu sein, sich extrem beschäftigt oder gestresst zu zeigen. Welchen Stellenwert sollte Untätigkeit haben? Erläutern Sie Ihre Ansicht.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 14
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000000f",
+      "part": "präsentation",
+      "prompt": "In vielen Industrieländern findet das Konzept des städtischen Gartenbaus immer mehr Anklang. Denken Sie, dass Selbstversorgung durch Dachgärten sinnvoll ist?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 15
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000010",
+      "part": "präsentation",
+      "prompt": "Welche Bedeutung hat die Musik in Ihrem Herkunftsland? Warum ist Musik wichtig für den einzelnen Menschen und für die Gesellschaft?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 16
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000011",
+      "part": "präsentation",
+      "prompt": "Welche Rolle spielt der Naturschutz in Ihrem Herkunftsland? Welche Maßnahmen werden ergriffen, um die Natur zu schützen, und wie effektiv sind sie?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 17
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000012",
+      "part": "präsentation",
+      "prompt": "Beschreiben Sie das Bildungssystem in einem Land Ihrer Wahl. Was funktioniert gut, und wo sehen Sie Verbesserungsbedarf?",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 18
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000013",
+      "part": "präsentation",
+      "prompt": "Vertreten Sie die Auffassung, dass Sportvereine dem Allgemeinwohl dienen und staatlich gefördert werden sollten? Schildern Sie Ihre Gedanken.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 19
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000014",
+      "part": "präsentation",
+      "prompt": "Viele Städte leiden unter dem ständig zunehmenden Straßenverkehr. Manche Bürger fordern ein vollständiges Verbot von Privatautos in Städten. Erläutern Sie Ihre Haltung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000015",
+      "part": "präsentation",
+      "prompt": "Welche historischen Ereignisse sind Ihrer Meinung nach besonders wichtig? Begründen Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 21
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000016",
+      "part": "präsentation",
+      "prompt": "Wie kann man eine Sprache gut lernen? Geben Sie Tipps und begründen Sie aus Ihrer Erfahrung.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 22
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000017",
+      "part": "präsentation",
+      "prompt": "Denken Sie, dass Schwierigkeiten vor allem Chancen sind? Begründen Sie Ihren Standpunkt.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 23
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000018",
+      "part": "präsentation",
+      "prompt": "Traditionelle und religiöse Feste werden zunehmend kommerzialisiert. Sehen Sie darin einen Grund, solche Feste gar nicht mehr zu feiern? Erläutern Sie Ihre Ansicht.",
+      "stimulus": null,
+      "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
+      "prepTimeSeconds": 180,
+      "responseTimeSeconds": 180,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Im Folgenden möchte ich darlegen, dass…",
+        "Ein zentrales Argument ist…",
+        "Andererseits muss man bedenken, dass…",
+        "Zusammenfassend lässt sich sagen, dass…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 24
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000019",
       "part": "diskussion",
-      "prompt": "\"Soziale Medien isolieren Menschen eher, als sie Gemeinschaft zu schaffen.\" Nehmen Sie Stellung.",
+      "prompt": "Wege entstehen dadurch, dass man sie geht.",
       "stimulus": null,
       "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
       "prepTimeSeconds": 60,
       "responseTimeSeconds": 120,
-      "modelAnswer": "Diese Behauptung ist meines Erachtens nur bedingt zutreffend. Zwar kann der exzessive Gebrauch sozialer Medien zu Isolation führen, insbesondere wenn virtueller Kontakt realen ersetzt. Dennoch bieten sie auch Plattformen für Minderheiten und chronisch Kranke, um Unterstützung zu finden. Entscheidend ist daher ein bewusster Umgang mit diesen Medien.",
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
       "usefulPhrases": [
         "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
         "Zwar…, dennoch…",
@@ -43,53 +1168,2303 @@
         "Worauf wollen Sie hinaus?"
       ],
       "hints": [
-        "Nehmen Sie eine klare Position ein.",
-        "Beziehen Sie Gegenargumente mit ein."
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
       ],
       "rubric": [
-        { "criterion": "Stellungnahme", "description": "Klare Positionierung", "maxPoints": 2 },
-        { "criterion": "Begründung", "description": "Logische Argumente mit Beispielen", "maxPoints": 2 },
-        { "criterion": "Gegenhaltung", "description": "Gegenargument einbringen", "maxPoints": 2 },
-        { "criterion": "Diskussionsredemittel", "description": "Einverständnis, Zweifel, Nachfragen", "maxPoints": 2 },
-        { "criterion": "Flüssigkeit", "description": "Natürlicher Dialogfluss", "maxPoints": 2 }
-      ]
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 1
     },
     {
-      "id": "bil-1",
-      "part": "bildbeschreibung",
-      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil erneuerbarer Energien in Deutschland 2010–2025\".",
-      "stimulus": "Grafik: Anteil erneuerbarer Energien in Deutschland von 2010 bis 2025.",
-      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "id": "00000000-0000-4000-a000-00000000001a",
+      "part": "diskussion",
+      "prompt": "Lügen ist immer besser als die Wahrheit.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
       "prepTimeSeconds": 60,
       "responseTimeSeconds": 120,
-      "modelAnswer": "Die Grafik zeigt den Anteil erneuerbarer Energien in Deutschland von 2010 bis 2025. Zu erkennen ist ein kontinuierlicher Anstieg von etwa 17 % auf über 50 %. Besonders steil verläuft die Kurve zwischen 2018 und 2022, was vermutlich auf den Kohleausstieg und den Ausbau der Windenergie zurückzuführen ist. Meiner Einschätzung nach spiegelt dies einen grundlegenden gesellschaftlichen Wandel wider.",
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
       "usefulPhrases": [
-        "Die Grafik veranschaulicht…",
-        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
-        "Dies lässt sich vermutlich damit erklären, dass…",
-        "Meiner Einschätzung nach…"
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
       ],
       "hints": [
-        "Beschreiben Sie zuerst Fakten, dann interpretieren Sie.",
-        "Verwenden Sie Prozentangaben und Vergleiche."
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
       ],
       "rubric": [
-        { "criterion": "Beschreibung", "description": "Sachliche, chronologische Beschreibung", "maxPoints": 2 },
-        { "criterion": "Interpretation", "description": "Vermutungen und Ursachen nennen", "maxPoints": 2 },
-        { "criterion": "Wortschatz", "description": "Fachbegriffe, Prozentangaben, Steigerungen", "maxPoints": 2 },
-        { "criterion": "Struktur", "description": "Überleitungen zwischen Beschreibung und Deutung", "maxPoints": 2 },
-        { "criterion": "Flüssigkeit", "description": "Flüssige, selbstständige Rede", "maxPoints": 2 }
-      ]
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 2
     },
     {
-      "id": "mei-1",
-      "part": "meinung",
-      "prompt": "\"Bildung sollte für alle Menschen lebenslang kostenlos sein.\" Äußern Sie Ihre Meinung.",
+      "id": "00000000-0000-4000-a000-00000000001b",
+      "part": "diskussion",
+      "prompt": "Über Geschmack muss man nicht streiten.",
       "stimulus": null,
-      "instructions": "Äußern Sie Ihre Meinung zum Zitat, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
       "prepTimeSeconds": 60,
       "responseTimeSeconds": 120,
-      "modelAnswer": "Ich bin grundsätzlich der Auffassung, dass lebenslange Bildung ein zentrales gesellschaftliches Gut darstellt. Kostenlose Weiterbildung würde Chancengerechtigkeit erhöhen und Anpassungsfähigkeit im Arbeitsmarkt stärken. Allerdings stellt sich die Frage der Finanzierung; möglicherweise sollte man gezielt einkommensschwache Gruppen fördern, anstatt alles pauschal kostenlos anzubieten.",
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001c",
+      "part": "diskussion",
+      "prompt": "Höflichkeit ist eine Kunst, die wir zeigen sollten.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001d",
+      "part": "diskussion",
+      "prompt": "Wir brauchen Ernährungserziehung.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 5
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001e",
+      "part": "diskussion",
+      "prompt": "Glück ist kostenlos, aber unbezahlbar.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 6
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000001f",
+      "part": "diskussion",
+      "prompt": "Freunde sind auch Familie, die man aussuchen kann.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000020",
+      "part": "diskussion",
+      "prompt": "Jedes Kind ist gewissermaßen ein Genie, und jedes Genie ist gewissermaßen ein Kind.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000021",
+      "part": "diskussion",
+      "prompt": "Es gibt eine Menge Menschen, aber noch viel mehr Gesichter.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 9
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000022",
+      "part": "diskussion",
+      "prompt": "Träume nicht von deinem Leben, lebe deinen Traum.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 10
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000023",
+      "part": "diskussion",
+      "prompt": "Das Handy bedeutet Verlust an Freiheit.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000024",
+      "part": "diskussion",
+      "prompt": "Stärke bedeutet Wissen, nicht immer stark sein.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000025",
+      "part": "diskussion",
+      "prompt": "Wenn zwei sich streiten, freut sich der Dritte.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000026",
+      "part": "diskussion",
+      "prompt": "Statt die Gleichheit zu holen, sollte man zur Vielfalt raten.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 14
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000027",
+      "part": "diskussion",
+      "prompt": "Erfahrung ist etwas, was man bekommt, nachdem man es gebraucht hätte.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 15
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000028",
+      "part": "diskussion",
+      "prompt": "Konkurrenz ist gesund.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 16
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000029",
+      "part": "diskussion",
+      "prompt": "Im Internet kann man mehr Informationen finden als in Büchern.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 17
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002a",
+      "part": "diskussion",
+      "prompt": "Die Schule ist nur für Bildung, nicht für Erziehung.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 18
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002b",
+      "part": "diskussion",
+      "prompt": "Nur tote Fische schwimmen mit dem Strom.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 19
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002c",
+      "part": "diskussion",
+      "prompt": "Es ist nicht leicht, andere von seiner Meinung zu überzeugen.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002d",
+      "part": "diskussion",
+      "prompt": "Hat die Mehrheit immer Recht?",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 21
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002e",
+      "part": "diskussion",
+      "prompt": "Die Zeit ist wertvoller als Geld.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 22
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000002f",
+      "part": "diskussion",
+      "prompt": "Ein nebliger Morgen ist noch kein wolkiger Tag.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 23
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000030",
+      "part": "diskussion",
+      "prompt": "Genug ist besser als zu viel.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 24
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000031",
+      "part": "diskussion",
+      "prompt": "Kein Mensch ist so reich, dass er nicht seinen Nachbarn bräuchte.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 25
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000032",
+      "part": "diskussion",
+      "prompt": "Man kann im Leben alles erreichen, was man sich vornimmt.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 26
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000033",
+      "part": "diskussion",
+      "prompt": "Papier ist geduldig.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 27
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000034",
+      "part": "diskussion",
+      "prompt": "Spielen ist nur für Kinder.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 28
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000035",
+      "part": "diskussion",
+      "prompt": "Wer nicht kann, will auch nicht.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 29
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000036",
+      "part": "diskussion",
+      "prompt": "Bildung ist die mächtigste Waffe, um die Welt zu verändern.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 30
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000037",
+      "part": "diskussion",
+      "prompt": "Wissen ist Macht.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 31
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000038",
+      "part": "diskussion",
+      "prompt": "Schönheit ist der Schlüssel zum Erfolg.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 32
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000039",
+      "part": "diskussion",
+      "prompt": "Jeder will länger leben, aber nicht älter werden.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 33
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003a",
+      "part": "diskussion",
+      "prompt": "Das Leben ist komisch ohne Freude, aber schön mit Ernst.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 34
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003b",
+      "part": "diskussion",
+      "prompt": "Eine Reise von tausend Meilen fängt mit dem ersten Schritt an.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 35
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003c",
+      "part": "diskussion",
+      "prompt": "Die Hoffnung führt uns weiter als die Furcht.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 36
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003d",
+      "part": "diskussion",
+      "prompt": "Das Gras wächst nicht schneller, wenn man daran zieht.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 37
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003e",
+      "part": "diskussion",
+      "prompt": "Man kann nicht denken, wenn man es eilig hat.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 38
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000003f",
+      "part": "diskussion",
+      "prompt": "Erziehen heißt vorleben, alles andere ist höchstens Dressur.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 39
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000040",
+      "part": "diskussion",
+      "prompt": "Was dem Schwarm nicht nützt, nützt auch der einzelnen Biene nicht.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 40
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000041",
+      "part": "diskussion",
+      "prompt": "Die Familie ist vor allen eine solidarische Gemeinschaft.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 41
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000042",
+      "part": "diskussion",
+      "prompt": "Beziehungen sind wichtiger als Können.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 42
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000043",
+      "part": "diskussion",
+      "prompt": "Man kann das Leben ändern, wenn man seine Denkweise ändert.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 43
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000044",
+      "part": "diskussion",
+      "prompt": "Soziale Netzwerke machen einsame Menschen einsamer.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 44
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000045",
+      "part": "diskussion",
+      "prompt": "Fernsehen ist Zeitverschwendung.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 45
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000046",
+      "part": "diskussion",
+      "prompt": "Der Kluge gibt nach – eine traurige Wahrheit, sie begründet die Weltherrschaft der Dummheit.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 46
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000047",
+      "part": "diskussion",
+      "prompt": "Das Geld macht Menschen attraktiv.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 47
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000048",
+      "part": "diskussion",
+      "prompt": "Geld verschafft Unabhängigkeit, aber zu wissen, dass man auch ohne leben kann, verschafft Freiheit.",
+      "stimulus": null,
+      "instructions": "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Diese Behauptung ist meines Erachtens nur bedingt zutreffend.",
+        "Zwar…, dennoch…",
+        "Ein Gegenargument wäre…",
+        "Worauf wollen Sie hinaus?"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Stellungnahme",
+          "description": "Klare Positionierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Gegenhaltung",
+          "description": "Gegenargument einbringen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Diskussionsredemittel",
+          "description": "Einverständnis, Zweifel, Nachfragen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürlicher Dialogfluss",
+          "maxPoints": 2
+        }
+      ],
+      "order": 48
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000049",
+      "part": "meinung",
+      "prompt": "Sind Sie gegen das Spiel Lotto und für die Entfernung dieses Spiels und seiner Arten? Erklären Sie Ihre Sichtweise und Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
       "usefulPhrases": [
         "Ich bin der Auffassung, dass…",
         "Ein gewichtiges Argument dafür/dagegen ist…",
@@ -97,16 +3472,997 @@
         "Meiner Ansicht nach sollte man…"
       ],
       "hints": [
-        "Begründen Sie Ihre Meinung mit konkreten Beispielen.",
-        "Gehen Sie auf mögliche Gegenstimmen ein."
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
       ],
       "rubric": [
-        { "criterion": "Meinungsäußerung", "description": "Klare, nuancierte Position", "maxPoints": 2 },
-        { "criterion": "Begründung", "description": "Mehrere Argumente mit Beispielen", "maxPoints": 2 },
-        { "criterion": "Einschränkung", "description": "Gegenargument oder Differenzierung", "maxPoints": 2 },
-        { "criterion": "Meinungsredemittel", "description": "Ich bin der Auffassung, Es lässt sich darüber streiten", "maxPoints": 2 },
-        { "criterion": "Flüssigkeit", "description": "Natürliche, flüssige Rede", "maxPoints": 2 }
-      ]
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 1
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004a",
+      "part": "meinung",
+      "prompt": "Sind Sie der Meinung, dass jede oder jeder Jugendliche sich sozial engagieren sollte? Erläutern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 2
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004b",
+      "part": "meinung",
+      "prompt": "Soll es ein generelles Handyverbot an den Schulen geben? Äußern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004c",
+      "part": "meinung",
+      "prompt": "Sollte der Staat die Kunst fördern? Begründen Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004d",
+      "part": "meinung",
+      "prompt": "Sind Sie der Ansicht, dass Kinder unter allen Umständen für die Pflege ihrer Eltern zuständig sind? Legen Sie Ihre Meinung dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 5
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004e",
+      "part": "meinung",
+      "prompt": "Sollten Tierversuche verboten werden? Äußern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 6
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000004f",
+      "part": "meinung",
+      "prompt": "Sind Sie der Auffassung, dass der Staat für die Betreuung alter Menschen verantwortlich ist? Legen Sie Ihre Ansichten dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000050",
+      "part": "meinung",
+      "prompt": "Sollten Jungen und Mädchen gleich erzogen werden? Legen Sie Ihre Meinung zu diesem Thema dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000051",
+      "part": "meinung",
+      "prompt": "Sollten Politikerinnen und Politiker auf teure Statussymbole wie Rolex oder teure Autos verzichten? Begründen Sie Ihre Haltung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 9
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000052",
+      "part": "meinung",
+      "prompt": "Sollten wir aus Umweltschutzgründen auf Reisen verzichten? Legen Sie Ihre Ansichten zu dieser Frage dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 10
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000053",
+      "part": "meinung",
+      "prompt": "Sind Sie der Meinung, dass man eine Fremdsprache nur in dem jeweiligen Land richtig gut lernen kann? Schildern Sie Ihre Erfahrungen.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000054",
+      "part": "meinung",
+      "prompt": "Sollte Sport ein fester Bestandteil des Bildungsangebotes sein? Erläutern Sie Ihren Standpunkt.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000055",
+      "part": "meinung",
+      "prompt": "Denken Sie, dass eine solche Überwachung durch Kameras an öffentlichen Plätzen notwendig ist? Begründen Sie Ihren Standpunkt.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000056",
+      "part": "meinung",
+      "prompt": "Befürworten Sie die allgemeine Verwendung von Kreditkarten? Sehen Sie darin auch Gefahren? Legen Sie Argumente dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 14
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000057",
+      "part": "meinung",
+      "prompt": "Sind Sie der Meinung, dass in der Schule immer noch traditionelle Rollenbilder von Mann und Frau vermittelt werden? Berichten Sie von Erfahrungen.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 15
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000058",
+      "part": "meinung",
+      "prompt": "Sollte man seine Gemütsverfassung auch in der Öffentlichkeit zeigen? Begründen Sie Ihre Haltung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 16
+    },
+    {
+      "id": "00000000-0000-4000-a000-000000000059",
+      "part": "meinung",
+      "prompt": "Ist Altersvorsorge allein Aufgabe des Staates oder sollte jeder auch selbst dafür sorgen? Legen Sie Ihre Überlegungen dar.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 17
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000005a",
+      "part": "meinung",
+      "prompt": "Ist Sport in sensiblen Umgebungen zu verantworten? Erläutern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 18
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000005b",
+      "part": "meinung",
+      "prompt": "Ist Fitness-Training eitle Selbstoptimierung oder berechtigter Wunsch nach guter körperlicher Verfassung? Erläutern Sie Ihre Meinung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 19
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000005c",
+      "part": "meinung",
+      "prompt": "Brauchen Kinder Märchen? Glauben Sie, dass Kinder fantasievolle Geschichten brauchen? Erzählen Sie von Ihrer Erfahrung.",
+      "stimulus": null,
+      "instructions": "Äußern Sie Ihre Meinung zum Thema, begründen Sie diese mit Beispielen und gehen Sie auf Einschränkungen ein.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Ich bin der Auffassung, dass…",
+        "Ein gewichtiges Argument dafür/dagegen ist…",
+        "Allerdings stellt sich die Frage, ob…",
+        "Meiner Ansicht nach sollte man…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Meinungsäußerung",
+          "description": "Klare, nuancierte Position",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Begründung",
+          "description": "Mehrere Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Einschränkung",
+          "description": "Gegenargument oder Differenzierung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Meinungsredemittel",
+          "description": "Ich bin der Auffassung, Es lässt sich darüber streiten",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Natürliche, flüssige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "00000000-0000-4000-a000-00000000005d",
+      "part": "bildbeschreibung",
+      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil erneuerbarer Energien in Deutschland 2010–2025\".",
+      "stimulus": "Grafik: Anteil erneuerbarer Energien in Deutschland von 2010 bis 2025.",
+      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Die Grafik veranschaulicht…",
+        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
+        "Dies lässt sich vermutlich damit erklären, dass…",
+        "Meiner Einschätzung nach…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Struktur",
+          "description": "Klare Einleitung, Hauptteil, Schluss",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Argumentation",
+          "description": "Logische Argumente mit Beispielen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "C1-typische Redemittel und Nuancen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Satzstrukturen",
+          "description": "Komplexe Sätze, Konnektoren, Konjunktiv",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Wenige Pausen und Füllwörter",
+          "maxPoints": 2
+        }
+      ],
+      "order": 1
     }
   ]
 }
