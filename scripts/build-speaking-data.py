@@ -220,7 +220,7 @@ bildbeschreibung_rubric = [
 def make_exercise(index, part, prompt, stimulus, order):
     rubric = discussion_rubric if part == "diskussion" else opinion_rubric if part == "meinung" else bildbeschreibung_rubric if part == "bildbeschreibung" else base_rubric
     
-    if part in ("präsentation-a", "präsentation-b", "präsentation-c"):
+    if part in ("praesentation-a", "praesentation-b", "praesentation-c"):
         instructions = "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss."
         prep = 180
         response = 180
@@ -262,15 +262,15 @@ index = 1
 exercises = []
 
 for i, prompt in enumerate(presentationsA):
-    exercises.append(make_exercise(index, "präsentation-a", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-a", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(presentationsB):
-    exercises.append(make_exercise(index, "präsentation-b", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-b", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(presentationsC):
-    exercises.append(make_exercise(index, "präsentation-c", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-c", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(discussions):
