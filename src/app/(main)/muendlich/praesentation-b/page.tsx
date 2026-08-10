@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function PraesentationBPage() {
-  const part: SpeakingPart = "präsentation-b";
+  const part: SpeakingPart = "praesentation-b";
   const exercises = await getSpeakingExercisesByPart(part);
 
   if (exercises.length === 0) {

@@ -14,9 +14,9 @@ export type DashboardStat = {
 };
 
 export type SpeakingPart =
-  | "präsentation-a"
-  | "präsentation-b"
-  | "präsentation-c"
+  | "praesentation-a"
+  | "praesentation-b"
+  | "praesentation-c"
   | "diskussion"
   | "bildbeschreibung"
   | "meinung";
