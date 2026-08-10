@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# speaking exercise extraction temp files
+scripts/*.err
+scripts/all-prompts.*
+scripts/prompts-cleaned.*
+scripts/presentations-*
+scripts/tables.*
+scripts/page*.png
+scripts/dump-*.py
+scripts/extract-*.py
+scripts/render-*.py
+scripts/clean-*.py
