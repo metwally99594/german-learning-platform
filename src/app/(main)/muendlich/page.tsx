@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 
 const parts: SpeakingPartSummary[] = [
   {
-    part: "präsentation-a",
+    part: "praesentation-a",
     title: "Präsentation A",
     description: "Practise presentations on society, lifestyle and values.",
     estimatedMinutes: 6,
   },
   {
-    part: "präsentation-b",
+    part: "praesentation-b",
     title: "Präsentation B",
     description: "Practise presentations on culture, media and everyday life.",
     estimatedMinutes: 6,
   },
   {
-    part: "präsentation-c",
+    part: "praesentation-c",
     title: "Präsentation C",
     description: "Practise presentations on language, education and identity.",
     estimatedMinutes: 6,

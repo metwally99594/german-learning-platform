@@ -31,8 +31,12 @@ All routes live under the existing `(main)` group so they automatically use `She
 | Route | Purpose |
 |-------|---------|
 | `/muendlich` | Landing / hub: choose a part, see streak, points, last session. |
-| `/muendlich/präsentation` | List of presentation prompts. |
-| `/muendlich/präsentation/[id]` | Practice screen for one prompt. |
+| `/muendlich/praesentation-a` | List of presentation prompts (set A). |
+| `/muendlich/praesentation-a/[id]` | Practice screen for one prompt. |
+| `/muendlich/praesentation-b` | List of presentation prompts (set B). |
+| `/muendlich/praesentation-b/[id]` | Practice screen for one prompt. |
+| `/muendlich/praesentation-c` | List of presentation prompts (set C). |
+| `/muendlich/praesentation-c/[id]` | Practice screen for one prompt. |
 | `/muendlich/diskussion` | List of discussion prompts. |
 | `/muendlich/diskussion/[id]` | Practice screen for one prompt. |
 | `/muendlich/bildbeschreibung` | List of image-description prompts. |
@@ -95,7 +99,13 @@ All new components live under `src/components/muendlich/`.
 ### Types (add to `src/types/index.ts`)
 
 ```ts
-export type SpeakingPart = "präsentation" | "diskussion" | "bildbeschreibung" | "meinung";
+export type SpeakingPart =
+  | "praesentation-a"
+  | "praesentation-b"
+  | "praesentation-c"
+  | "diskussion"
+  | "bildbeschreibung"
+  | "meinung";
 
 export type RubricItem = {
   criterion: string;
@@ -126,7 +136,7 @@ No new Prisma models. Reuse the existing `Exercise` table with `type = SPEAKING`
 
 ```json
 {
-  "part": "präsentation",
+  "part": "praesentation-a",
   "prompt": "Präsentieren Sie, wie sich die digitale Kommunikation auf zwischenmenschliche Beziehungen auswirkt.",
   "stimulus": null,
   "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",

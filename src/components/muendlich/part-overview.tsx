@@ -8,9 +8,9 @@ export type PartOverviewProps = {
 };
 
 const partTitles: Record<SpeakingPart, string> = {
-  "präsentation-a": "Präsentation A",
-  "präsentation-b": "Präsentation B",
-  "präsentation-c": "Präsentation C",
+  "praesentation-a": "Präsentation A",
+  "praesentation-b": "Präsentation B",
+  "praesentation-c": "Präsentation C",
   diskussion: "Diskussion",
   bildbeschreibung: "Bildbeschreibung",
   meinung: "Meinung äußern",
@@ -28,7 +28,7 @@ export function PartOverview({ part, exercises }: PartOverviewProps) {
           return (
             <li key={exercise.id}>
               <Link
-                href={`/mündlich/${part}/${exercise.id}`}
+                href={`/muendlich/${part}/${exercise.id}`}
                 className="block rounded-lg border p-4 transition-colors hover:bg-accent"
               >
                 <p className="font-medium">{prompt}</p>

@@ -175,7 +175,7 @@ const bildbeschreibungen = [
 
 function makeExercise(
   index: number,
-  part: "präsentation-a" | "präsentation-b" | "präsentation-c" | "diskussion" | "bildbeschreibung" | "meinung",
+  part: "praesentation-a" | "praesentation-b" | "praesentation-c" | "diskussion" | "bildbeschreibung" | "meinung",
   prompt: string,
   stimulus: string | null,
   order: number
@@ -191,7 +191,7 @@ function makeExercise(
       : baseRubric;
 
   const instructions =
-    part === "präsentation-a" || part === "präsentation-b" || part === "präsentation-c"
+    part === "praesentation-a" || part === "praesentation-b" || part === "praesentation-c"
       ? "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss."
       : part === "diskussion"
       ? "Nehmen Sie Stellung und diskutieren Sie das Zitat. Sie haben 1 Minute Vorbereitungszeit und ca. 2 Minuten Sprechzeit."
@@ -214,8 +214,8 @@ function makeExercise(
     prompt,
     stimulus,
     instructions,
-    prepTimeSeconds: part === "präsentation-a" || part === "präsentation-b" || part === "präsentation-c" ? 180 : 60,
-    responseTimeSeconds: part === "präsentation-a" || part === "präsentation-b" || part === "präsentation-c" ? 180 : 120,
+    prepTimeSeconds: part === "praesentation-a" || part === "praesentation-b" || part === "praesentation-c" ? 180 : 60,
+    responseTimeSeconds: part === "praesentation-a" || part === "praesentation-b" || part === "praesentation-c" ? 180 : 120,
     modelAnswer: "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
     usefulPhrases,
     hints: ["Begründen Sie Ihre Position mit Beispielen.", "Gehen Sie auf Gegenargumente ein."],
@@ -227,9 +227,9 @@ function makeExercise(
 let index = 1;
 const exercises: unknown[] = [];
 
-presentationsA.forEach((prompt, i) => exercises.push(makeExercise(index++, "präsentation-a", prompt, null, i + 1)));
-presentationsB.forEach((prompt, i) => exercises.push(makeExercise(index++, "präsentation-b", prompt, null, i + 1)));
-presentationsC.forEach((prompt, i) => exercises.push(makeExercise(index++, "präsentation-c", prompt, null, i + 1)));
+presentationsA.forEach((prompt, i) => exercises.push(makeExercise(index++, "praesentation-a", prompt, null, i + 1)));
+presentationsB.forEach((prompt, i) => exercises.push(makeExercise(index++, "praesentation-b", prompt, null, i + 1)));
+presentationsC.forEach((prompt, i) => exercises.push(makeExercise(index++, "praesentation-c", prompt, null, i + 1)));
 discussions.forEach((prompt, i) => exercises.push(makeExercise(index++, "diskussion", prompt, null, i + 1)));
 opinions.forEach((prompt, i) => exercises.push(makeExercise(index++, "meinung", prompt, null, i + 1)));
 bildbeschreibungen.forEach((item, i) => exercises.push(makeExercise(index++, "bildbeschreibung", item.prompt, item.stimulus, i + 1)));

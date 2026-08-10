@@ -2,7 +2,7 @@
   "exercises": [
     {
       "id": "00000000-0000-4000-a000-000000000001",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Bücher geben Anleitungen zum Glücklich sein, und von manchen Menschen wird behauptet, sie hätten das Glück gepachtet. Was ist für Sie Glück, und welchen Stellenwert hat es in Ihrem Leben? Erläutern Sie Ihre Vorstellungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -50,7 +50,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000002",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Würden Sie auch arbeiten, wenn Sie finanziell nicht darauf angewiesen wären? Schildern Sie Ihre Gedanken zum Thema arbeitsfreies Leben.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -98,7 +98,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000003",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Halloween oder das indische Frühlingsfest Holi – in Deutschland werden Bräuche aus anderen Kulturkreisen immer populärer. Schildern Sie Ihre Überlegungen zur Übernahme von fremden Bräuchen. Berichten Sie auch von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -146,7 +146,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000004",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Unsere Eltern und Großeltern können aus eigener Erfahrung von historischen Ereignissen berichten. Erachten Sie persönliche Schilderungen als vertrauenswürdige Quelle für Geschichtswissen? Legen Sie Ihre Überlegungen zu dieser Frage dar.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -194,7 +194,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000005",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Heutzutage werden im Spitzensport sehr hohe Gagen bezahlt. Finden Sie es richtig, dass Spitzensportler, z.B. Tennisspieler oder Fußballer, so viel Geld verdienen? Erläutern Sie Ihren Standpunkt. Oder: Finden Sie es gerecht, dass Spitzensportler so viel verdienen?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -242,7 +242,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000006",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Sind Sie gegen das Spiel Lotto und für die Entfernung dieses Spiels und seiner Arten? Was sind die Gründe? Erklären Sie Ihre Sichtweise und Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -290,7 +290,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000007",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Wie kann Architektur das Aussehen von Städten prägen? Geben Sie Beispiele.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -338,7 +338,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000008",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Welche Berufsgruppe halten Sie für besonders wichtig? Begründen Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -386,7 +386,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000009",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Welche Berufe haben ein besonders hohes, welche ein besonders niedriges Prestige in Ihrem Herkunftsland (oder einem anderen Land Ihrer Wahl)? Wie kommen solche Prestigeunterschiede Ihrer Meinung nach zustande?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -434,7 +434,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000a",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Wie sind Abfallentsorgung und Recycling in Ihrem Herkunftsland organisiert? Welche Unterschiede gibt es zu Deutschland? Berichten Sie.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -482,7 +482,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000b",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Welche Rolle spielt der Tierschutz in einem Land Ihrer Wahl? Erläutern Sie dies anhand von Beispielen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -530,7 +530,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000c",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Wie informieren die Medien in einem Land Ihrer Wahl über aktuelle Themen? Inwieweit vertrauen Sie der Berichterstattung? Erläutern Sie Ihre Haltung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -578,7 +578,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000d",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Ist Altersvorsorge allein Aufgabe des Staates oder sollte jeder auch selbst dafür sorgen, dass er im Alter seinen Lebensunterhalt bestreiten kann? Legen Sie Ihre Überlegungen zu dieser Frage dar.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -626,7 +626,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000e",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Für den Skisport werden Lebensräume der Tierwelt zerstört. Mountainbiker fahren durch die Wälder, Klettertouristen verschmutzen das Hochgebirge. Ist Sport in sensiblen Umgebungen zu verantworten? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -674,7 +674,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000000f",
-      "part": "präsentation-a",
+      "part": "praesentation-a",
       "prompt": "Manche Menschen behaupten, der medizinische Fortschritt sei mehr Fluch als Segen. Teilen Sie diese Ansicht? Begründen Sie Ihren Standpunkt anhand von Beispielen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -722,7 +722,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000010",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Sind Sie der Meinung, dass jede oder jeder Jugendliche sich sozial engagieren sollte? Erläutern Sie Ihre Meinung. Sie können auch von eigenen Erfahrungen berichten.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -770,7 +770,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000011",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Mitunter wird der Vorwurf erhoben, unsere Gesellschaft sei kinderfeindlich. Entspricht das Ihrem persönlichen Empfinden? Schildern Sie Erfahrungen und Beobachtungen. Sie können auch mit der Einstellung gegenüber Kindern in einem Land Ihrer Wahl vergleichen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -818,7 +818,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000012",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Viele Menschen vertrauen Heilpraktikern, während andere sie als Scharlatane abtun. Sind Sie der Ansicht, dass das Heilen allein Ärztinnen und Ärzten vorbehalten sein sollte? Erläutern Sie Ihre Haltung. Berichten Sie auch von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -866,7 +866,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000013",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Sind Sie der Meinung, dass Kinder auf dem Land eine schönere Kindheit haben als solche, die in einer Großstadt aufwachsen? Begründen Sie Ihre Ansicht und berichten Sie von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -914,7 +914,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000014",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Immer wieder gehen Menschen auf die Straße, um die Öffentlichkeit auf bestimmte Anliegen aufmerksam zu machen. Betrachten Sie Demonstrationen als wirksames Mittel zur Meinungsäußerung? Erläutern Sie Ihre Haltung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -962,7 +962,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000015",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Soll es ein generelles Handyverbot an den Schulen geben? Erläutern Sie Ihre Haltung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000016",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Was macht für Sie einen erfolgreichen Menschen aus? Schildern Sie Ihre Überlegungen zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1058,7 +1058,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000017",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Sind Sie der Meinung, dass der Staat die Kunst fördern sollte? Begründen Sie Ihre Haltung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1106,7 +1106,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000018",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Sind Sie der Ansicht, dass Kinder unter allen Umständen für die Pflege ihrer Eltern zuständig sind? Legen Sie Ihre Haltung zu dieser Frage dar. Spiel-Trends: Wandel mit der Zeit. Welchen Stellenwert sollte das Spiel im Leben eines Menschen haben?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1154,7 +1154,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000019",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Wenn Sie eine andere Person 24 Stunden lang sein würden: Was würden Sie tun? Warum? Stellen Sie sich vor.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1202,7 +1202,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001a",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Kunst ist jahrhundertelang von Mäzenen und nicht vom Staat gefördert worden. Sind Sie der Meinung, dass Kunstförderung eine private Angelegenheit ist? Begründen Sie Ihre Haltung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1250,7 +1250,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001b",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Fernsehserien und Serien zum Herunterladen liegen zurzeit sehr im Trend; manche Menschen schauen sie täglich. Wie erklären Sie sich die Faszination, die von Serien ausgeht? Berichten Sie von Ihren Erfahrungen und Beobachtungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1298,7 +1298,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001c",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Heutzutage scheint es schick zu sein, sich extrem beschäftigt oder gestresst zu zeigen. Selbst Entspannungszeiten sind häufig durchorganisiert, und Nichtstun ist verpönt. Welchen Stellenwert sollte Untätigkeit haben? Erläutern Sie Ihre Ansicht.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1346,7 +1346,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001d",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Manche Menschen möchten sich den Zwängen entziehen und suchen alternative Lebensformen in einer fremden Umgebung. Ist Aussteigen für Sie eine nachvollziehbare Haltung? Begründen Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1394,7 +1394,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001e",
-      "part": "präsentation-b",
+      "part": "praesentation-b",
       "prompt": "Der Zeitpunkt, zu dem Frauen in Deutschland ihr erstes Kind bekommen, verschiebt sich immer weiter nach hinten. Sehen Sie darin eine positive Entwicklung? Erläutern Sie Ihre Meinung zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1442,7 +1442,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000001f",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Für jüngere Menschen ist das Duzen ganz normal, während ältere Menschen eher beim Sie bleiben. Sind Sie der Meinung, dass das Siezen überholt ist? Schildern Sie Ihre Meinung. Vergleichen Sie mit einem Land Ihrer Wahl.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1490,7 +1490,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000020",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Tierversuche: Sollten Tierversuche verboten werden? Erläutern Sie Ihre Meinung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1538,7 +1538,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000021",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Welche positiven und negativen Funktionen hat Werbung? Erläutern Sie dies anhand von Beispielen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1586,7 +1586,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000022",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Beschreiben Sie ein Werk aus der Literatur. Wie schätzen Sie seine Bedeutung ein?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1634,7 +1634,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000023",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Welche Bedeutung hat die Musik in Ihrem Herkunftsland (oder einem Land Ihrer Wahl)? Warum ist Musik wichtig für den einzelnen Menschen und für die Gesellschaft?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1682,7 +1682,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000024",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Welche Rolle spielt der Naturschutz in Ihrem Herkunftsland (oder einem Land Ihrer Wahl)? Welche Maßnahmen werden ergriffen, um die Natur zu schützen, und wie effektiv sind sie?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1730,7 +1730,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000025",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Wir leben immer länger, und die Pflege im Alter wird zu einem wichtigen Thema. Sind Sie der Auffassung, dass der Staat für die Betreuung alter Menschen verantwortlich ist? Legen Sie Ihre Ansichten dar und stellen Sie Vergleiche mit einem Land Ihrer Wahl an.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1778,7 +1778,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000026",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "In vielen Industrieländern findet das Konzept des städtischen Gartenbaus immer mehr Anklang. Denken Sie, dass Selbstversorgung durch Anbau auf Dachgärten und an Fassaden sinnvoll ist? Schildern Sie Ihre Überlegungen zu diesem Thema.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1826,7 +1826,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000027",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Beschreiben Sie das Bildungssystem in einem Land Ihrer Wahl. Was funktioniert gut und wo sehen Sie Verbesserungsbedarf?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1874,7 +1874,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000028",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Welche Rollen haben Männer und Frauen in einem Land Ihrer Wahl in der Gesellschaft und in der Familie? Erläutern Sie Ihre Beobachtungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1922,7 +1922,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-000000000029",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Vertreten Sie die Auffassung, dass Sportvereine dem Allgemeinwohl dienen und von der öffentlichen Hand staatlich gefördert werden sollten? Schildern Sie Ihre Gedanken zu dieser Frage.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -1970,7 +1970,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000002a",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Für Konsumgüter gibt es heute fast überall bequeme Ratenzahlung. Ist Sparen für besondere Ankäufe wie zum Beispiel Möbel oder ein Auto noch zeitgemäß? Legen Sie Ihre Ansichten und Beobachtungen dar.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -2018,7 +2018,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000002b",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Sollten Jungen und Mädchen gleich erzogen werden? Legen Sie Ihre Meinung zu diesem Thema dar. Berichten Sie auch von eigenen Erfahrungen.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -2066,7 +2066,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000002c",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Oft hört man, dass die Mode dazu beitrage, die eigene Persönlichkeit zu betonen. Stimmen Sie der Aussage zu? Welchen Stellenwert hat Mode in Ihrem Leben?",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
@@ -2114,7 +2114,7 @@
     },
     {
       "id": "00000000-0000-4000-a000-00000000002d",
-      "part": "präsentation-c",
+      "part": "praesentation-c",
       "prompt": "Sollten Politikerinnen und Politiker auf teure Statussymbole wie Rolex, Schmuck oder teure Autos und Kleidung verzichten? Begründen Sie Ihre Haltung.",
       "stimulus": null,
       "instructions": "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss.",
