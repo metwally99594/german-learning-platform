@@ -92,9 +92,18 @@ export type GrammarLessonContent = {
   quiz: GrammarQuizContent;
 };
 
+export type GrammarExamFile = {
+  type: Exclude<GrammarQuizType, "LESSON" | "REVIEW">;
+  weekNumber: number | null;
+  passingScore: number;
+  questions: GrammarQuizQuestion[];
+};
+
 export type GrammarLevelFile = {
   level: string;
+  exportedAt?: string;
   lessons: GrammarLessonContent[];
+  exams?: GrammarExamFile[];
 };
 
 export type QuizAnswerValue = number | boolean | string;
