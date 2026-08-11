@@ -15,7 +15,7 @@ export default async function WeekExamPage({ params }: PageProps) {
   const { level, n } = await params;
   const weekNumber = Number(n);
 
-  if (!Number.isFinite(weekNumber)) {
+  if (!Number.isInteger(weekNumber) || weekNumber <= 0) {
     notFound();
   }
 

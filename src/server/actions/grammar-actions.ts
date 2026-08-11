@@ -149,15 +149,49 @@ export type GrammarExamForPlay =
   | { status: "locked" }
   | { status: "ready"; passingScore: number; questions: GrammarQuizQuestionPublic[] };
 
+// Existence check only (no `questions` selected) so a nonexistent exam can
+// be told apart from a locked one without paying the same RSC-payload-leak
+// cost that resolving the full quiz would.
+async function examQuizExists(
+  lookup: Extract<QuizLookup, { kind: "exam" } | { kind: "final" }>
+): Promise<boolean> {
+  try {
+    if (lookup.kind === "exam") {
+      const level = normalizeLevelCode(lookup.levelCode);
+      const count = await prisma.grammarQuiz.count({
+        where: {
+          type: lookup.type,
+          cefrLevel: { code: level },
+          ...(lookup.weekNumber !== undefined ? { weekNumber: lookup.weekNumber } : {}),
+        },
+      });
+      return count > 0;
+    }
+    const count = await prisma.grammarQuiz.count({ where: { type: "FINAL" } });
+    return count > 0;
+  } catch {
+    return false;
+  }
+}
+
 export async function getExamQuizForPlay(
   levelCode: string,
   type: "WEEKLY" | "LEVEL",
   weekNumber?: number
 ): Promise<GrammarExamForPlay> {
+  if (type === "WEEKLY" && (weekNumber === undefined || !Number.isInteger(weekNumber) || weekNumber <= 0)) {
+    return { status: "not-found" };
+  }
+
   const level = normalizeLevelCode(levelCode);
+
+  if (!(await examQuizExists({ kind: "exam", levelCode: level, type, weekNumber }))) {
+    return { status: "not-found" };
+  }
+
   const unlocked =
     type === "WEEKLY"
-      ? weekNumber !== undefined && (await isWeekFullyPassed(level, weekNumber))
+      ? await isWeekFullyPassed(level, weekNumber!)
       : await isLevelFullyPassed(level);
 
   if (!unlocked) return { status: "locked" };
@@ -172,6 +206,10 @@ export async function getExamQuizForPlay(
 }
 
 export async function getFinalExamForPlay(): Promise<GrammarExamForPlay> {
+  if (!(await examQuizExists({ kind: "final" }))) {
+    return { status: "not-found" };
+  }
+
   if (!(await isFinalExamUnlocked())) return { status: "locked" };
 
   const resolved = await resolveQuizContent({ kind: "final" });
@@ -254,11 +292,18 @@ export async function submitExamQuizAttempt(
   answers: Record<number, QuizAnswerValue>,
   weekNumber?: number
 ) {
+  if (type === "WEEKLY" && (weekNumber === undefined || !Number.isInteger(weekNumber) || weekNumber <= 0)) {
+    return { score: 0, passed: false, results: [], saved: false, error: "Quiz not found." };
+  }
+
   const level = normalizeLevelCode(levelCode);
+
+  if (!(await examQuizExists({ kind: "exam", levelCode: level, type, weekNumber }))) {
+    return { score: 0, passed: false, results: [], saved: false, error: "Quiz not found." };
+  }
+
   const unlocked =
-    type === "WEEKLY"
-      ? weekNumber !== undefined && (await isWeekFullyPassed(level, weekNumber))
-      : await isLevelFullyPassed(level);
+    type === "WEEKLY" ? await isWeekFullyPassed(level, weekNumber!) : await isLevelFullyPassed(level);
 
   if (!unlocked) {
     return { score: 0, passed: false, results: [], saved: false, error: "الامتحان ده لسه مقفول." };
@@ -269,6 +314,10 @@ export async function submitExamQuizAttempt(
 }
 
 export async function submitFinalExamAttempt(answers: Record<number, QuizAnswerValue>) {
+  if (!(await examQuizExists({ kind: "final" }))) {
+    return { score: 0, passed: false, results: [], saved: false, error: "Quiz not found." };
+  }
+
   if (!(await isFinalExamUnlocked())) {
     return { score: 0, passed: false, results: [], saved: false, error: "الامتحان ده لسه مقفول." };
   }
