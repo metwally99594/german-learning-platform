@@ -349,6 +349,13 @@ model GrammarLesson {
   @@map("grammar_lessons")
 }
 
+// Invariant (not enforced at the DB level -- Prisma has no conditional
+// CHECK constraint support here, so this must be respected by every write
+// path): type LESSON quizzes must set lessonId and leave cefrLevelId/
+// weekNumber null; type WEEKLY must set cefrLevelId+weekNumber and leave
+// lessonId null; type LEVEL/FINAL must set cefrLevelId (LEVEL) or neither
+// (FINAL) and always leave lessonId null. See resolveQuizContent in
+// src/server/actions/grammar-actions.ts for the read side of this.
 model GrammarQuiz {
   id           String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   lessonId     String?         @db.Uuid

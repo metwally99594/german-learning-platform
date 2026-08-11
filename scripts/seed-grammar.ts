@@ -74,6 +74,19 @@ async function main() {
         },
       });
 
+      // A lesson's embedded quiz is always the LESSON-type quiz for that
+      // lesson by definition -- WEEKLY/LEVEL/FINAL quizzes are separate,
+      // level-scoped content, never embedded under a lesson. If content
+      // ever set this to something else, the findFirst below (which only
+      // looks for an existing LESSON quiz) would silently create a
+      // duplicate row every time this script re-runs instead of updating
+      // the original, so fail loudly instead.
+      if (lesson.quiz.type !== "LESSON") {
+        throw new Error(
+          `Lesson "${lesson.slug}" has quiz.type "${lesson.quiz.type}", expected "LESSON".`
+        );
+      }
+
       const existingQuiz = await prisma.grammarQuiz.findFirst({
         where: { lessonId: grammarLesson.id, type: "LESSON" },
       });

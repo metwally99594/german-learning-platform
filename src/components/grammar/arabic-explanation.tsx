@@ -7,12 +7,18 @@ export type ArabicExplanationProps = {
 };
 
 // Content mixes Arabic prose with inline German terms marked as **bold** or
-// `code` -- but bold is also used for plain Arabic emphasis, so detect German
-// terms by script rather than by markup: a run is treated as German if it
-// contains no Arabic characters.
-function isLatinOnly(text: string): boolean {
+// `code` -- but bold is also used for plain Arabic emphasis and backtick
+// spans aren't guaranteed to always be German either, so detect German
+// terms by script rather than by markup alone: a run counts as German only
+// if it contains at least one Latin letter AND no Arabic letters. Requiring
+// a Latin letter (not just "no Arabic") avoids miscoloring bare numbers,
+// punctuation, or other non-Arabic scripts as German.
+function isGermanTerm(text: string): boolean {
   const trimmed = text.trim();
-  return trimmed.length > 0 && !/[؀-ۿ]/.test(trimmed);
+  if (trimmed.length === 0) return false;
+  const hasArabic = /[؀-ۿ]/.test(trimmed);
+  const hasLatinLetter = /[A-Za-zÄÖÜäöüß]/.test(trimmed);
+  return hasLatinLetter && !hasArabic;
 }
 
 function textContent(children: React.ReactNode): string {
@@ -33,7 +39,7 @@ export function ArabicExplanation({ text }: ArabicExplanationProps) {
           p: ({ children }) => <p className="leading-relaxed">{children}</p>,
           strong: ({ children }) => {
             const content = textContent(children);
-            if (isLatinOnly(content)) {
+            if (isGermanTerm(content)) {
               return (
                 <strong
                   dir="ltr"
@@ -45,14 +51,24 @@ export function ArabicExplanation({ text }: ArabicExplanationProps) {
             }
             return <strong className="font-bold text-blue-900 dark:text-blue-100">{children}</strong>;
           },
-          code: ({ children }) => (
-            <code
-              dir="ltr"
-              className="mx-1 inline-block rounded bg-red-100 px-1.5 py-0.5 font-bold text-red-700 dark:bg-red-950/50 dark:text-red-400"
-            >
-              {children}
-            </code>
-          ),
+          code: ({ children }) => {
+            const content = textContent(children);
+            if (isGermanTerm(content)) {
+              return (
+                <code
+                  dir="ltr"
+                  className="mx-1 inline-block rounded bg-red-100 px-1.5 py-0.5 font-bold text-red-700 dark:bg-red-950/50 dark:text-red-400"
+                >
+                  {children}
+                </code>
+              );
+            }
+            return (
+              <code className="mx-1 inline-block rounded bg-muted px-1.5 py-0.5 text-sm">
+                {children}
+              </code>
+            );
+          },
           del: ({ children }) => <del className="opacity-70">{children}</del>,
           blockquote: ({ children }) => (
             <blockquote className="rounded-md border-r-4 border-blue-400 bg-blue-100/50 p-3 dark:border-blue-700 dark:bg-blue-950/30">

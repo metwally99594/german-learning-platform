@@ -135,20 +135,52 @@ export async function getLessonQuizForPlay(levelCode: string, slug: string): Pro
   return { passingScore: resolved.passingScore, questions: resolved.questions.map(toPublicQuestion) };
 }
 
+// Exam access is gated on curriculum progress (see isWeekFullyPassed /
+// isLevelFullyPassed / isFinalExamUnlocked below). Distinct from "not
+// found" so pages can render a lock message vs. a 404. The lock check
+// happens BEFORE resolving quiz content -- an early return, not just
+// hiding a <QuizEngine> prop -- because an unrendered child element's
+// props still end up in the RSC payload sent to the client (constructing
+// <QuizEngine questions={...} /> serializes `questions` regardless of
+// whether the parent ends up rendering it), so questions must never be
+// fetched at all while locked.
+export type GrammarExamForPlay =
+  | { status: "not-found" }
+  | { status: "locked" }
+  | { status: "ready"; passingScore: number; questions: GrammarQuizQuestionPublic[] };
+
 export async function getExamQuizForPlay(
   levelCode: string,
   type: "WEEKLY" | "LEVEL",
   weekNumber?: number
-): Promise<GrammarQuizForPlay> {
+): Promise<GrammarExamForPlay> {
+  const level = normalizeLevelCode(levelCode);
+  const unlocked =
+    type === "WEEKLY"
+      ? weekNumber !== undefined && (await isWeekFullyPassed(level, weekNumber))
+      : await isLevelFullyPassed(level);
+
+  if (!unlocked) return { status: "locked" };
+
   const resolved = await resolveQuizContent({ kind: "exam", levelCode, type, weekNumber });
-  if (!resolved) return null;
-  return { passingScore: resolved.passingScore, questions: resolved.questions.map(toPublicQuestion) };
+  if (!resolved) return { status: "not-found" };
+  return {
+    status: "ready",
+    passingScore: resolved.passingScore,
+    questions: resolved.questions.map(toPublicQuestion),
+  };
 }
 
-export async function getFinalExamForPlay(): Promise<GrammarQuizForPlay> {
+export async function getFinalExamForPlay(): Promise<GrammarExamForPlay> {
+  if (!(await isFinalExamUnlocked())) return { status: "locked" };
+
   const resolved = await resolveQuizContent({ kind: "final" });
-  if (!resolved) return null;
-  return { passingScore: resolved.passingScore, questions: resolved.questions.map(toPublicQuestion) };
+  if (!resolved) return { status: "not-found" };
+  return {
+    status: "ready",
+    passingScore: resolved.passingScore,
+    questions: resolved.questions.map(toPublicQuestion),
+  };
 }
 
 async function finalizeAttempt(
@@ -170,6 +202,12 @@ async function finalizeAttempt(
   }
 
   if (!userId || !resolved.dbId) {
+    // Known limitation, not a bug: without a real DB row (JSON-fallback
+    // content, which is all that exists in this environment right now)
+    // there is nothing to persist a QuizAttempt against, so a passed
+    // fallback quiz can never satisfy getPassedLessonSlugs() and unlock
+    // the next lesson. "saved: false" surfaces this to the caller instead
+    // of silently discarding the result.
     return { ...grade, saved: false };
   }
 
@@ -216,11 +254,25 @@ export async function submitExamQuizAttempt(
   answers: Record<number, QuizAnswerValue>,
   weekNumber?: number
 ) {
+  const level = normalizeLevelCode(levelCode);
+  const unlocked =
+    type === "WEEKLY"
+      ? weekNumber !== undefined && (await isWeekFullyPassed(level, weekNumber))
+      : await isLevelFullyPassed(level);
+
+  if (!unlocked) {
+    return { score: 0, passed: false, results: [], saved: false, error: "الامتحان ده لسه مقفول." };
+  }
+
   const resolved = await resolveQuizContent({ kind: "exam", levelCode, type, weekNumber });
   return finalizeAttempt(resolved, answers, `/grammar/${levelCode.toLowerCase()}`);
 }
 
 export async function submitFinalExamAttempt(answers: Record<number, QuizAnswerValue>) {
+  if (!(await isFinalExamUnlocked())) {
+    return { score: 0, passed: false, results: [], saved: false, error: "الامتحان ده لسه مقفول." };
+  }
+
   const resolved = await resolveQuizContent({ kind: "final" });
   return finalizeAttempt(resolved, answers, "/roadmap");
 }
@@ -252,6 +304,27 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
   } catch {
     return new Set();
   }
+}
+
+async function isLevelFullyPassed(level: string): Promise<boolean> {
+  const lessons = await getLevelLessonContents(level);
+  if (lessons.length === 0) return false;
+  const passed = await getPassedLessonSlugs(lessons.map((l) => l.slug));
+  return passed.size === lessons.length;
+}
+
+async function isWeekFullyPassed(level: string, weekNumber: number): Promise<boolean> {
+  const lessons = (await getLevelLessonContents(level)).filter((l) => l.weekNumber === weekNumber);
+  if (lessons.length === 0) return false;
+  const passed = await getPassedLessonSlugs(lessons.map((l) => l.slug));
+  return passed.size === lessons.length;
+}
+
+async function isFinalExamUnlocked(): Promise<boolean> {
+  for (const code of CEFR_LEVEL_CODES) {
+    if (!(await isLevelFullyPassed(code))) return false;
+  }
+  return true;
 }
 
 export type GrammarLessonSummary = {
