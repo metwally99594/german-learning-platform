@@ -356,24 +356,22 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
 }
 
 async function isLevelFullyPassed(level: string): Promise<boolean> {
-  const lessons = await getLevelLessonContents(level);
-  if (lessons.length === 0) return false;
-  const passed = await getPassedLessonSlugs(lessons.map((l) => l.slug));
-  return passed.size === lessons.length;
+  const summaries = await getLevelLessonSummaries(level);
+  if (summaries.length === 0) return false;
+  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  return passed.size === summaries.length;
 }
 
 async function isWeekFullyPassed(level: string, weekNumber: number): Promise<boolean> {
-  const lessons = (await getLevelLessonContents(level)).filter((l) => l.weekNumber === weekNumber);
-  if (lessons.length === 0) return false;
-  const passed = await getPassedLessonSlugs(lessons.map((l) => l.slug));
-  return passed.size === lessons.length;
+  const summaries = (await getLevelLessonSummaries(level)).filter((l) => l.weekNumber === weekNumber);
+  if (summaries.length === 0) return false;
+  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  return passed.size === summaries.length;
 }
 
 async function isFinalExamUnlocked(): Promise<boolean> {
-  for (const code of CEFR_LEVEL_CODES) {
-    if (!(await isLevelFullyPassed(code))) return false;
-  }
-  return true;
+  const results = await Promise.all(CEFR_LEVEL_CODES.map((code) => isLevelFullyPassed(code)));
+  return results.every(Boolean);
 }
 
 export type GrammarLessonSummary = {
@@ -386,45 +384,56 @@ export type GrammarLessonSummary = {
   locked: boolean;
 };
 
-async function getLevelLessonContents(level: string): Promise<GrammarLessonContent[]> {
+type LessonSummaryRow = {
+  slug: string;
+  titleAr: string;
+  titleDe: string;
+  weekNumber: number;
+  orderInLevel: number;
+  prerequisite: string | null;
+};
+
+// Lightweight, `select`-only fetch for list/lock-check purposes -- no
+// ruleDe/explanationAr/examples/story/quiz.questions. getGrammarLesson
+// below fetches full content, but only for a single lesson via a direct
+// findFirst, never for a whole level's worth of lessons at once.
+async function getLevelLessonSummaries(level: string): Promise<LessonSummaryRow[]> {
   try {
     const dbLessons = await prisma.grammarLesson.findMany({
       where: { cefrLevel: { code: level } },
-      include: { quizzes: { where: { type: "LESSON" }, take: 1 } },
+      select: {
+        slug: true,
+        titleAr: true,
+        titleDe: true,
+        weekNumber: true,
+        orderInLevel: true,
+        prerequisite: true,
+      },
       orderBy: { orderInLevel: "asc" },
     });
-    if (dbLessons.length > 0) {
-      return dbLessons.map((lesson) => ({
-        slug: lesson.slug,
-        weekNumber: lesson.weekNumber,
-        orderInLevel: lesson.orderInLevel,
-        titleDe: lesson.titleDe,
-        titleAr: lesson.titleAr,
-        prerequisite: lesson.prerequisite,
-        ruleDe: lesson.ruleDe,
-        explanationAr: lesson.explanationAr,
-        examples: lesson.examples as unknown as GrammarExample[],
-        story: lesson.story as unknown as GrammarStory,
-        quiz: lesson.quizzes[0]
-          ? {
-              type: lesson.quizzes[0].type,
-              passingScore: lesson.quizzes[0].passingScore,
-              questions: lesson.quizzes[0].questions as unknown as GrammarQuizQuestion[],
-            }
-          : { type: "LESSON", passingScore: 70, questions: [] },
-      }));
-    }
+    if (dbLessons.length > 0) return dbLessons;
   } catch {
     // fall through to JSON
   }
 
   const fallback = LEVEL_FALLBACKS[level];
-  return fallback ? [...fallback.lessons].sort((a, b) => a.orderInLevel - b.orderInLevel) : [];
+  return fallback
+    ? [...fallback.lessons]
+        .sort((a, b) => a.orderInLevel - b.orderInLevel)
+        .map((l) => ({
+          slug: l.slug,
+          titleAr: l.titleAr,
+          titleDe: l.titleDe,
+          weekNumber: l.weekNumber,
+          orderInLevel: l.orderInLevel,
+          prerequisite: l.prerequisite,
+        }))
+    : [];
 }
 
 export async function getGrammarLessonsByLevel(levelCode: string): Promise<GrammarLessonSummary[]> {
   const level = normalizeLevelCode(levelCode);
-  const lessons = await getLevelLessonContents(level);
+  const lessons = await getLevelLessonSummaries(level);
   const passedSlugs = await getPassedLessonSlugs(lessons.map((l) => l.slug));
 
   return lessons.map((lesson) => ({
@@ -442,8 +451,42 @@ export type GrammarLessonView = GrammarLessonContent & { locked: boolean };
 
 export async function getGrammarLesson(levelCode: string, slug: string): Promise<GrammarLessonView | null> {
   const level = normalizeLevelCode(levelCode);
-  const lessons = await getLevelLessonContents(level);
-  const content = lessons.find((l) => l.slug === slug);
+  let content: GrammarLessonContent | null = null;
+
+  try {
+    const dbLesson = await prisma.grammarLesson.findFirst({
+      where: { slug, cefrLevel: { code: level } },
+      include: { quizzes: { where: { type: "LESSON" }, take: 1 } },
+    });
+    if (dbLesson) {
+      content = {
+        slug: dbLesson.slug,
+        weekNumber: dbLesson.weekNumber,
+        orderInLevel: dbLesson.orderInLevel,
+        titleDe: dbLesson.titleDe,
+        titleAr: dbLesson.titleAr,
+        prerequisite: dbLesson.prerequisite,
+        ruleDe: dbLesson.ruleDe,
+        explanationAr: dbLesson.explanationAr,
+        examples: dbLesson.examples as unknown as GrammarExample[],
+        story: dbLesson.story as unknown as GrammarStory,
+        quiz: dbLesson.quizzes[0]
+          ? {
+              type: dbLesson.quizzes[0].type,
+              passingScore: dbLesson.quizzes[0].passingScore,
+              questions: dbLesson.quizzes[0].questions as unknown as GrammarQuizQuestion[],
+            }
+          : { type: "LESSON", passingScore: 70, questions: [] },
+      };
+    }
+  } catch {
+    // fall through to JSON
+  }
+
+  if (!content) {
+    content = await findFallbackLesson(level, slug);
+  }
+
   if (!content) return null;
 
   const locked = content.prerequisite
@@ -462,14 +505,59 @@ export type RoadmapLevelView = {
 };
 
 export async function getRoadmap(): Promise<RoadmapLevelView[]> {
+  // Batched instead of a per-level loop: one query for lesson counts
+  // (groupBy), one for the user's distinct passed lessons, both grouped by
+  // level in memory afterward -- a constant few queries regardless of how
+  // many CEFR levels exist, instead of up to 2 full-content queries per
+  // level (10 total, each dragging ruleDe/explanationAr/examples/story/
+  // quiz.questions for every lesson along for no reason).
+  const totalsByCode = new Map<string, number>();
+  const passedByCode = new Map<string, number>();
+
+  try {
+    const levelRows = await prisma.cEFRLevel.findMany({ select: { id: true, code: true } });
+    const idToCode = new Map(levelRows.map((l) => [l.id, l.code]));
+
+    const totals = await prisma.grammarLesson.groupBy({
+      by: ["cefrLevelId"],
+      _count: { _all: true },
+    });
+    for (const row of totals) {
+      const code = idToCode.get(row.cefrLevelId);
+      if (code) totalsByCode.set(code, row._count._all);
+    }
+
+    let userId: string | null = null;
+    try {
+      userId = await requireUserId();
+    } catch {
+      // Not authenticated -- passedByCode stays empty (0 everywhere).
+    }
+
+    if (userId) {
+      const passedLessons = await prisma.quizAttempt.findMany({
+        where: { userId, passed: true, quiz: { type: "LESSON", lessonId: { not: null } } },
+        distinct: ["quizId"], // a lesson can be attempted more than once; count it once
+        select: { quiz: { select: { lesson: { select: { cefrLevelId: true } } } } },
+      });
+      for (const attempt of passedLessons) {
+        const levelId = attempt.quiz.lesson?.cefrLevelId;
+        const code = levelId ? idToCode.get(levelId) : undefined;
+        if (code) passedByCode.set(code, (passedByCode.get(code) ?? 0) + 1);
+      }
+    }
+  } catch {
+    // DB unreachable -- every level falls through to the JSON-fallback
+    // count below (only A1 has fallback content, matching
+    // getLevelLessonSummaries's own fallback).
+  }
+
   const levels: RoadmapLevelView[] = [];
   let previousCompleted = true; // A1 is always reachable
 
   for (const code of CEFR_LEVEL_CODES) {
-    const lessons = await getLevelLessonContents(code);
-    const total = lessons.length;
-    const passed = await getPassedLessonSlugs(lessons.map((l) => l.slug));
-    const completedCount = passed.size;
+    const total = totalsByCode.get(code) ?? LEVEL_FALLBACKS[code]?.lessons.length ?? 0;
+    const completedCount = totalsByCode.has(code) ? passedByCode.get(code) ?? 0 : 0;
     const completed = total > 0 && completedCount === total;
 
     levels.push({
