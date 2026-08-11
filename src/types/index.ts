@@ -27,10 +27,22 @@ export type RubricItem = {
   maxPoints: number;
 };
 
+export type ChartPoint = {
+  label: string;
+  value: number;
+};
+
+export type ChartData = {
+  type: "line" | "bar";
+  unit?: string;
+  points: ChartPoint[];
+};
+
 export type SpeakingExerciseContent = {
   part: SpeakingPart;
   prompt: string;
   stimulus?: string;
+  chart?: ChartData;
   instructions: string;
   prepTimeSeconds: number;
   responseTimeSeconds: number;

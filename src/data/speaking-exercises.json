@@ -7630,7 +7630,333 @@
           "maxPoints": 2
         }
       ],
-      "order": 1
+      "order": 1,
+      "chart": {
+        "type": "line",
+        "unit": "%",
+        "points": [
+          {
+            "label": "2010",
+            "value": 17
+          },
+          {
+            "label": "2013",
+            "value": 24
+          },
+          {
+            "label": "2016",
+            "value": 32
+          },
+          {
+            "label": "2019",
+            "value": 42
+          },
+          {
+            "label": "2022",
+            "value": 49
+          },
+          {
+            "label": "2025",
+            "value": 52
+          }
+        ]
+      }
+    },
+    {
+      "id": "00000000-0000-4000-a000-0000000000a0",
+      "part": "bildbeschreibung",
+      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Nutzung von Homeoffice in Deutschland 2015–2024\".",
+      "stimulus": "Grafik: Anteil der Beschäftigten, die regelmäßig im Homeoffice arbeiten, 2015 bis 2024.",
+      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Die Grafik veranschaulicht…",
+        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
+        "Dies lässt sich vermutlich damit erklären, dass…",
+        "Meiner Einschätzung nach…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Beschreibung",
+          "description": "Sachliche, chronologische Beschreibung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Interpretation",
+          "description": "Vermutungen und Ursachen nennen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "Fachbegriffe, Prozentangaben, Steigerungen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Struktur",
+          "description": "Überleitungen zwischen Beschreibung und Deutung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Flüssige, selbstständige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 2,
+      "chart": {
+        "type": "line",
+        "unit": "%",
+        "points": [
+          {
+            "label": "2015",
+            "value": 5
+          },
+          {
+            "label": "2017",
+            "value": 8
+          },
+          {
+            "label": "2019",
+            "value": 12
+          },
+          {
+            "label": "2020",
+            "value": 25
+          },
+          {
+            "label": "2022",
+            "value": 22
+          },
+          {
+            "label": "2024",
+            "value": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "00000000-0000-4000-a000-0000000000a1",
+      "part": "bildbeschreibung",
+      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Durchschnittliche wöchentliche Arbeitszeit im internationalen Vergleich\".",
+      "stimulus": "Grafik: Durchschnittliche wöchentliche Arbeitszeit in Stunden, ausgewählte Länder.",
+      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Die Grafik veranschaulicht…",
+        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
+        "Dies lässt sich vermutlich damit erklären, dass…",
+        "Meiner Einschätzung nach…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Beschreibung",
+          "description": "Sachliche, chronologische Beschreibung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Interpretation",
+          "description": "Vermutungen und Ursachen nennen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "Fachbegriffe, Prozentangaben, Steigerungen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Struktur",
+          "description": "Überleitungen zwischen Beschreibung und Deutung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Flüssige, selbstständige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 3,
+      "chart": {
+        "type": "bar",
+        "unit": "h",
+        "points": [
+          {
+            "label": "Schweden",
+            "value": 33
+          },
+          {
+            "label": "Deutschland",
+            "value": 35
+          },
+          {
+            "label": "Japan",
+            "value": 37
+          },
+          {
+            "label": "Frankreich",
+            "value": 36
+          },
+          {
+            "label": "USA",
+            "value": 39
+          }
+        ]
+      }
+    },
+    {
+      "id": "00000000-0000-4000-a000-0000000000a2",
+      "part": "bildbeschreibung",
+      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil der Studierenden nach Fachrichtung an deutschen Hochschulen\".",
+      "stimulus": "Grafik: Verteilung der Studierenden nach Fachrichtung in Deutschland.",
+      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Die Grafik veranschaulicht…",
+        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
+        "Dies lässt sich vermutlich damit erklären, dass…",
+        "Meiner Einschätzung nach…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Beschreibung",
+          "description": "Sachliche, chronologische Beschreibung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Interpretation",
+          "description": "Vermutungen und Ursachen nennen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "Fachbegriffe, Prozentangaben, Steigerungen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Struktur",
+          "description": "Überleitungen zwischen Beschreibung und Deutung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Flüssige, selbstständige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 4,
+      "chart": {
+        "type": "bar",
+        "unit": "%",
+        "points": [
+          {
+            "label": "Ingenieurwiss.",
+            "value": 24
+          },
+          {
+            "label": "Recht/Wirtsch.",
+            "value": 22
+          },
+          {
+            "label": "Naturwiss.",
+            "value": 19
+          },
+          {
+            "label": "Sprach-/Kulturwiss.",
+            "value": 18
+          },
+          {
+            "label": "Sonstige",
+            "value": 17
+          }
+        ]
+      }
+    },
+    {
+      "id": "00000000-0000-4000-a000-0000000000a3",
+      "part": "bildbeschreibung",
+      "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Internetnutzung nach Altersgruppe in Deutschland\".",
+      "stimulus": "Grafik: Anteil der Internetnutzer nach Altersgruppe in Deutschland.",
+      "instructions": "Beschreiben Sie die Grafik sachlich, interpretieren Sie sie und geben Sie eine kurze persönliche Einschätzung ab.",
+      "prepTimeSeconds": 60,
+      "responseTimeSeconds": 120,
+      "modelAnswer": "[Musterantwort folgt in einer späteren Version. Sprechen Sie frei und strukturiert über das Thema.]",
+      "usefulPhrases": [
+        "Die Grafik veranschaulicht…",
+        "Zu erkennen ist ein deutlicher Anstieg/Rückgang…",
+        "Dies lässt sich vermutlich damit erklären, dass…",
+        "Meiner Einschätzung nach…"
+      ],
+      "hints": [
+        "Begründen Sie Ihre Position mit Beispielen.",
+        "Gehen Sie auf Gegenargumente ein."
+      ],
+      "rubric": [
+        {
+          "criterion": "Beschreibung",
+          "description": "Sachliche, chronologische Beschreibung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Interpretation",
+          "description": "Vermutungen und Ursachen nennen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Wortschatz",
+          "description": "Fachbegriffe, Prozentangaben, Steigerungen",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Struktur",
+          "description": "Überleitungen zwischen Beschreibung und Deutung",
+          "maxPoints": 2
+        },
+        {
+          "criterion": "Flüssigkeit",
+          "description": "Flüssige, selbstständige Rede",
+          "maxPoints": 2
+        }
+      ],
+      "order": 5,
+      "chart": {
+        "type": "bar",
+        "unit": "%",
+        "points": [
+          {
+            "label": "14–29",
+            "value": 98
+          },
+          {
+            "label": "30–49",
+            "value": 95
+          },
+          {
+            "label": "50–64",
+            "value": 88
+          },
+          {
+            "label": "65+",
+            "value": 62
+          }
+        ]
+      }
     }
   ]
 }

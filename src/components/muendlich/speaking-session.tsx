@@ -57,6 +57,7 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
       <PromptCard
         title={partTitles[content.part]}
         stimulus={content.stimulus}
+        chart={content.chart}
         prompt={content.prompt}
         instructions={exercise.instructions}
       />
