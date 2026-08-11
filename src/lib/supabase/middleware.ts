@@ -11,6 +11,8 @@ const PROTECTED_PATH_PREFIXES = [
   "/achievements",
   "/ai-chat",
   "/settings",
+  "/grammar",
+  "/roadmap",
 ];
 
 function isProtectedPath(pathname: string) {
