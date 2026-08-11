@@ -20,7 +20,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
@@ -57,7 +56,7 @@ export function LoginForm() {
   return (
     <Card className="w-full max-w-md border border-border/50 bg-card/80 backdrop-blur-md shadow-xl">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
+        <h1 className="text-2xl font-bold">Welcome back</h1>
         <CardDescription>Sign in to continue your German learning journey.</CardDescription>
       </CardHeader>
       <CardContent>
