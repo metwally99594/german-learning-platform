@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
+  BookText,
   Brain,
   ClipboardList,
   LayoutDashboard,
+  Map,
   MessageSquare,
   Mic,
   Settings,
@@ -19,6 +21,8 @@ import { GraduationCap } from "lucide-react";
 const navItems = [
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { title: "Lessons", href: "/lessons", icon: BookOpen },
+  { title: "Grammar", href: "/grammar/a1", icon: BookText },
+  { title: "Roadmap", href: "/roadmap", icon: Map },
   { title: "Flashcards", href: "/flashcards", icon: Brain },
   { title: "Quizzes", href: "/quizzes", icon: ClipboardList },
   { title: "C1 Mündlich", href: "/muendlich", icon: Mic },

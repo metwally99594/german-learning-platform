@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SpeakingSession } from "@/components/muendlich/speaking-session";
 import { getSpeakingExerciseById } from "@/server/actions/speaking-actions";
+import { getExerciseTitle } from "@/lib/muendlich/format";
 
 type PageProps = {
   params: Promise<{ id: string }>;
@@ -9,8 +10,9 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
+  const exercise = await getSpeakingExerciseById(id);
   return {
-    title: `Bildbeschreibung ${id}`,
+    title: exercise ? getExerciseTitle(exercise) : "Übung nicht gefunden",
   };
 }
 

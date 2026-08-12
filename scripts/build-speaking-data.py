@@ -174,10 +174,85 @@ opinions = [
     "Brauchen Kinder Märchen? Glauben Sie, dass Kinder fantasievolle Geschichten brauchen? Erzählen Sie von Ihrer Erfahrung.",
 ]
 
+# NOTE: unlike the other sections (sourced from PDF exam material), these five
+# bildbeschreibung prompts and their chart data are authored for this build as
+# a placeholder data set -- not taken from an official exam source.
 bildbeschreibungen = [
     {
         "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil erneuerbarer Energien in Deutschland 2010–2025\".",
         "stimulus": "Grafik: Anteil erneuerbarer Energien in Deutschland von 2010 bis 2025.",
+        "chart": {
+            "type": "line",
+            "unit": "%",
+            "points": [
+                {"label": "2010", "value": 17},
+                {"label": "2013", "value": 24},
+                {"label": "2016", "value": 32},
+                {"label": "2019", "value": 42},
+                {"label": "2022", "value": 49},
+                {"label": "2025", "value": 52},
+            ],
+        },
+    },
+    {
+        "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Nutzung von Homeoffice in Deutschland 2015–2024\".",
+        "stimulus": "Grafik: Anteil der Beschäftigten, die regelmäßig im Homeoffice arbeiten, 2015 bis 2024.",
+        "chart": {
+            "type": "line",
+            "unit": "%",
+            "points": [
+                {"label": "2015", "value": 5},
+                {"label": "2017", "value": 8},
+                {"label": "2019", "value": 12},
+                {"label": "2020", "value": 25},
+                {"label": "2022", "value": 22},
+                {"label": "2024", "value": 20},
+            ],
+        },
+    },
+    {
+        "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Durchschnittliche wöchentliche Arbeitszeit im internationalen Vergleich\".",
+        "stimulus": "Grafik: Durchschnittliche wöchentliche Arbeitszeit in Stunden, ausgewählte Länder.",
+        "chart": {
+            "type": "bar",
+            "unit": "h",
+            "points": [
+                {"label": "Schweden", "value": 33},
+                {"label": "Deutschland", "value": 35},
+                {"label": "Japan", "value": 37},
+                {"label": "Frankreich", "value": 36},
+                {"label": "USA", "value": 39},
+            ],
+        },
+    },
+    {
+        "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Anteil der Studierenden nach Fachrichtung an deutschen Hochschulen\".",
+        "stimulus": "Grafik: Verteilung der Studierenden nach Fachrichtung in Deutschland.",
+        "chart": {
+            "type": "bar",
+            "unit": "%",
+            "points": [
+                {"label": "Ingenieurwiss.", "value": 24},
+                {"label": "Recht/Wirtsch.", "value": 22},
+                {"label": "Naturwiss.", "value": 19},
+                {"label": "Sprach-/Kulturwiss.", "value": 18},
+                {"label": "Sonstige", "value": 17},
+            ],
+        },
+    },
+    {
+        "prompt": "Beschreiben und interpretieren Sie die Grafik zum Thema \"Internetnutzung nach Altersgruppe in Deutschland\".",
+        "stimulus": "Grafik: Anteil der Internetnutzer nach Altersgruppe in Deutschland.",
+        "chart": {
+            "type": "bar",
+            "unit": "%",
+            "points": [
+                {"label": "14–29", "value": 98},
+                {"label": "30–49", "value": 95},
+                {"label": "50–64", "value": 88},
+                {"label": "65+", "value": 62},
+            ],
+        },
     },
 ]
 
@@ -217,10 +292,10 @@ bildbeschreibung_rubric = [
     {"criterion": "Flüssigkeit", "description": "Flüssige, selbstständige Rede", "maxPoints": 2},
 ]
 
-def make_exercise(index, part, prompt, stimulus, order):
+def make_exercise(index, part, prompt, stimulus, order, chart=None):
     rubric = discussion_rubric if part == "diskussion" else opinion_rubric if part == "meinung" else bildbeschreibung_rubric if part == "bildbeschreibung" else base_rubric
     
-    if part in ("präsentation-a", "präsentation-b", "präsentation-c"):
+    if part in ("praesentation-a", "praesentation-b", "praesentation-c"):
         instructions = "Sie haben 3 Minuten Zeit. Strukturieren Sie Ihren Vortrag in Einleitung, Hauptteil und Schluss."
         prep = 180
         response = 180
@@ -243,7 +318,7 @@ def make_exercise(index, part, prompt, stimulus, order):
         "bildbeschreibung": ["Die Grafik veranschaulicht…", "Zu erkennen ist ein deutlicher Anstieg/Rückgang…", "Dies lässt sich vermutlich damit erklären, dass…", "Meiner Einschätzung nach…"],
     }.get(part, ["Im Folgenden möchte ich darlegen, dass…", "Ein zentrales Argument ist…", "Andererseits muss man bedenken, dass…", "Zusammenfassend lässt sich sagen, dass…"])
     
-    return {
+    result = {
         "id": uuid(index),
         "part": part,
         "prompt": prompt,
@@ -257,20 +332,23 @@ def make_exercise(index, part, prompt, stimulus, order):
         "rubric": rubric,
         "order": order,
     }
+    if chart is not None:
+        result["chart"] = chart
+    return result
 
 index = 1
 exercises = []
 
 for i, prompt in enumerate(presentationsA):
-    exercises.append(make_exercise(index, "präsentation-a", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-a", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(presentationsB):
-    exercises.append(make_exercise(index, "präsentation-b", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-b", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(presentationsC):
-    exercises.append(make_exercise(index, "präsentation-c", prompt, None, i + 1))
+    exercises.append(make_exercise(index, "praesentation-c", prompt, None, i + 1))
     index += 1
 
 for i, prompt in enumerate(discussions):
@@ -282,7 +360,9 @@ for i, prompt in enumerate(opinions):
     index += 1
 
 for i, item in enumerate(bildbeschreibungen):
-    exercises.append(make_exercise(index, "bildbeschreibung", item["prompt"], item["stimulus"], i + 1))
+    exercises.append(
+        make_exercise(index, "bildbeschreibung", item["prompt"], item["stimulus"], i + 1, item.get("chart"))
+    )
     index += 1
 
 with open("src/data/speaking-exercises.json", "w", encoding="utf-8") as f:

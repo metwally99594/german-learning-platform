@@ -36,6 +36,14 @@ enum BookmarkType {
   VOCABULARY
 }
 
+enum GrammarQuizType {
+  LESSON
+  REVIEW
+  WEEKLY
+  LEVEL
+  FINAL
+}
+
 // User.id MUST equal the Supabase auth.users.id for the corresponding account.
 // There is no DB trigger enforcing this — the app is responsible for syncing
 // it (see src/lib/auth/session.ts requireUserId, which upserts this row using
@@ -56,6 +64,7 @@ model User {
   aiChats           AIChat[]
   notes             Note[]
   bookmarks         Bookmark[]
+  quizAttempts      QuizAttempt[]
 
   @@map("users")
 }
@@ -67,8 +76,10 @@ model CEFRLevel {
   description String?
   order       Int    @default(0)
 
-  lessons Lesson[]
-  exams   Exam[]
+  lessons        Lesson[]
+  exams          Exam[]
+  grammarLessons GrammarLesson[]
+  grammarQuizzes GrammarQuiz[]
 
   @@map("cefr_levels")
 }
@@ -307,4 +318,75 @@ model Bookmark {
   @@index([userId])
   @@index([type])
   @@map("bookmarks")
+}
+
+// Route/slug values for grammar content MUST be ASCII-only (no ü/ä/ö/ß) --
+// non-ASCII route segments have broken this app's live routing on Vercel's
+// Edge Network twice already (see the mündlich->muendlich and
+// präsentation->praesentation renames). This applies to GrammarLesson.slug.
+model GrammarLesson {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  cefrLevelId   String   @db.Uuid
+  weekNumber    Int
+  orderInLevel  Int
+  slug          String   @unique @db.VarChar(255)
+  titleAr       String   @db.VarChar(255)
+  titleDe       String   @db.VarChar(255)
+  ruleDe        String   @db.Text
+  explanationAr String   @db.Text
+  examples      Json
+  story         Json
+  prerequisite  String?  @db.VarChar(255)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  cefrLevel CEFRLevel     @relation(fields: [cefrLevelId], references: [id], onDelete: Cascade)
+  quizzes   GrammarQuiz[]
+
+  @@unique([cefrLevelId, orderInLevel])
+  @@index([cefrLevelId])
+  @@index([cefrLevelId, weekNumber])
+  @@map("grammar_lessons")
+}
+
+// Invariant (not enforced at the DB level -- Prisma has no conditional
+// CHECK constraint support here, so this must be respected by every write
+// path): type LESSON quizzes must set lessonId and leave cefrLevelId/
+// weekNumber null; type WEEKLY must set cefrLevelId+weekNumber and leave
+// lessonId null; type LEVEL/FINAL must set cefrLevelId (LEVEL) or neither
+// (FINAL) and always leave lessonId null. See resolveQuizContent in
+// src/server/actions/grammar-actions.ts for the read side of this.
+model GrammarQuiz {
+  id           String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lessonId     String?         @db.Uuid
+  cefrLevelId  String?         @db.Uuid
+  weekNumber   Int?
+  type         GrammarQuizType
+  passingScore Int             @default(70)
+  questions    Json
+  createdAt    DateTime        @default(now())
+
+  lesson    GrammarLesson? @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  cefrLevel CEFRLevel?     @relation(fields: [cefrLevelId], references: [id], onDelete: Cascade)
+  attempts  QuizAttempt[]
+
+  @@index([lessonId])
+  @@index([cefrLevelId])
+  @@map("grammar_quizzes")
+}
+
+model QuizAttempt {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @db.Uuid
+  quizId    String   @db.Uuid
+  score     Int
+  passed    Boolean
+  answers   Json
+  createdAt DateTime @default(now())
+
+  user User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz GrammarQuiz @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  @@index([userId, quizId])
+  @@map("quiz_attempts")
 }

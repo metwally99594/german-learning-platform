@@ -1,19 +1,11 @@
 import Link from "next/link";
 import { Exercise } from "@prisma/client";
 import { SpeakingPart } from "@/types";
+import { partTitles } from "@/lib/muendlich/format";
 
 export type PartOverviewProps = {
   part: SpeakingPart;
   exercises: Exercise[];
-};
-
-const partTitles: Record<SpeakingPart, string> = {
-  "praesentation-a": "Präsentation A",
-  "praesentation-b": "Präsentation B",
-  "praesentation-c": "Präsentation C",
-  diskussion: "Diskussion",
-  bildbeschreibung: "Bildbeschreibung",
-  meinung: "Meinung äußern",
 };
 
 export function PartOverview({ part, exercises }: PartOverviewProps) {

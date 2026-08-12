@@ -1,232 +1,191 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Exercise } from "@prisma/client";
-import { Clock, RotateCcw, CheckCircle } from "lucide-react";
+import { RubricItem, SpeakingExerciseContent } from "@/types";
+import { updateSpeakingProgress } from "@/server/actions/speaking-actions";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { PromptCard } from "./prompt-card";
+import { PrepTimer } from "./prep-timer";
 import { RecordingControls } from "./recording-controls";
-import { useSpeechRecognition } from "./use-speech-recognition";
+import { AudioPlayback } from "./audio-playback";
+import { ModelAnswerPanel } from "./model-answer-panel";
+import { SelfAssessment } from "./self-assessment";
 import { useMediaRecorder } from "./use-media-recorder";
+import { useSpeechRecognition } from "./use-speech-recognition";
+import { useCountdown } from "./use-countdown";
 import { evaluateGermanSpeech, SpeechEvaluation } from "./evaluate-speech";
 import { SpeechFeedback } from "./speech-feedback";
-import { updateSpeakingProgress } from "@/server/actions/speaking-actions";
+import { partTitles } from "@/lib/muendlich/format";
 
 export type SpeakingSessionProps = {
   exercise: Exercise;
+  sessionMins?: number;
 };
 
-type Phase = "prep" | "recording" | "review";
+type Phase = "idle" | "prep" | "recording" | "review";
 
-export function SpeakingSession({ exercise }: SpeakingSessionProps) {
-  const content = exercise.content as Record<string, unknown> | null;
-  const prompt = typeof content?.prompt === "string" ? content.prompt : exercise.instructions;
-  const prepTimeSeconds = typeof content?.prepTimeSeconds === "number" ? content.prepTimeSeconds : 180;
-  const responseTimeSeconds =
-    typeof content?.responseTimeSeconds === "number" ? content.responseTimeSeconds : 180;
-  const usefulPhrases = Array.isArray(content?.usefulPhrases) ? content.usefulPhrases : [];
-  const hints = Array.isArray(content?.hints) ? content.hints : [];
+export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps) {
+  const content = exercise.content as unknown as SpeakingExerciseContent;
+  const rubric = (exercise.answerKey as unknown as RubricItem[]) ?? [];
 
-  const [phase, setPhase] = useState<Phase>("prep");
-  const [prepRemaining, setPrepRemaining] = useState(prepTimeSeconds);
-  const [recordingElapsedMs, setRecordingElapsedMs] = useState(0);
+  const [phase, setPhase] = useState<Phase>("idle");
+  const [revealed, setRevealed] = useState(false);
   const [evaluation, setEvaluation] = useState<SpeechEvaluation | null>(null);
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const [saveError, setSaveError] = useState<string | null>(null);
 
   const speech = useSpeechRecognition();
-  const recorder = useMediaRecorder();
+  const { start, stop, pause, blob, error, isRecording, isPaused } = useMediaRecorder();
   const recordingStartRef = useRef<number | null>(null);
 
-  const maxRecordingMs = responseTimeSeconds * 1000;
+  const responseTimer = useCountdown(content.responseTimeSeconds, handleStopRecording);
 
-  // Preparation countdown
-  useEffect(() => {
-    if (phase !== "prep" || prepRemaining <= 0) return;
-    const interval = setInterval(() => {
-      setPrepRemaining((prev) => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          setPhase("recording");
-          speech.start();
-          recorder.start();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [phase, prepRemaining, recorder, speech]);
+  const elapsedMs = (content.responseTimeSeconds - responseTimer.remaining) * 1000;
 
-  // Recording elapsed time and auto-stop
-  useEffect(() => {
-    if (phase !== "recording") return;
-    recordingStartRef.current = Date.now();
-    const interval = setInterval(() => {
-      const elapsed = Date.now() - (recordingStartRef.current ?? Date.now());
-      setRecordingElapsedMs(elapsed);
-      if (elapsed >= maxRecordingMs) {
-        stopAndEvaluate();
-      }
-    }, 100);
-    return () => clearInterval(interval);
-  }, [phase, maxRecordingMs]);
-
-  const fullTranscript = useMemo(
-    () => `${speech.transcript} ${speech.interimTranscript}`.trim(),
-    [speech.transcript, speech.interimTranscript]
-  );
-
-  function handleStart() {
-    setPhase("recording");
+  function handleStartRecording() {
     recordingStartRef.current = Date.now();
     speech.start();
-    recorder.start();
+    void start();
+    responseTimer.start();
   }
 
-  function stopAndEvaluate() {
+  function handleStopRecording() {
     speech.stop();
-    recorder.stop();
+    stop();
+    responseTimer.pause();
+
     const elapsedMs = Date.now() - (recordingStartRef.current ?? Date.now());
-    const elapsedSec = Math.min(responseTimeSeconds, Math.max(1, Math.round(elapsedMs / 1000)));
-    const currentTranscript = `${speech.transcript} ${speech.interimTranscript}`.trim();
-    const result = evaluateGermanSpeech(currentTranscript, elapsedSec);
+    const elapsedSec = Math.min(
+      content.responseTimeSeconds,
+      Math.max(1, Math.round(elapsedMs / 1000))
+    );
+    const transcript = `${speech.transcript} ${speech.interimTranscript}`.trim();
+    const result = evaluateGermanSpeech(transcript, elapsedSec);
     setEvaluation(result);
     setPhase("review");
-    setRecordingElapsedMs(0);
-    recordingStartRef.current = null;
-    saveProgress(result.score, elapsedSec);
+
+    void saveProgress(result.score, elapsedSec);
   }
 
-  async function saveProgress(score: number, durationSeconds: number) {
+  async function saveProgress(score: number, timeSpentSeconds: number) {
     setSaving(true);
-    setSaveError(null);
-    const response = await updateSpeakingProgress({
+    const result = await updateSpeakingProgress({
       score,
-      timeSpentSeconds: durationSeconds,
+      timeSpentSeconds,
       completed: false,
     });
-    if (response?.error) {
-      setSaveError(response.error);
-    }
+    setSaveMessage(result.error ?? "Fortschritt gespeichert.");
     setSaving(false);
   }
 
   function handleReset() {
     speech.reset();
-    recorder.stop();
+    stop();
+    responseTimer.reset(content.responseTimeSeconds);
+    setPhase("idle");
+    setRevealed(false);
     setEvaluation(null);
-    setPrepRemaining(prepTimeSeconds);
-    setRecordingElapsedMs(0);
-    setPhase("prep");
-    setSaveError(null);
+    setSaveMessage(null);
+    recordingStartRef.current = null;
   }
 
-  if (phase === "prep") {
-    return (
-      <div className="space-y-6 px-4 py-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>{prompt}</CardTitle>
-            <CardDescription>{exercise.instructions}</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex items-center justify-center gap-2 rounded-xl bg-muted py-12 text-4xl font-bold">
-              <Clock className="h-8 w-8" />
-              {Math.floor(prepRemaining / 60)}:{(prepRemaining % 60).toString().padStart(2, "0")}
-            </div>
+  // Auto-stop when response timer reaches zero.
+  useEffect(() => {
+    if (phase === "recording" && responseTimer.remaining === 0 && responseTimer.isRunning === false) {
+      handleStopRecording();
+    }
+  }, [phase, responseTimer.remaining, responseTimer.isRunning]);
 
-            {usefulPhrases.length > 0 && (
-              <div className="space-y-2">
-                <h3 className="font-semibold">Useful phrases</h3>
-                <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-                  {usefulPhrases.map((phrase, i) => (
-                    <li key={i}>{phrase as string}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+  const fullTranscript = `${speech.transcript} ${speech.interimTranscript}`.trim();
 
-            {hints.length > 0 && (
-              <div className="space-y-2">
-                <h3 className="font-semibold">Hints</h3>
-                <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-                  {hints.map((hint, i) => (
-                    <li key={i}>{hint as string}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+  return (
+    <div className="space-y-6 px-4 py-8">
+      <PromptCard
+        title={partTitles[content.part]}
+        stimulus={content.stimulus}
+        chart={content.chart}
+        prompt={content.prompt}
+        instructions={exercise.instructions}
+      />
 
-            <Button onClick={() => setPrepRemaining(0)} className="w-full">
-              Start now
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
+      {phase === "idle" && (
+        <Button onClick={() => setPhase("prep")}>Übung starten</Button>
+      )}
 
-  if (phase === "recording") {
-    return (
-      <div className="space-y-6 px-4 py-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>{prompt}</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <RecordingControls
-              isRecording={speech.isListening || recorder.isRecording}
-              isPaused={recorder.isPaused}
-              onStart={handleStart}
-              onStop={stopAndEvaluate}
-              onPause={() => {
-                recorder.pause();
-                if (speech.isListening) speech.stop();
-              }}
-              elapsedMs={recordingElapsedMs}
-              maxSeconds={responseTimeSeconds}
-            />
+      {phase === "prep" && (
+        <div className="space-y-2">
+          <p className="text-sm text-muted-foreground">Vorbereitungszeit</p>
+          <PrepTimer seconds={content.prepTimeSeconds} onComplete={() => setPhase("recording")} />
+          <Button variant="outline" onClick={() => setPhase("recording")}>Jetzt starten</Button>
+        </div>
+      )}
 
-            {(speech.error || recorder.error) && (
-              <p className="text-sm text-destructive">{speech.error || recorder.error}</p>
-            )}
+      {(phase === "recording" || phase === "review") && (
+        <div className="space-y-4">
+          <RecordingControls
+            isRecording={isRecording || speech.isListening}
+            isPaused={isPaused}
+            onStart={handleStartRecording}
+            onStop={handleStopRecording}
+            onPause={() => {
+              pause();
+              if (speech.isListening) speech.stop();
+            }}
+            elapsedMs={elapsedMs}
+            maxSeconds={content.responseTimeSeconds}
+          />
 
+          {phase === "recording" && (
             <div className="rounded-lg border bg-muted/50 p-4">
               <p className="text-sm text-muted-foreground">Live transcript</p>
               <p className="min-h-[4rem] whitespace-pre-wrap text-sm">
                 {fullTranscript || "Start speaking…"}
               </p>
             </div>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6 px-4 py-8">
-      {evaluation && <SpeechFeedback evaluation={evaluation} transcript={fullTranscript} />}
-
-      {saveError && (
-        <p className="text-sm text-destructive">{saveError}</p>
+          )}
+        </div>
       )}
 
-      <div className="flex gap-3">
-        <Button onClick={handleReset} variant="outline" className="gap-2">
-          <RotateCcw className="h-4 w-4" /> Try again
-        </Button>
+      {(error || speech.error) && (
+        <p className="text-sm text-destructive">{error || speech.error}</p>
+      )}
 
-        {saving ? (
-          <Button disabled className="gap-2">
-            <CheckCircle className="h-4 w-4" /> Saving…
-          </Button>
-        ) : (
-          <Button disabled className="gap-2">
-            <CheckCircle className="h-4 w-4" /> Saved
-          </Button>
-        )}
-      </div>
+      {phase === "review" && blob && <AudioPlayback blob={blob} />}
+
+      {phase === "review" && evaluation && (
+        <SpeechFeedback evaluation={evaluation} transcript={fullTranscript} />
+      )}
+
+      {phase === "review" && !revealed && (
+        <Button variant="outline" onClick={() => setRevealed(true)}>
+          Musterantwort anzeigen
+        </Button>
+      )}
+
+      {revealed && (
+        <>
+          <ModelAnswerPanel
+            modelAnswer={content.modelAnswer}
+            phrases={content.usefulPhrases}
+            rubric={rubric}
+          />
+          <SelfAssessment rubric={rubric} onRate={() => {}} />
+        </>
+      )}
+
+      {phase === "review" && (
+        <div className="flex items-center gap-3">
+          <Button variant="outline" onClick={handleReset}>Noch einmal versuchen</Button>
+          {saveMessage && (
+            <p className="text-sm text-muted-foreground">{saveMessage} {saving && "(speichert…)"}</p>
+          )}
+        </div>
+      )}
+
+      {sessionMins && (
+        <p className="text-sm text-muted-foreground">Session length: {sessionMins} min</p>
+      )}
     </div>
   );
 }

@@ -1,0 +1,356 @@
+{
+  "level": "A1",
+  "lessons": [
+    {
+      "slug": "alphabet-aussprache",
+      "weekNumber": 1,
+      "orderInLevel": 1,
+      "titleDe": "Das Alphabet und die Aussprache",
+      "titleAr": "الأبجدية والنطق",
+      "prerequisite": null,
+
+      "ruleDe": "Das deutsche Alphabet: 26 Buchstaben\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nDazu: 3 Umlaute → Ä ä · Ö ö · Ü ü\nUnd: das Eszett → ß\n\nWICHTIGE LAUTE:\nei  → [ai]      mein, drei, heißen\nie  → [ii]      sie, vier, Liebe\neu  → [oi]      neun, Deutsch, heute\näu  → [oi]      Häuser, Bäume\nsch → [sch]     Schule, schön\nsp- → [schp]    sprechen, Sport\nst- → [scht]    Straße, Student\nch  → [ch]      ich, Buch, machen\nv   → [f]       Vater, vier, viel\nw   → [w]       Wasser, wir, wo\nz   → [ts]      zehn, Zeit, tanzen\nj   → [j]       ja, Jahr, jetzt\ns   → [z]       sagen, sieben, Sonne\nß   → [ss]      heißen, Straße, weiß",
+
+      "explanationAr": "الأبجدية الألمانية زي الإنجليزية بالظبط — **26 حرف** — بس فيها **4 حروف زيادة**: تلاتة اسمهم **Umlaute** (وهما Ä و Ö و Ü)، وحرف رابع شكله غريب اسمه **Eszett** (ß).\n\nالحكاية كلها إن الألماني لغة **بتتنطق زي ما بتتكتب**. مفيش مفاجآت زي الإنجليزي. أول ما تحفظ إن حرفين معينين بينطقوا كذا، القاعدة دي هتفضل صح **في كل الكلمات من غير استثناء**. دي أحلى حاجة في الألماني صراحة.\n\nبس في **6 مصايد** لازم تاخد بالك منهم من أول يوم، لأن دول اللي بيفضحوا العربي وهو بيتكلم:\n\n**المصيدة الأولى — ei و ie:**\nدول أكتر حاجة بتلخبط. **ei** بتتنطق «آي»، و **ie** بتتنطق «إيييي» طويلة. الحيلة اللي بتظبط الموضوع: **انطق الحرف التاني**. يعني في **ei** الحرف التاني هو i (آي)، وفي **ie** الحرف التاني هو e (إيه)... لأ استنى، الأسهل كده: `mein` = «ماين»، `vier` = «فيير».\n\n**المصيدة التانية — v و w مقلوبين:**\nحرف **v** في الألماني بينطق **ف** مش «في». يعني `Vater` = «فاتر» مش «فاتر» بالإنجليزي. وحرف **w** بينطق **ڤ** (زي v الإنجليزي). يعني `Wasser` = «ڤاسر». اعتبرهم اتبادلوا الأدوار.\n\n**المصيدة التالتة — z بتنطق «تس»:**\nمش «ز» أبداً. `zehn` = «تسين» مش «زين».\n\n**المصيدة الرابعة — s في أول الكلمة بتنطق «ز»:**\n`sagen` = «زاجن». بس لو **ß** أو **ss**، ساعتها «س» عادي: `heißen` = «هايسن».\n\n**المصيدة الخامسة — sp و st في أول الكلمة:**\nبيتحولوا لـ «شب» و «شت». `sprechen` = «شبريشن»، `Straße` = «شتراسه».\n\n**المصيدة السادسة — ß:**\nده مش حرف B! ده اسمه **Eszett** وبينطق **س** عادي جداً. سبب وجوده إنه بيجي بعد حرف متحرك طويل. في سويسرا شالوه خالص وبيكتبوا **ss** بدله.\n\n> **معلومة تفيدك في الامتحان:** لما الألماني يسألك «?Wie schreibt man das» (إزاي بتتكتب دي؟)، هو عايزك **تتهجى** الكلمة حرف حرف بالأسماء الألمانية للحروف. عشان كده حفظ نطق أسماء الحروف نفسها مهم جداً، مش رفاهية.",
+
+      "examples": [
+        { "de": "Ich heiße Ahmed.", "ar": "اسمي أحمد." },
+        { "de": "Wie schreibt man das?", "ar": "إزاي بتتكتب دي؟" },
+        { "de": "Mein Name ist Sara.", "ar": "اسمي سارة." },
+        { "de": "Die Straße ist neu.", "ar": "الشارع جديد." },
+        { "de": "Wir sprechen Deutsch.", "ar": "إحنا بنتكلم ألماني." },
+        { "de": "Das Wasser ist kalt.", "ar": "المية باردة." },
+        { "de": "Zehn Studenten sind hier.", "ar": "عشرة طلبة هنا." },
+        { "de": "Häuser und Bäume.", "ar": "بيوت وشجر." }
+      ],
+
+      "story": {
+        "titleDe": "In der Sprachschule",
+        "titleAr": "في مدرسة اللغة",
+        "sentences": [
+          { "de": "Guten Tag! Ich heiße Yusuf.", "ar": "يوم سعيد! اسمي يوسف.", "highlight": true },
+          { "de": "Wie bitte? Wie heißen Sie?", "ar": "عفواً؟ حضرتك اسمك إيه؟", "highlight": true },
+          { "de": "Yusuf. Y – U – S – U – F.", "ar": "يوسف. ياء – واو – سين – واو – فاء.", "highlight": false },
+          { "de": "Ah, Yusuf! Und wie schreibt man das?", "ar": "آه، يوسف! وإزاي بتتكتب؟", "highlight": true },
+          { "de": "Mit Y am Anfang, nicht mit J.", "ar": "بحرف Y في الأول، مش بحرف J.", "highlight": true },
+          { "de": "Danke. Ich bin Frau Schmidt.", "ar": "شكراً. أنا السيدة شميت.", "highlight": true },
+          { "de": "Schmidt? Mit S – C – H?", "ar": "شميت؟ بـ S – C – H؟", "highlight": true },
+          { "de": "Genau! Sehr gut, Yusuf.", "ar": "بالظبط! كويس جداً يا يوسف.", "highlight": false },
+          { "de": "Willkommen in der Sprachschule!", "ar": "أهلاً بيك في مدرسة اللغة!", "highlight": true }
+        ]
+      },
+
+      "quiz": {
+        "type": "LESSON",
+        "passingScore": 70,
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "question": "إزاي بتتنطق كلمة «vier»؟",
+            "options": ["ڤيير", "فيير", "فاير", "ڤاير"],
+            "answer": 1,
+            "explanation": "حرف v في الألماني بينطق «ف»، و ie بتنطق «إي» طويلة → «فيير»."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "كلمة «Wasser» بتبدأ بأنهي صوت؟",
+            "options": ["و", "ڤ", "ف", "ب"],
+            "answer": 1,
+            "explanation": "حرف w في الألماني بينطق «ڤ» (زي v الإنجليزي)."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "«zehn» بتتنطق إزاي؟",
+            "options": ["زين", "تسين", "شين", "سين"],
+            "answer": 1,
+            "explanation": "حرف z دايماً بينطق «تس» في الألماني."
+          },
+          {
+            "type": "true-false",
+            "question": "حرف ß بينطق «ب».",
+            "answer": false,
+            "explanation": "غلط. ß اسمه Eszett وبينطق «س». شكله بس اللي شبه B."
+          },
+          {
+            "type": "true-false",
+            "question": "الأبجدية الألمانية فيها 26 حرف + 3 Umlaute + ß.",
+            "answer": true,
+            "explanation": "صح. 26 حرف أساسي، زائد Ä Ö Ü، زائد ß."
+          },
+          {
+            "type": "fill-blank",
+            "question": "كلمة «Straße» بتبدأ بصوت ___ (اكتب بالعربي)",
+            "answer": ["شت", "شتر"],
+            "explanation": "st في أول الكلمة بتتحول لـ «شت» → «شتراسه»."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "أنهي كلمة فيها صوت «آي»؟",
+            "options": ["vier", "sieben", "mein", "Liebe"],
+            "answer": 2,
+            "explanation": "«mein» فيها ei = «آي». الباقي كلهم ie = «إي» طويلة."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "«Deutsch» فيها الصوت eu، بينطق إزاي؟",
+            "options": ["إيو", "أوي", "يو", "آو"],
+            "answer": 1,
+            "explanation": "eu (وكمان äu) بينطقوا «أوي» → «دويتش»."
+          },
+          {
+            "type": "true-false",
+            "question": "حرف s في أول كلمة «sagen» بينطق «س».",
+            "answer": false,
+            "explanation": "غلط. s قبل حرف متحرك بتنطق «ز» → «زاجن»."
+          },
+          {
+            "type": "translate",
+            "question": "ترجم للألماني: «إزاي بتتكتب دي؟»",
+            "answer": ["Wie schreibt man das?", "Wie schreibt man das"],
+            "explanation": "دي أهم جملة هتحتاجها وإنت بتتعلم التهجئة."
+          }
+        ]
+      }
+    },
+
+    {
+      "slug": "personalpronomen",
+      "weekNumber": 1,
+      "orderInLevel": 2,
+      "titleDe": "Personalpronomen im Nominativ",
+      "titleAr": "الضمائر الشخصية",
+      "prerequisite": "alphabet-aussprache",
+
+      "ruleDe": "PERSONALPRONOMEN IM NOMINATIV\n\n         SINGULAR          PLURAL\n1.       ich               wir\n2.       du                ihr\n3.       er / sie / es     sie\n\nHÖFLICHKEITSFORM:\n         Sie  (Singular UND Plural)\n         → immer mit großem S!\n\nMERKE:\nsie (klein) = هم / هي\nSie (groß)  = حضرتك / حضراتكم",
+
+      "explanationAr": "الضمائر في الألماني تقريباً زي العربي، بس فيها **تلات حاجات مختلفة** لازم تفهمها من دلوقتي عشان ما تغلطش طول عمرك.\n\n**أولاً — مفيش «إنتِ» منفصلة عن «إنتَ»:**\nفي العربي بنقول «إنتَ» للولد و«إنتِ» للبنت. في الألماني الاتنين **du**. خلاص، مفيش تفرقة. نفس الكلام في الجمع: «إنتوا» = **ihr** للاتنين.\n\n**ثانياً — كلمة sie ليها تلات معاني!**\nدي أكتر حاجة بتلخبط المبتدئين، فخد بالك كويس:\n\n| الشكل | المعنى | مثال |\n|---|---|---|\n| **sie** (صغيرة) | هي | sie ist Studentin |\n| **sie** (صغيرة) | هم | sie sind Studenten |\n| **Sie** (كبيرة) | حضرتك / حضراتكم | Sie sind Herr Müller |\n\nطب إزاي تفرق بينهم وإنت بتسمع؟ **من الفعل اللي بعدها**. لو الفعل مفرد يبقى «هي»، ولو جمع يبقى «هم» أو «حضرتك». ومع الكتابة الموضوع أسهل: **الـ S الكبيرة** معناها احترام دايماً.\n\n**ثالثاً — الفرق بين du و Sie مش رفاهية، ده احترام:**\nدي نقطة اجتماعية مهمة جداً في ألمانيا، ولو غلطت فيها ممكن تبان قليل الأدب من غير ما تقصد.\n\n- **du** → للأصحاب، العيلة، الأطفال، الزمايل الشباب، وأي حد قالك «du» الأول\n- **Sie** → لأي حد غريب، الأكبر منك، الدكتور، الموظف، المدرس، في الشغل الرسمي\n\n> **القاعدة الذهبية:** لو مش متأكد، استخدم **Sie**. إنت كده مؤدب زيادة، وده مفيهوش مشكلة. لكن العكس (تقول du لواحد غريب) ممكن يزعّله. الألمان نفسهم بيقولوا جملة «?Wollen wir uns duzen» يعني «نتكلم بـ du؟» — يعني الموضوع ده عندهم رسمي لدرجة إنهم بيستأذنوا فيه.\n\n**رابعاً — er / sie / es مش عن الجنس البيولوجي:**\nدي هتصدمك شوية. في الألماني كل اسم ليه **Artikel** (أداة تعريف)، والضمير بيتبع الأداة مش المعنى. يعني:\n\n- `das Mädchen` (البنت) → ضميرها **es** مش sie! لأن أداتها das\n- `der Tisch` (الترابيزة) → ضميرها **er** لأن أداتها der\n\nالموضوع ده هنفهمه بالتفصيل في درس الـ **Artikel**، بس اعرف دلوقتي إن الضمير بيمشي ورا الأداة مش ورا المنطق.",
+
+      "examples": [
+        { "de": "Ich bin Student.", "ar": "أنا طالب." },
+        { "de": "Du bist mein Freund.", "ar": "إنت صاحبي." },
+        { "de": "Er kommt aus Ägypten.", "ar": "هو جاي من مصر." },
+        { "de": "Sie wohnt in Berlin.", "ar": "هي ساكنة في برلين." },
+        { "de": "Es ist kalt heute.", "ar": "الجو بارد النهاردة." },
+        { "de": "Wir lernen Deutsch.", "ar": "إحنا بنتعلم ألماني." },
+        { "de": "Ihr seid sehr nett.", "ar": "إنتوا لطاف جداً." },
+        { "de": "Sie sind Herr Müller, oder?", "ar": "حضرتك السيد مولر، صح؟" }
+      ],
+
+      "story": {
+        "titleDe": "Der neue Nachbar",
+        "titleAr": "الجار الجديد",
+        "sentences": [
+          { "de": "Guten Morgen! Sind Sie der neue Nachbar?", "ar": "صباح الخير! حضرتك الجار الجديد؟", "highlight": true },
+          { "de": "Ja, ich bin Karim. Und Sie?", "ar": "أيوه، أنا كريم. وحضرتك؟", "highlight": true },
+          { "de": "Ich heiße Anna. Das ist mein Bruder.", "ar": "أنا اسمي أنّا. ده أخويا.", "highlight": true },
+          { "de": "Er heißt Tom. Er ist Student.", "ar": "هو اسمه توم. هو طالب.", "highlight": true },
+          { "de": "Freut mich! Woher kommt ihr?", "ar": "تشرفنا! إنتوا جايين منين؟", "highlight": true },
+          { "de": "Wir kommen aus München.", "ar": "إحنا جايين من ميونخ.", "highlight": true },
+          { "de": "Sehr schön. Ich komme aus Kairo.", "ar": "جميل جداً. أنا جاي من القاهرة.", "highlight": true },
+          { "de": "Karim, wollen wir uns duzen?", "ar": "كريم، نتكلم بـ du؟", "highlight": true },
+          { "de": "Gern! Dann sind wir Freunde.", "ar": "بكل سرور! يبقى إحنا أصحاب.", "highlight": true }
+        ]
+      },
+
+      "quiz": {
+        "type": "LESSON",
+        "passingScore": 70,
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "question": "بتكلم مدير شركة لأول مرة. تستخدم أنهي ضمير؟",
+            "options": ["du", "ihr", "Sie", "sie"],
+            "answer": 2,
+            "explanation": "مع أي حد غريب أو في موقف رسمي → Sie بالـ S الكبيرة."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "«إحنا» بالألماني إيه؟",
+            "options": ["ihr", "wir", "sie", "uns"],
+            "answer": 1,
+            "explanation": "wir = إحنا (المتكلم الجمع)."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "بتكلم تلاتة من أصحابك مع بعض. تستخدم إيه؟",
+            "options": ["Sie", "ihr", "wir", "du"],
+            "answer": 1,
+            "explanation": "ihr = إنتوا (غير رسمي، جمع). مع أصحابك مش محتاج Sie."
+          },
+          {
+            "type": "true-false",
+            "question": "في الألماني فيه ضمير مختلف لـ «إنتَ» و«إنتِ».",
+            "answer": false,
+            "explanation": "غلط. الاتنين du، مفيش تفرقة بين مذكر ومؤنث في المخاطب."
+          },
+          {
+            "type": "true-false",
+            "question": "الفرق الوحيد بين sie و Sie هو الحرف الكبير.",
+            "answer": true,
+            "explanation": "صح في الكتابة. في الكلام بتفرق من السياق ومن الفعل."
+          },
+          {
+            "type": "fill-blank",
+            "question": "___ komme aus Ägypten. (أنا جاي من مصر)",
+            "answer": ["Ich", "ich"],
+            "explanation": "ich = أنا."
+          },
+          {
+            "type": "fill-blank",
+            "question": "___ wohnt in Berlin. (هي ساكنة في برلين)",
+            "answer": ["Sie", "sie"],
+            "explanation": "sie = هي. هنا بحرف صغير لأنها في وسط الجملة ومعناها «هي»."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "كلمة «das Mädchen» (البنت) ضميرها إيه؟",
+            "options": ["sie", "er", "es", "ihr"],
+            "answer": 2,
+            "explanation": "es! لأن الضمير بيتبع الـ Artikel (das) مش المعنى. دي من أغرب حاجات الألماني."
+          },
+          {
+            "type": "reorder",
+            "question": "رتّب الجملة:",
+            "words": ["sind", "nett", "Ihr", "sehr"],
+            "answer": "Ihr seid sehr nett",
+            "acceptAlso": ["Ihr sind sehr nett"],
+            "explanation": "الترتيب: الضمير + الفعل + الوصف. (ملاحظة: الفعل الصح مع ihr هو seid — هنتعلمه الدرس الجاي)"
+          },
+          {
+            "type": "translate",
+            "question": "ترجم للألماني: «حضرتك السيد مولر؟» (بشكل رسمي)",
+            "answer": ["Sind Sie Herr Müller?", "Sind Sie Herr Müller", "Sie sind Herr Müller?"],
+            "explanation": "Sie بالـ S الكبيرة عشان الاحترام."
+          }
+        ]
+      }
+    },
+
+    {
+      "slug": "verb-sein",
+      "weekNumber": 1,
+      "orderInLevel": 3,
+      "titleDe": "Das Verb „sein\" im Präsens",
+      "titleAr": "الفعل sein (يكون)",
+      "prerequisite": "personalpronomen",
+
+      "ruleDe": "DAS VERB „SEIN\" — PRÄSENS (unregelmäßig!)\n\nich        bin\ndu         bist\ner/sie/es  ist\n\nwir        sind\nihr        seid\nsie/Sie    sind\n\nVERWENDUNG:\n1. Identität   → Ich bin Lehrer.\n2. Herkunft    → Er ist aus Syrien.\n3. Eigenschaft → Das Buch ist neu.\n4. Ort         → Wir sind zu Hause.\n5. Alter       → Sie ist 20 Jahre alt.\n\nACHTUNG: sein ist unregelmäßig.\nDie Formen muss man auswendig lernen!",
+
+      "explanationAr": "الفعل **sein** معناه «يكون»، وهو **أهم فعل في اللغة الألمانية كلها** من غير أي مبالغة. هتستخدمه في كل جملة تقريباً، وهيرجع يقابلك تاني في الـ **Perfekt** وفي الـ **Passiv** وفي كل حتة.\n\n**أول حاجة لازم تستوعبها — الجملة الاسمية مش موجودة:**\n\nدي أكبر فرق بين العربي والألماني، وأكتر غلطة بيقع فيها العرب.\n\nإحنا في العربي بنقول «أنا طالب» و«الجو بارد» — **من غير فعل خالص**. الجملة تمام ومفهومة.\n\nفي الألماني؟ **مستحيل**. لازم يكون في فعل في كل جملة. يعني:\n\n| العربي | ❌ غلط | ✅ صح |\n|---|---|---|\n| أنا طالب | ~~Ich Student~~ | **Ich bin Student** |\n| الجو بارد | ~~Es kalt~~ | **Es ist kalt** |\n| إحنا في البيت | ~~Wir zu Hause~~ | **Wir sind zu Hause** |\n\nفكّر فيها كده: الألماني بيقول «أنا **أكون** طالب». غريبة على ودنك في البداية، بس دي القاعدة.\n\n**ثانياً — الفعل ده شاذ، يعني حفظ:**\n\nكلمة **unregelmäßig** معناها «غير منتظم» أو شاذ. يعني مفيش قاعدة تطلعلك التصريف — لازم تحفظه صم. بس الأخبار الحلوة إنك هتستخدمه كتير أوي لدرجة إنه هيتحفظ لوحده خلال أسبوع.\n\n**التصريف اللي لازم تحفظه دلوقتي حالاً:**\n\n> ich **bin** · du **bist** · er/sie/es **ist**\n> wir **sind** · ihr **seid** · sie/Sie **sind**\n\n**نصيحة للحفظ:** لاحظ إن **wir** و **sie/Sie** بياخدوا نفس الشكل (**sind**). ودي مش صدفة — هتلاقيها في كل الأفعال الألمانية. يعني إنت فعلياً بتحفظ 5 أشكال مش 6.\n\n**ثالثاً — أكتر 3 غلطات بيغلطها العرب:**\n\n1. **نسيان الفعل خالص** → «Ich Lehrer» بدل «Ich bin Lehrer»\n2. **الخلط بين ist و sind** → افتكر: **ist** لواحد، **sind** لأكتر من واحد\n3. **استخدام sind مع ihr** → لأ! **ihr** بياخد **seid** (وده الشكل الوحيد الغريب في الجدول، فركّز فيه)\n\n**رابعاً — مفيش «a/an» قبل المهنة:**\n\nحاجة صغيرة بس بتفرق. في الإنجليزي بتقول «I am **a** student». في الألماني **بتشيل الأداة خالص** مع المهن:\n\n- ✅ Ich bin Student. (مش ~~Ich bin ein Student~~)\n- ✅ Sie ist Ärztin. (مش ~~Sie ist eine Ärztin~~)\n\n> **ملاحظة ثقافية:** لاحظ في المثال ده كلمة **Ärztin** بـ «in» في الآخر — دي صيغة المؤنث من **Arzt** (دكتور). الألماني بيفرّق بين المهنة للراجل والست بإضافة **-in**. `Lehrer` → `Lehrerin`، `Student` → `Studentin`. حاجة هتقابلك كتير.",
+
+      "examples": [
+        { "de": "Ich bin Ahmed. Ich bin Student.", "ar": "أنا أحمد. أنا طالب." },
+        { "de": "Du bist sehr freundlich.", "ar": "إنت لطيف جداً." },
+        { "de": "Er ist mein Bruder.", "ar": "هو أخويا." },
+        { "de": "Sie ist Lehrerin.", "ar": "هي مدرسة." },
+        { "de": "Es ist heute kalt.", "ar": "الجو النهاردة بارد." },
+        { "de": "Wir sind aus Ägypten.", "ar": "إحنا من مصر." },
+        { "de": "Ihr seid meine Freunde.", "ar": "إنتوا أصحابي." },
+        { "de": "Sie sind Herr Weber, richtig?", "ar": "حضرتك السيد ڤيبر، صح؟" },
+        { "de": "Das Buch ist neu.", "ar": "الكتاب جديد." },
+        { "de": "Wo bist du?", "ar": "إنت فين؟" }
+      ],
+
+      "story": {
+        "titleDe": "Die erste Deutschstunde",
+        "titleAr": "أول حصة ألماني",
+        "sentences": [
+          { "de": "Guten Tag! Ich bin Frau Klein.", "ar": "يوم سعيد! أنا السيدة كلاين.", "highlight": true },
+          { "de": "Ich bin eure Lehrerin.", "ar": "أنا مدرستكم.", "highlight": true },
+          { "de": "Wie heißt du? Und woher bist du?", "ar": "إنت اسمك إيه؟ وإنت منين؟", "highlight": true },
+          { "de": "Ich bin Nour. Ich bin aus Ägypten.", "ar": "أنا نور. أنا من مصر.", "highlight": true },
+          { "de": "Und das ist Omar. Er ist mein Bruder.", "ar": "وده عمر. هو أخويا.", "highlight": true },
+          { "de": "Seid ihr zusammen hier?", "ar": "إنتوا هنا مع بعض؟", "highlight": true },
+          { "de": "Ja, wir sind zusammen hier.", "ar": "أيوه، إحنا هنا مع بعض.", "highlight": true },
+          { "de": "Sehr gut! Deutsch ist nicht schwer.", "ar": "كويس جداً! الألماني مش صعب.", "highlight": true },
+          { "de": "Wirklich? Es ist ein bisschen schwer!", "ar": "بجد؟ هو صعب شوية!", "highlight": true },
+          { "de": "Keine Sorge. Ihr seid sehr fleißig!", "ar": "ما تقلقش. إنتوا مجتهدين جداً!", "highlight": true }
+        ]
+      },
+
+      "quiz": {
+        "type": "LESSON",
+        "passingScore": 70,
+        "questions": [
+          {
+            "type": "fill-blank",
+            "question": "Ich ___ Student.",
+            "answer": ["bin"],
+            "explanation": "ich دايماً بياخد bin."
+          },
+          {
+            "type": "fill-blank",
+            "question": "Ihr ___ sehr nett.",
+            "answer": ["seid"],
+            "explanation": "ihr بياخد seid — وده الشكل اللي أغلب الناس بتغلط فيه وتقول sind."
+          },
+          {
+            "type": "fill-blank",
+            "question": "Wir ___ aus Ägypten.",
+            "answer": ["sind"],
+            "explanation": "wir بياخد sind."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "أنهي جملة صح؟",
+            "options": ["Er sind mein Bruder.", "Er ist mein Bruder.", "Er bist mein Bruder.", "Er seid mein Bruder."],
+            "answer": 1,
+            "explanation": "er (مفرد غائب) بياخد ist."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "«إحنا في البيت» بالألماني:",
+            "options": ["Wir zu Hause.", "Wir ist zu Hause.", "Wir sind zu Hause.", "Wir seid zu Hause."],
+            "answer": 2,
+            "explanation": "لازم فعل في الجملة الألمانية، و wir بياخد sind."
+          },
+          {
+            "type": "true-false",
+            "question": "ينفع أقول «Ich Lehrer» من غير فعل.",
+            "answer": false,
+            "explanation": "غلط تماماً. الألماني لازم فعل في كل جملة → Ich bin Lehrer."
+          },
+          {
+            "type": "true-false",
+            "question": "wir و sie بياخدوا نفس شكل الفعل (sind).",
+            "answer": true,
+            "explanation": "صح، ودي قاعدة هتلاقيها في كل الأفعال الألمانية مش بس sein."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "الصح: «هي دكتورة»",
+            "options": ["Sie ist eine Ärztin.", "Sie ist Ärztin.", "Sie sind Ärztin.", "Sie Ärztin."],
+            "answer": 1,
+            "explanation": "مع المهن بنشيل الأداة (ein/eine) خالص."
+          },
+          {
+            "type": "reorder",
+            "question": "رتّب الجملة:",
+            "words": ["Bruder", "ist", "mein", "Er"],
+            "answer": "Er ist mein Bruder",
+            "explanation": "الضمير أول، بعده الفعل في المركز التاني."
+          },
+          {
+            "type": "translate",
+            "question": "ترجم للألماني: «إنتوا أصحابي»",
+            "answer": ["Ihr seid meine Freunde", "Ihr seid meine Freunde."],
+            "explanation": "ihr + seid + meine Freunde."
+          },
+          {
+            "type": "translate",
+            "question": "ترجم للألماني: «الجو بارد النهاردة»",
+            "answer": ["Es ist heute kalt", "Es ist heute kalt.", "Es ist kalt heute", "Heute ist es kalt"],
+            "explanation": "لاحظ إن العربي مفيهوش فعل بس الألماني لازم يكون فيه ist."
+          },
+          {
+            "type": "multiple-choice",
+            "question": "«sein» فعل من أي نوع؟",
+            "options": ["regelmäßig (منتظم)", "unregelmäßig (شاذ)", "trennbar (منفصل)", "modal (ناقص)"],
+            "answer": 1,
+            "explanation": "unregelmäßig — يعني تصريفه ملهوش قاعدة ولازم يتحفظ."
+          }
+        ]
+      }
+    }
+  ]
+}
