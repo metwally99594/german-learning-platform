@@ -382,6 +382,7 @@ export type GrammarLessonSummary = {
   orderInLevel: number;
   prerequisite: string | null;
   locked: boolean;
+  passed: boolean;
 };
 
 type LessonSummaryRow = {
@@ -444,10 +445,15 @@ export async function getGrammarLessonsByLevel(levelCode: string): Promise<Gramm
     orderInLevel: lesson.orderInLevel,
     prerequisite: lesson.prerequisite,
     locked: lesson.prerequisite !== null && !passedSlugs.has(lesson.prerequisite),
+    passed: passedSlugs.has(lesson.slug),
   }));
 }
 
-export type GrammarLessonView = GrammarLessonContent & { locked: boolean };
+export type GrammarLessonView = GrammarLessonContent & {
+  locked: boolean;
+  prerequisiteTitleAr: string | null;
+  levelProgress: { completed: number; total: number } | null;
+};
 
 export async function getGrammarLesson(levelCode: string, slug: string): Promise<GrammarLessonView | null> {
   const level = normalizeLevelCode(levelCode);
@@ -493,7 +499,19 @@ export async function getGrammarLesson(levelCode: string, slug: string): Promise
     ? !(await getPassedLessonSlugs([content.prerequisite])).has(content.prerequisite)
     : false;
 
-  return { ...content, locked };
+  // Only worth the extra queries when actually locked -- the gate UI needs
+  // the prerequisite's Arabic title and the level's completion count, but
+  // the far more common unlocked path has no use for either.
+  let prerequisiteTitleAr: string | null = null;
+  let levelProgress: { completed: number; total: number } | null = null;
+  if (locked) {
+    const summaries = await getLevelLessonSummaries(level);
+    prerequisiteTitleAr = summaries.find((l) => l.slug === content!.prerequisite)?.titleAr ?? null;
+    const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+    levelProgress = { completed: passed.size, total: summaries.length };
+  }
+
+  return { ...content, locked, prerequisiteTitleAr, levelProgress };
 }
 
 export type RoadmapLevelView = {

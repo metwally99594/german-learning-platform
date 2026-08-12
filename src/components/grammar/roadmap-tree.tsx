@@ -29,7 +29,7 @@ export function RoadmapTree({ levels }: RoadmapTreeProps) {
                 level.state === "completed" && "text-green-600 dark:text-green-500"
               )}
             />
-            <div className="flex-1">
+            <div dir="rtl" className="flex-1 text-right">
               <p className="font-medium">{level.name}</p>
               <p className="text-sm text-muted-foreground">
                 {level.totalLessons > 0

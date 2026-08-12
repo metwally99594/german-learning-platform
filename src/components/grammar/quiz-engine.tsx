@@ -9,6 +9,13 @@ import { ReorderQuestionInput } from "./reorder-question-input";
 
 type SubmitResult = QuizGradeResult & { saved: boolean; error?: string };
 
+// Multiple-choice options are sometimes German words, sometimes Arabic
+// phonetic transliterations (e.g. a "how is this pronounced?" question) --
+// there's no fixed script for this field, so force-rendering the options
+// list as dir="ltr" always misaligns the Arabic case. Decide per question
+// from whichever script actually appears.
+const hasArabicText = (s: string) => /[؀-ۿ]/.test(s);
+
 export type QuizEngineProps = {
   questions: GrammarQuizQuestionPublic[];
   passingScore: number;
@@ -29,30 +36,36 @@ function QuizQuestionCard({
   return (
     <div className="space-y-3 rounded-lg border p-4">
       <p dir="rtl" className="text-right font-medium">
-        {index + 1}. {question.question}
+        <span dir="ltr" className="inline-block">
+          {index + 1}.
+        </span>{" "}
+        {question.question}
       </p>
 
-      {question.type === "multiple-choice" && (
-        <div dir="ltr" className="space-y-2 text-left">
-          {question.options.map((option, i) => (
-            <label
-              key={i}
-              className={cn(
-                "flex cursor-pointer items-center gap-2 rounded-md border p-2 text-sm",
-                value === i && "border-primary bg-accent"
-              )}
-            >
-              <input
-                type="radio"
-                name={`q-${index}`}
-                checked={value === i}
-                onChange={() => onChange(i)}
-              />
-              {option}
-            </label>
-          ))}
-        </div>
-      )}
+      {question.type === "multiple-choice" && (() => {
+        const rtl = question.options.some(hasArabicText);
+        return (
+          <div dir={rtl ? "rtl" : "ltr"} className={cn("space-y-2", rtl ? "text-right" : "text-left")}>
+            {question.options.map((option, i) => (
+              <label
+                key={i}
+                className={cn(
+                  "flex cursor-pointer items-center gap-2 rounded-md border p-2 text-sm",
+                  value === i && "border-primary bg-accent"
+                )}
+              >
+                <input
+                  type="radio"
+                  name={`q-${index}`}
+                  checked={value === i}
+                  onChange={() => onChange(i)}
+                />
+                {option}
+              </label>
+            ))}
+          </div>
+        );
+      })()}
 
       {question.type === "true-false" && (
         <div className="flex gap-2">
@@ -152,7 +165,10 @@ export function QuizEngine({ questions, passingScore, onSubmit }: QuizEngineProp
                 )}
               >
                 <p dir="rtl" className="text-right font-medium">
-                  {i + 1}. {question.question}
+                  <span dir="ltr" className="inline-block">
+                    {i + 1}.
+                  </span>{" "}
+                  {question.question}
                 </p>
                 <p dir="rtl" className="text-right text-sm">
                   {questionResult.correct ? "✅ صح" : `❌ غلط — الإجابة الصحيحة: ${questionResult.correctAnswer}`}

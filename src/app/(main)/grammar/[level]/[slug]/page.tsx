@@ -28,7 +28,7 @@ export default async function GrammarLessonPage({ params }: PageProps) {
   }
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+    <div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
       <div dir="rtl" className="text-right">
         <p className="text-sm text-muted-foreground">الأسبوع {lesson.weekNumber}</p>
         <h1 className="text-3xl font-bold">{lesson.titleAr}</h1>
@@ -37,7 +37,13 @@ export default async function GrammarLessonPage({ params }: PageProps) {
         </p>
       </div>
 
-      <LessonGate locked={lesson.locked} prerequisiteSlug={lesson.prerequisite} levelCode={level}>
+      <LessonGate
+        locked={lesson.locked}
+        prerequisiteSlug={lesson.prerequisite}
+        prerequisiteTitleAr={lesson.prerequisiteTitleAr}
+        levelCode={level}
+        levelProgress={lesson.levelProgress}
+      >
         <div className="space-y-6">
           <GrammarRule ruleDe={lesson.ruleDe} />
           <ArabicExplanation text={lesson.explanationAr} />
