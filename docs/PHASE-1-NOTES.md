@@ -53,8 +53,21 @@ See `.env.example` for the required variables:
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `SUPABASE_SERVICE_ROLE_KEY`
-- `DATABASE_URL`
-- `DIRECT_URL`
+- `DATABASE_URL` -- must point at Supabase's transaction pooler (port 6543)
+  with `?pgbouncer=true&connection_limit=1`, not the direct connection.
+  Vercel functions are short-lived and run in parallel, so a `connection_limit`
+  above 1 (or missing `pgbouncer=true`) exhausts Postgres connections fast.
+- `DIRECT_URL` -- the direct connection (port 5432), used only for
+  migrations (`prisma migrate`), never at runtime.
+- `REVALIDATE_SECRET` / `REVALIDATE_URL` -- optional. Grammar lesson content
+  is cached indefinitely (`unstable_cache`, tag `grammar-content`) since it
+  only changes on a re-seed. `REVALIDATE_SECRET` authorizes
+  `POST /api/revalidate-grammar` to drop that cache; `REVALIDATE_URL` (the
+  deployment's base URL) lets `scripts/seed-grammar.ts` call it automatically
+  after seeding. Without these two, re-seeding still works, it just won't
+  refresh the live site's cache until it expires on its own (it doesn't --
+  it must be triggered manually via the curl command in
+  `scripts/seed-grammar.ts`'s `triggerRevalidation()`).
 
 No real credentials are committed; fill them in after creating a Supabase project.
 
