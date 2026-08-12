@@ -337,16 +337,25 @@ export async function submitFinalExamAttempt(answers: Record<number, QuizAnswerV
   return finalizeAttempt(resolved, answers, "/roadmap");
 }
 
+// TEMP-DIAGNOSTIC: timing instrumentation to confirm/deny where /grammar/[level]
+// spends its ~278ms server time -- remove once the real numbers are in from
+// Vercel logs. Two separate timers because requireUserId() (JWT validation)
+// and the actual quizAttempt query are different costs; conflating them would
+// hide which one (if either) actually matters.
 async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
   if (slugs.length === 0) return new Set();
 
+  const authStart = performance.now();
   let userId: string;
   try {
     userId = await requireUserId();
   } catch {
+    console.log(`[TIMING] requireUserId() (failed): ${(performance.now() - authStart).toFixed(1)}ms`);
     return new Set();
   }
+  console.log(`[TIMING] requireUserId(): ${(performance.now() - authStart).toFixed(1)}ms`);
 
+  const queryStart = performance.now();
   try {
     const attempts = await prisma.quizAttempt.findMany({
       where: {
@@ -356,6 +365,9 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
       },
       select: { quiz: { select: { lesson: { select: { slug: true } } } } },
     });
+    console.log(
+      `[TIMING] quizAttempt.findMany (${slugs.length} slugs): ${(performance.now() - queryStart).toFixed(1)}ms`
+    );
     return new Set(
       attempts
         .map((attempt) => attempt.quiz.lesson?.slug)
