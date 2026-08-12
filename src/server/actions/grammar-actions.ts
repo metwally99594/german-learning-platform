@@ -337,13 +337,25 @@ export async function submitFinalExamAttempt(answers: Record<number, QuizAnswerV
   return finalizeAttempt(resolved, answers, "/roadmap");
 }
 
-// TEMP-DIAGNOSTIC: timing instrumentation to confirm/deny where /grammar/[level]
-// spends its ~278ms server time -- remove once the real numbers are in from
-// Vercel logs. Two separate timers because requireUserId() (JWT validation)
-// and the actual quizAttempt query are different costs; conflating them would
-// hide which one (if either) actually matters.
-async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
-  if (slugs.length === 0) return new Set();
+// TEMP-DIAGNOSTIC: timing instrumentation -- remove once the user has
+// measured the post-quizId-lookup numbers and confirmed removal.
+//
+// Takes {slug, quizId} pairs (from LessonSummaryRow) instead of bare slugs:
+// filtering QuizAttempt by quizId directly is a single-table lookup, no
+// join, versus the previous quiz: { type, lesson: { slug: { in } } } filter
+// (join through Quiz to Lesson) plus a matching nested `select` to read the
+// slug back out (a second join for output). Lessons with no quizId
+// (JSON-fallback content, never persisted -- see LessonSummaryRow) are
+// filtered out before the query since they can't have a real QuizAttempt
+// row regardless.
+async function getPassedLessonSlugs(
+  lessons: { slug: string; quizId: string | null }[]
+): Promise<Set<string>> {
+  const quizIdToSlug = new Map<string, string>();
+  for (const lesson of lessons) {
+    if (lesson.quizId) quizIdToSlug.set(lesson.quizId, lesson.slug);
+  }
+  if (quizIdToSlug.size === 0) return new Set();
 
   const authStart = performance.now();
   let userId: string;
@@ -361,16 +373,16 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
       where: {
         userId,
         passed: true,
-        quiz: { type: "LESSON", lesson: { slug: { in: slugs } } },
+        quizId: { in: [...quizIdToSlug.keys()] },
       },
-      select: { quiz: { select: { lesson: { select: { slug: true } } } } },
+      select: { quizId: true },
     });
     console.log(
-      `[TIMING] quizAttempt.findMany (${slugs.length} slugs): ${(performance.now() - queryStart).toFixed(1)}ms`
+      `[TIMING] quizAttempt.findMany (${quizIdToSlug.size} quizIds): ${(performance.now() - queryStart).toFixed(1)}ms`
     );
     return new Set(
       attempts
-        .map((attempt) => attempt.quiz.lesson?.slug)
+        .map((attempt) => quizIdToSlug.get(attempt.quizId))
         .filter((slug): slug is string => Boolean(slug))
     );
   } catch {
@@ -381,14 +393,14 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
 async function isLevelFullyPassed(level: string): Promise<boolean> {
   const summaries = await getLevelLessonSummaries(level);
   if (summaries.length === 0) return false;
-  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  const passed = await getPassedLessonSlugs(summaries);
   return passed.size === summaries.length;
 }
 
 async function isWeekFullyPassed(level: string, weekNumber: number): Promise<boolean> {
   const summaries = (await getLevelLessonSummaries(level)).filter((l) => l.weekNumber === weekNumber);
   if (summaries.length === 0) return false;
-  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  const passed = await getPassedLessonSlugs(summaries);
   return passed.size === summaries.length;
 }
 
@@ -415,6 +427,11 @@ type LessonSummaryRow = {
   weekNumber: number;
   orderInLevel: number;
   prerequisite: string | null;
+  // The lesson's LESSON-type quiz id -- null for JSON-fallback content
+  // (never persisted, so there's no id to have). Carried here so
+  // getPassedLessonSlugs can filter QuizAttempt by quizId directly instead
+  // of joining through quiz -> lesson -> slug on every call.
+  quizId: string | null;
 };
 
 // Lightweight, `select`-only fetch for list/lock-check purposes -- no
@@ -438,10 +455,16 @@ async function fetchLevelLessonSummaries(level: string): Promise<LessonSummaryRo
         weekNumber: true,
         orderInLevel: true,
         prerequisite: true,
+        quizzes: { where: { type: "LESSON" }, select: { id: true }, take: 1 },
       },
       orderBy: { orderInLevel: "asc" },
     });
-    if (dbLessons.length > 0) return dbLessons;
+    if (dbLessons.length > 0) {
+      return dbLessons.map(({ quizzes, ...lesson }) => ({
+        ...lesson,
+        quizId: quizzes[0]?.id ?? null,
+      }));
+    }
   } catch {
     // fall through to JSON
   }
@@ -457,6 +480,7 @@ async function fetchLevelLessonSummaries(level: string): Promise<LessonSummaryRo
           weekNumber: l.weekNumber,
           orderInLevel: l.orderInLevel,
           prerequisite: l.prerequisite,
+          quizId: null,
         }))
     : [];
 }
@@ -471,7 +495,7 @@ const getLevelLessonSummaries = cache(
 export async function getGrammarLessonsByLevel(levelCode: string): Promise<GrammarLessonSummary[]> {
   const level = normalizeLevelCode(levelCode);
   const lessons = await getLevelLessonSummaries(level);
-  const passedSlugs = await getPassedLessonSlugs(lessons.map((l) => l.slug));
+  const passedSlugs = await getPassedLessonSlugs(lessons);
 
   return lessons.map((lesson) => ({
     slug: lesson.slug,
@@ -555,19 +579,26 @@ export async function getLessonLockInfo(
   }
 
   const level = normalizeLevelCode(levelCode);
-  const passedPrereq = await getPassedLessonSlugs([prerequisiteSlug]);
+  // Fetched once upfront (cached, so this is never a second real query) --
+  // getPassedLessonSlugs needs the prerequisite's quizId, not just its
+  // slug, and the locked branch below needs the same summaries anyway.
+  const summaries = await getLevelLessonSummaries(level);
+  const prerequisiteRow = summaries.find((l) => l.slug === prerequisiteSlug);
+
+  const passedPrereq = await getPassedLessonSlugs(
+    prerequisiteRow ? [prerequisiteRow] : [{ slug: prerequisiteSlug, quizId: null }]
+  );
   const locked = !passedPrereq.has(prerequisiteSlug);
 
   if (!locked) {
     return { locked: false, prerequisiteTitleAr: null, levelProgress: null };
   }
 
-  // Only worth the extra queries once actually locked -- the gate UI needs
+  // Only worth the extra query once actually locked -- the gate UI needs
   // the prerequisite's Arabic title and the level's completion count, but
   // the far more common unlocked path has no use for either.
-  const summaries = await getLevelLessonSummaries(level);
-  const prerequisiteTitleAr = summaries.find((l) => l.slug === prerequisiteSlug)?.titleAr ?? null;
-  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  const prerequisiteTitleAr = prerequisiteRow?.titleAr ?? null;
+  const passed = await getPassedLessonSlugs(summaries);
   const levelProgress = { completed: passed.size, total: summaries.length };
 
   return { locked, prerequisiteTitleAr, levelProgress };
