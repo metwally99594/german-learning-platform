@@ -7,6 +7,7 @@ import {
   BookText,
   Brain,
   ClipboardList,
+  ExternalLink,
   LayoutDashboard,
   Map,
   MessageSquare,
@@ -27,6 +28,7 @@ const navItems = [
   { title: "Quizzes", href: "/quizzes", icon: ClipboardList },
   { title: "C1 Mündlich", href: "/muendlich", icon: Mic },
   { title: "Achievements", href: "/achievements", icon: Trophy },
+  { title: "C1 Speaking Trainer", href: "https://c1-speaking-trainer.vercel.app", icon: ExternalLink, external: true },
   { title: "AI Chat", href: "/ai-chat", icon: MessageSquare },
 ];
 
@@ -45,17 +47,20 @@ export function SidebarContent() {
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                active
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-accent hover:text-foreground"
-              )}
-            >
+          const className = cn(
+            "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+            active
+              ? "bg-primary text-primary-foreground"
+              : "text-muted-foreground hover:bg-accent hover:text-foreground"
+          );
+
+          return item.external ? (
+            <a key={item.href} href={item.href} target="_blank" rel="noreferrer" className={className}>
+              <Icon className="h-4 w-4" />
+              {item.title}
+            </a>
+          ) : (
+            <Link key={item.href} href={item.href} className={className}>
               <Icon className="h-4 w-4" />
               {item.title}
             </Link>

@@ -60,6 +60,18 @@ export function SpeechFeedback({ evaluation, transcript }: SpeechFeedbackProps) 
         </CardContent>
       </Card>
 
+      {evaluation.correctedText && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Corrected version</CardTitle>
+            <CardDescription>Eine natürlichere und grammatikalisch verbesserte Version.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="whitespace-pre-wrap text-sm leading-relaxed">{evaluation.correctedText}</p>
+          </CardContent>
+        </Card>
+      )}
+
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>
           <CardHeader>
