@@ -112,6 +112,42 @@ async function main() {
   }
 
   console.log(`Done. ${totalLessons} grammar lessons seeded total.`);
+
+  await triggerRevalidation();
+}
+
+// Grammar content is cached indefinitely on the deployed app (unstable_cache,
+// tags: ['grammar-content'] in grammar-actions.ts) since it only changes on a
+// re-seed like this one -- so tell the deployment to drop that cache now that
+// the DB has fresh content. Best-effort: if REVALIDATE_URL/REVALIDATE_SECRET
+// aren't set (e.g. seeding a local DB with no deployment to notify), this
+// just logs how to trigger it manually instead of failing the seed.
+async function triggerRevalidation() {
+  const url = process.env.REVALIDATE_URL;
+  const secret = process.env.REVALIDATE_SECRET;
+
+  if (!url || !secret) {
+    console.log(
+      "REVALIDATE_URL/REVALIDATE_SECRET not set -- skipping cache revalidation. " +
+        "If this seed targeted a deployed database, run:\n" +
+        "  curl -X POST <deployment-url>/api/revalidate-grammar -H \"Authorization: Bearer <REVALIDATE_SECRET>\""
+    );
+    return;
+  }
+
+  try {
+    const res = await fetch(`${url.replace(/\/$/, "")}/api/revalidate-grammar`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${secret}` },
+    });
+    if (res.ok) {
+      console.log("Grammar content cache revalidated on the deployment.");
+    } else {
+      console.warn(`Revalidation request failed: ${res.status} ${await res.text()}`);
+    }
+  } catch (error) {
+    console.warn("Revalidation request failed:", error);
+  }
 }
 
 main()

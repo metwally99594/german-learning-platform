@@ -6,9 +6,22 @@ import type { NextConfig } from "next";
 // needs middleware), which is the stronger alternative if this is ever
 // revisited. style-src needs 'unsafe-inline' too: Base UI's popover/
 // dropdown/tooltip positioning sets inline styles via JS.
+//
+// 'unsafe-eval' is added ONLY in development: webpack's dev-mode module
+// system (next dev) wraps modules in eval()-based code for HMR, and without
+// this, that eval() call is blocked by the CSP -- which doesn't just log a
+// console warning, it silently breaks React hydration entirely (confirmed:
+// hydrated elements never get their __reactProps, so no client component
+// anywhere on the page ever becomes interactive -- clicks, effects, state,
+// all inert). Production's webpack build doesn't use eval() for anything,
+// so this is dev-only and doesn't weaken the deployed CSP.
+const scriptSrc = ["'self'", "'unsafe-inline'", ...(process.env.NODE_ENV !== "production" ? ["'unsafe-eval'"] : [])].join(
+  " "
+);
+
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src ${scriptSrc}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",

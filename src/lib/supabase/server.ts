@@ -1,7 +1,12 @@
+import { cache } from "react";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-export async function createClient() {
+// cache(): (main)/layout.tsx calls this directly, and requireUserId() also
+// calls it internally -- within one request those are two separate calls
+// to the same cookies()+client-construction work. Per-request only, so no
+// cross-request/cross-user leakage.
+export const createClient = cache(async () => {
   const cookieStore = await cookies();
 
   return createServerClient(
@@ -25,4 +30,4 @@ export async function createClient() {
       },
     }
   );
-}
+});

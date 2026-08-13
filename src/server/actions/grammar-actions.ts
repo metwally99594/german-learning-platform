@@ -1,9 +1,10 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, unstable_cache } from "next/cache";
+import { cache } from "react";
 import { Prisma, GrammarQuizType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
-import { requireUserId } from "@/lib/auth/session";
+import { requireUserId, provisionUserRow } from "@/lib/auth/session";
 import { gradeQuiz } from "@/lib/grammar/grading";
 import {
   GrammarExample,
@@ -23,6 +24,16 @@ const LEVEL_FALLBACKS: Record<string, GrammarLevelFile> = {
 };
 
 const CEFR_LEVEL_CODES = ["A1", "A2", "B1", "B2", "C1"] as const;
+
+// Grammar lesson/quiz text only changes when someone re-seeds the DB (a few
+// times a year), not per-request -- so it's cached indefinitely (tags,
+// revalidate: false) and only invalidated explicitly via revalidateTag from
+// POST /api/revalidate-grammar (see scripts/seed-grammar.ts for the caller).
+// Anything that depends on requireUserId()/cookies (locked state, passed
+// lessons, progress counts) must NEVER be wrapped in unstable_cache -- that
+// cache is shared across all users and requests, so caching a per-user
+// result would leak one user's progress to everyone else.
+const GRAMMAR_CONTENT_TAG = "grammar-content";
 
 const LEVEL_NAMES: Record<string, string> = {
   A1: "A1 – Beginner",
@@ -249,21 +260,37 @@ async function finalizeAttempt(
     return { ...grade, saved: false };
   }
 
+  const attemptData = {
+    userId,
+    quizId: resolved.dbId,
+    score: grade.score,
+    passed: grade.passed,
+    answers: answers as Prisma.InputJsonValue,
+  };
+
   try {
-    await prisma.quizAttempt.create({
-      data: {
-        userId,
-        quizId: resolved.dbId,
-        score: grade.score,
-        passed: grade.passed,
-        answers: answers as Prisma.InputJsonValue,
-      },
-    });
-    if (revalidateOnSave) revalidatePath(revalidateOnSave);
-    return { ...grade, saved: true };
-  } catch {
-    return { ...grade, saved: false, error: "Failed to save your progress." };
+    await prisma.quizAttempt.create({ data: attemptData });
+  } catch (error) {
+    // requireUserId() no longer verifies a `users` row exists (see its
+    // doc comment) -- the normal provisioning path is signup(), so this
+    // should be rare. If the row genuinely is missing, the FK on
+    // QuizAttempt.userId fails the write instead of silently attaching it
+    // to a nonexistent user (Prisma P2003). Self-heal once: provision the
+    // row, retry the exact same insert, and only give up if that fails too.
+    if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2003") {
+      try {
+        await provisionUserRow(userId);
+        await prisma.quizAttempt.create({ data: attemptData });
+      } catch {
+        return { ...grade, saved: false, error: "Failed to save your progress." };
+      }
+    } else {
+      return { ...grade, saved: false, error: "Failed to save your progress." };
+    }
   }
+
+  if (revalidateOnSave) revalidatePath(revalidateOnSave);
+  return { ...grade, saved: true };
 }
 
 // Grades server-side against the authoritative answer key (never trusts a
@@ -326,28 +353,52 @@ export async function submitFinalExamAttempt(answers: Record<number, QuizAnswerV
   return finalizeAttempt(resolved, answers, "/roadmap");
 }
 
-async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
-  if (slugs.length === 0) return new Set();
+// TEMP-DIAGNOSTIC: timing instrumentation -- remove once the user has
+// measured the post-quizId-lookup numbers and confirmed removal.
+//
+// Takes {slug, quizId} pairs (from LessonSummaryRow) instead of bare slugs:
+// filtering QuizAttempt by quizId directly is a single-table lookup, no
+// join, versus the previous quiz: { type, lesson: { slug: { in } } } filter
+// (join through Quiz to Lesson) plus a matching nested `select` to read the
+// slug back out (a second join for output). Lessons with no quizId
+// (JSON-fallback content, never persisted -- see LessonSummaryRow) are
+// filtered out before the query since they can't have a real QuizAttempt
+// row regardless.
+async function getPassedLessonSlugs(
+  lessons: { slug: string; quizId: string | null }[]
+): Promise<Set<string>> {
+  const quizIdToSlug = new Map<string, string>();
+  for (const lesson of lessons) {
+    if (lesson.quizId) quizIdToSlug.set(lesson.quizId, lesson.slug);
+  }
+  if (quizIdToSlug.size === 0) return new Set();
 
+  const authStart = performance.now();
   let userId: string;
   try {
     userId = await requireUserId();
   } catch {
+    console.log(`[TIMING] requireUserId() (failed): ${(performance.now() - authStart).toFixed(1)}ms`);
     return new Set();
   }
+  console.log(`[TIMING] requireUserId(): ${(performance.now() - authStart).toFixed(1)}ms`);
 
+  const queryStart = performance.now();
   try {
     const attempts = await prisma.quizAttempt.findMany({
       where: {
         userId,
         passed: true,
-        quiz: { type: "LESSON", lesson: { slug: { in: slugs } } },
+        quizId: { in: [...quizIdToSlug.keys()] },
       },
-      select: { quiz: { select: { lesson: { select: { slug: true } } } } },
+      select: { quizId: true },
     });
+    console.log(
+      `[TIMING] quizAttempt.findMany (${quizIdToSlug.size} quizIds): ${(performance.now() - queryStart).toFixed(1)}ms`
+    );
     return new Set(
       attempts
-        .map((attempt) => attempt.quiz.lesson?.slug)
+        .map((attempt) => quizIdToSlug.get(attempt.quizId))
         .filter((slug): slug is string => Boolean(slug))
     );
   } catch {
@@ -358,14 +409,14 @@ async function getPassedLessonSlugs(slugs: string[]): Promise<Set<string>> {
 async function isLevelFullyPassed(level: string): Promise<boolean> {
   const summaries = await getLevelLessonSummaries(level);
   if (summaries.length === 0) return false;
-  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  const passed = await getPassedLessonSlugs(summaries);
   return passed.size === summaries.length;
 }
 
 async function isWeekFullyPassed(level: string, weekNumber: number): Promise<boolean> {
   const summaries = (await getLevelLessonSummaries(level)).filter((l) => l.weekNumber === weekNumber);
   if (summaries.length === 0) return false;
-  const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
+  const passed = await getPassedLessonSlugs(summaries);
   return passed.size === summaries.length;
 }
 
@@ -392,13 +443,24 @@ type LessonSummaryRow = {
   weekNumber: number;
   orderInLevel: number;
   prerequisite: string | null;
+  // The lesson's LESSON-type quiz id -- null for JSON-fallback content
+  // (never persisted, so there's no id to have). Carried here so
+  // getPassedLessonSlugs can filter QuizAttempt by quizId directly instead
+  // of joining through quiz -> lesson -> slug on every call.
+  quizId: string | null;
 };
 
 // Lightweight, `select`-only fetch for list/lock-check purposes -- no
 // ruleDe/explanationAr/examples/story/quiz.questions. getGrammarLesson
 // below fetches full content, but only for a single lesson via a direct
 // findFirst, never for a whole level's worth of lessons at once.
-async function getLevelLessonSummaries(level: string): Promise<LessonSummaryRow[]> {
+//
+// Pure content, no user/cookie dependency, so it's safe to cache across
+// requests (unstable_cache) AND across the several times it's called
+// within one render (React cache -- avoids re-hitting even the Data Cache
+// layer for e.g. a page that needs both the lesson list and a lock check
+// in the same request). See GRAMMAR_CONTENT_TAG for the invalidation story.
+async function fetchLevelLessonSummaries(level: string): Promise<LessonSummaryRow[]> {
   try {
     const dbLessons = await prisma.grammarLesson.findMany({
       where: { cefrLevel: { code: level } },
@@ -409,10 +471,16 @@ async function getLevelLessonSummaries(level: string): Promise<LessonSummaryRow[
         weekNumber: true,
         orderInLevel: true,
         prerequisite: true,
+        quizzes: { where: { type: "LESSON" }, select: { id: true }, take: 1 },
       },
       orderBy: { orderInLevel: "asc" },
     });
-    if (dbLessons.length > 0) return dbLessons;
+    if (dbLessons.length > 0) {
+      return dbLessons.map(({ quizzes, ...lesson }) => ({
+        ...lesson,
+        quizId: quizzes[0]?.id ?? null,
+      }));
+    }
   } catch {
     // fall through to JSON
   }
@@ -428,14 +496,22 @@ async function getLevelLessonSummaries(level: string): Promise<LessonSummaryRow[
           weekNumber: l.weekNumber,
           orderInLevel: l.orderInLevel,
           prerequisite: l.prerequisite,
+          quizId: null,
         }))
     : [];
 }
 
+const getLevelLessonSummaries = cache(
+  unstable_cache(fetchLevelLessonSummaries, ["grammar-level-lesson-summaries"], {
+    tags: [GRAMMAR_CONTENT_TAG],
+    revalidate: false,
+  })
+);
+
 export async function getGrammarLessonsByLevel(levelCode: string): Promise<GrammarLessonSummary[]> {
   const level = normalizeLevelCode(levelCode);
   const lessons = await getLevelLessonSummaries(level);
-  const passedSlugs = await getPassedLessonSlugs(lessons.map((l) => l.slug));
+  const passedSlugs = await getPassedLessonSlugs(lessons);
 
   return lessons.map((lesson) => ({
     slug: lesson.slug,
@@ -449,23 +525,19 @@ export async function getGrammarLessonsByLevel(levelCode: string): Promise<Gramm
   }));
 }
 
-export type GrammarLessonView = GrammarLessonContent & {
-  locked: boolean;
-  prerequisiteTitleAr: string | null;
-  levelProgress: { completed: number; total: number } | null;
-};
-
-export async function getGrammarLesson(levelCode: string, slug: string): Promise<GrammarLessonView | null> {
-  const level = normalizeLevelCode(levelCode);
-  let content: GrammarLessonContent | null = null;
-
+// Pure content fetch, no cookies/user dependency -- cacheable the same way
+// as fetchLevelLessonSummaries. This is what generateStaticParams's pages
+// call directly (see grammar/[level]/[slug]/page.tsx): a statically
+// rendered page must never touch requireUserId()/cookies() itself or Next
+// opts the whole route out of static generation.
+async function fetchLessonContent(level: string, slug: string): Promise<GrammarLessonContent | null> {
   try {
     const dbLesson = await prisma.grammarLesson.findFirst({
       where: { slug, cefrLevel: { code: level } },
       include: { quizzes: { where: { type: "LESSON" }, take: 1 } },
     });
     if (dbLesson) {
-      content = {
+      return {
         slug: dbLesson.slug,
         weekNumber: dbLesson.weekNumber,
         orderInLevel: dbLesson.orderInLevel,
@@ -489,29 +561,90 @@ export async function getGrammarLesson(levelCode: string, slug: string): Promise
     // fall through to JSON
   }
 
-  if (!content) {
-    content = await findFallbackLesson(level, slug);
+  return findFallbackLesson(level, slug);
+}
+
+const getLessonContentCached = cache(
+  unstable_cache(fetchLessonContent, ["grammar-lesson-content"], {
+    tags: [GRAMMAR_CONTENT_TAG],
+    revalidate: false,
+  })
+);
+
+export async function getLessonContent(levelCode: string, slug: string): Promise<GrammarLessonContent | null> {
+  return getLessonContentCached(normalizeLevelCode(levelCode), slug);
+}
+
+export type LessonLockInfo = {
+  locked: boolean;
+  prerequisiteTitleAr: string | null;
+  levelProgress: { completed: number; total: number } | null;
+};
+
+// Deliberately dynamic (never cached): reads the caller's progress via
+// getPassedLessonSlugs/requireUserId. Takes the prerequisite slug directly
+// (rather than re-deriving it from getGrammarLesson) so the statically
+// rendered lesson page can pass along what it already fetched instead of
+// this doing a second content lookup.
+export async function getLessonLockInfo(
+  levelCode: string,
+  prerequisiteSlug: string | null
+): Promise<LessonLockInfo> {
+  if (!prerequisiteSlug) {
+    return { locked: false, prerequisiteTitleAr: null, levelProgress: null };
   }
 
-  if (!content) return null;
+  const level = normalizeLevelCode(levelCode);
+  // Fetched once upfront (cached, so this is never a second real query) --
+  // getPassedLessonSlugs needs the prerequisite's quizId, not just its
+  // slug, and the locked branch below needs the same summaries anyway.
+  const summaries = await getLevelLessonSummaries(level);
+  const prerequisiteRow = summaries.find((l) => l.slug === prerequisiteSlug);
 
-  const locked = content.prerequisite
-    ? !(await getPassedLessonSlugs([content.prerequisite])).has(content.prerequisite)
-    : false;
+  const passedPrereq = await getPassedLessonSlugs(
+    prerequisiteRow ? [prerequisiteRow] : [{ slug: prerequisiteSlug, quizId: null }]
+  );
+  const locked = !passedPrereq.has(prerequisiteSlug);
 
-  // Only worth the extra queries when actually locked -- the gate UI needs
+  if (!locked) {
+    return { locked: false, prerequisiteTitleAr: null, levelProgress: null };
+  }
+
+  // Only worth the extra query once actually locked -- the gate UI needs
   // the prerequisite's Arabic title and the level's completion count, but
   // the far more common unlocked path has no use for either.
-  let prerequisiteTitleAr: string | null = null;
-  let levelProgress: { completed: number; total: number } | null = null;
-  if (locked) {
-    const summaries = await getLevelLessonSummaries(level);
-    prerequisiteTitleAr = summaries.find((l) => l.slug === content!.prerequisite)?.titleAr ?? null;
-    const passed = await getPassedLessonSlugs(summaries.map((l) => l.slug));
-    levelProgress = { completed: passed.size, total: summaries.length };
-  }
+  const prerequisiteTitleAr = prerequisiteRow?.titleAr ?? null;
+  const passed = await getPassedLessonSlugs(summaries);
+  const levelProgress = { completed: passed.size, total: summaries.length };
 
-  return { ...content, locked, prerequisiteTitleAr, levelProgress };
+  return { locked, prerequisiteTitleAr, levelProgress };
+}
+
+export type GrammarLessonView = GrammarLessonContent & LessonLockInfo;
+
+// Convenience composition of the two above, for callers that need both
+// content and lock status together and don't care about static rendering
+// (the quiz page, and submitLessonQuizAttempt's server-side re-check).
+export async function getGrammarLesson(levelCode: string, slug: string): Promise<GrammarLessonView | null> {
+  const content = await getLessonContent(levelCode, slug);
+  if (!content) return null;
+
+  const lockInfo = await getLessonLockInfo(levelCode, content.prerequisite);
+  return { ...content, ...lockInfo };
+}
+
+// All {level, slug} pairs that currently have lesson content, for
+// generateStaticParams -- content-only, so it uses the cached summaries
+// fetch rather than anything that would pull in a per-user progress query.
+export async function getAllGrammarLessonParams(): Promise<{ level: string; slug: string }[]> {
+  const params: { level: string; slug: string }[] = [];
+  for (const code of CEFR_LEVEL_CODES) {
+    const summaries = await getLevelLessonSummaries(code);
+    for (const summary of summaries) {
+      params.push({ level: code.toLowerCase(), slug: summary.slug });
+    }
+  }
+  return params;
 }
 
 export type RoadmapLevelView = {
@@ -522,37 +655,64 @@ export type RoadmapLevelView = {
   state: "locked" | "available" | "completed";
 };
 
-export async function getRoadmap(): Promise<RoadmapLevelView[]> {
-  // Batched instead of a per-level loop: one query for lesson counts
-  // (groupBy), one for the user's distinct passed lessons, both grouped by
-  // level in memory afterward -- a constant few queries regardless of how
-  // many CEFR levels exist, instead of up to 2 full-content queries per
-  // level (10 total, each dragging ruleDe/explanationAr/examples/story/
-  // quiz.questions for every lesson along for no reason).
-  const totalsByCode = new Map<string, number>();
-  const passedByCode = new Map<string, number>();
+type LevelTotals = {
+  // Record instead of Map -- unstable_cache serializes the return value,
+  // and a Map doesn't round-trip through JSON.
+  totalsByCode: Record<string, number>;
+  idToCode: Record<string, string>;
+};
+
+// Pure content: per-level lesson counts, plus the cefrLevelId -> code
+// mapping (small, static reference data) so the per-user part below doesn't
+// need a second query just to group its results by level.
+async function fetchLevelTotals(): Promise<LevelTotals> {
+  const totalsByCode: Record<string, number> = {};
+  const idToCode: Record<string, string> = {};
 
   try {
     const levelRows = await prisma.cEFRLevel.findMany({ select: { id: true, code: true } });
-    const idToCode = new Map(levelRows.map((l) => [l.id, l.code]));
+    for (const row of levelRows) idToCode[row.id] = row.code;
 
     const totals = await prisma.grammarLesson.groupBy({
       by: ["cefrLevelId"],
       _count: { _all: true },
     });
     for (const row of totals) {
-      const code = idToCode.get(row.cefrLevelId);
-      if (code) totalsByCode.set(code, row._count._all);
+      const code = idToCode[row.cefrLevelId];
+      if (code) totalsByCode[code] = row._count._all;
     }
+  } catch {
+    // DB unreachable -- caller falls through to the JSON-fallback count
+    // (only A1 has fallback content, matching getLevelLessonSummaries's
+    // own fallback).
+  }
 
-    let userId: string | null = null;
+  return { totalsByCode, idToCode };
+}
+
+const getLevelTotals = cache(
+  unstable_cache(fetchLevelTotals, ["grammar-level-totals"], {
+    tags: [GRAMMAR_CONTENT_TAG],
+    revalidate: false,
+  })
+);
+
+export async function getRoadmap(): Promise<RoadmapLevelView[]> {
+  const { totalsByCode, idToCode } = await getLevelTotals();
+  const passedByCode = new Map<string, number>();
+
+  // Per-user, so deliberately outside the cached totals fetch above --
+  // and its own try/catch, so a failure here (or simply being logged out)
+  // can't blank out the level totals too.
+  let userId: string | null = null;
+  try {
+    userId = await requireUserId();
+  } catch {
+    // Not authenticated -- passedByCode stays empty (0 everywhere).
+  }
+
+  if (userId) {
     try {
-      userId = await requireUserId();
-    } catch {
-      // Not authenticated -- passedByCode stays empty (0 everywhere).
-    }
-
-    if (userId) {
       const passedLessons = await prisma.quizAttempt.findMany({
         where: { userId, passed: true, quiz: { type: "LESSON", lessonId: { not: null } } },
         distinct: ["quizId"], // a lesson can be attempted more than once; count it once
@@ -560,22 +720,20 @@ export async function getRoadmap(): Promise<RoadmapLevelView[]> {
       });
       for (const attempt of passedLessons) {
         const levelId = attempt.quiz.lesson?.cefrLevelId;
-        const code = levelId ? idToCode.get(levelId) : undefined;
+        const code = levelId ? idToCode[levelId] : undefined;
         if (code) passedByCode.set(code, (passedByCode.get(code) ?? 0) + 1);
       }
+    } catch {
+      // DB unreachable for the per-user part -- passedByCode stays empty.
     }
-  } catch {
-    // DB unreachable -- every level falls through to the JSON-fallback
-    // count below (only A1 has fallback content, matching
-    // getLevelLessonSummaries's own fallback).
   }
 
   const levels: RoadmapLevelView[] = [];
   let previousCompleted = true; // A1 is always reachable
 
   for (const code of CEFR_LEVEL_CODES) {
-    const total = totalsByCode.get(code) ?? LEVEL_FALLBACKS[code]?.lessons.length ?? 0;
-    const completedCount = totalsByCode.has(code) ? passedByCode.get(code) ?? 0 : 0;
+    const total = totalsByCode[code] ?? LEVEL_FALLBACKS[code]?.lessons.length ?? 0;
+    const completedCount = code in totalsByCode ? passedByCode.get(code) ?? 0 : 0;
     const completed = total > 0 && completedCount === total;
 
     levels.push({

@@ -1,27 +1,34 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getGrammarLesson } from "@/server/actions/grammar-actions";
+import { getLessonContent, getAllGrammarLessonParams } from "@/server/actions/grammar-actions";
 import { GrammarRule } from "@/components/grammar/grammar-rule";
 import { ArabicExplanation } from "@/components/grammar/arabic-explanation";
 import { ExampleList } from "@/components/grammar/example-list";
 import { StoryBlock } from "@/components/grammar/story-block";
-import { LessonGate } from "@/components/grammar/lesson-gate";
+import { LessonGateClient } from "@/components/grammar/lesson-gate-client";
 import { Button } from "@/components/ui/button";
 
 type PageProps = {
   params: Promise<{ level: string; slug: string }>;
 };
 
+// Pre-render every known lesson at build time; new lessons added by a later
+// seed (e.g. A2) fall back to on-demand ISR instead of a 404, since
+// dynamicParams defaults to true.
+export async function generateStaticParams() {
+  return getAllGrammarLessonParams();
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { level, slug } = await params;
-  const lesson = await getGrammarLesson(level, slug);
+  const lesson = await getLessonContent(level, slug);
   return { title: lesson ? `${lesson.titleAr} — ${lesson.titleDe}` : "الدرس غير موجود" };
 }
 
 export default async function GrammarLessonPage({ params }: PageProps) {
   const { level, slug } = await params;
-  const lesson = await getGrammarLesson(level, slug);
+  const lesson = await getLessonContent(level, slug);
 
   if (!lesson) {
     notFound();
@@ -37,13 +44,7 @@ export default async function GrammarLessonPage({ params }: PageProps) {
         </p>
       </div>
 
-      <LessonGate
-        locked={lesson.locked}
-        prerequisiteSlug={lesson.prerequisite}
-        prerequisiteTitleAr={lesson.prerequisiteTitleAr}
-        levelCode={level}
-        levelProgress={lesson.levelProgress}
-      >
+      <LessonGateClient levelCode={level} prerequisiteSlug={lesson.prerequisite}>
         <div className="space-y-6">
           <GrammarRule ruleDe={lesson.ruleDe} />
           <ArabicExplanation text={lesson.explanationAr} />
@@ -54,7 +55,7 @@ export default async function GrammarLessonPage({ params }: PageProps) {
             <Link href={`/grammar/${level}/${slug}/quiz`}>ابدأ اختبار الدرس</Link>
           </Button>
         </div>
-      </LessonGate>
+      </LessonGateClient>
     </div>
   );
 }
