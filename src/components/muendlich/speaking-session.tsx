@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Exercise } from "@prisma/client";
 import { RubricItem, SpeakingExerciseContent } from "@/types";
 import { updateSpeakingProgress } from "@/server/actions/speaking-actions";
+import { getNvidiaSpeakingFeedback } from "@/server/actions/nvidia-feedback";
 import { Button } from "@/components/ui/button";
 import { PromptCard } from "./prompt-card";
 import { PrepTimer } from "./prep-timer";
@@ -17,6 +18,7 @@ import { useCountdown } from "./use-countdown";
 import { evaluateGermanSpeech, SpeechEvaluation } from "./evaluate-speech";
 import { SpeechFeedback } from "./speech-feedback";
 import { partTitles } from "@/lib/muendlich/format";
+import { Loader2 } from "lucide-react";
 
 export type SpeakingSessionProps = {
   exercise: Exercise;
@@ -34,6 +36,8 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
   const [evaluation, setEvaluation] = useState<SpeechEvaluation | null>(null);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState<string | null>(null);
 
   const speech = useSpeechRecognition();
   const { start, stop, pause, blob, error, isRecording, isPaused } = useMediaRecorder();
@@ -50,7 +54,7 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
     responseTimer.start();
   }
 
-  function handleStopRecording() {
+  async function handleStopRecording() {
     speech.stop();
     stop();
     responseTimer.pause();
@@ -61,9 +65,27 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
       Math.max(1, Math.round(elapsedMs / 1000))
     );
     const transcript = `${speech.transcript} ${speech.interimTranscript}`.trim();
-    const result = evaluateGermanSpeech(transcript, elapsedSec);
+
+    setAiLoading(true);
+    setAiError(null);
+
+    const nvidiaResult = await getNvidiaSpeakingFeedback({
+      transcript,
+      durationSeconds: elapsedSec,
+      prompt: content.prompt,
+    });
+
+    let result: SpeechEvaluation;
+    if (nvidiaResult?.evaluation) {
+      result = nvidiaResult.evaluation;
+    } else {
+      setAiError(nvidiaResult?.error ?? "AI feedback unavailable. Using local scoring.");
+      result = evaluateGermanSpeech(transcript, elapsedSec);
+    }
+
     setEvaluation(result);
     setPhase("review");
+    setAiLoading(false);
 
     void saveProgress(result.score, elapsedSec);
   }
@@ -151,13 +173,24 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
         <p className="text-sm text-destructive">{error || speech.error}</p>
       )}
 
+      {aiLoading && (
+        <div className="flex items-center gap-2 rounded-lg border bg-muted/50 p-4 text-sm">
+          <Loader2 className="h-4 w-4 animate-spin" />
+          AI bewertet deine Antwort…
+        </div>
+      )}
+
+      {aiError && (
+        <p className="text-sm text-amber-600">{aiError}</p>
+      )}
+
       {phase === "review" && blob && <AudioPlayback blob={blob} />}
 
-      {phase === "review" && evaluation && (
+      {phase === "review" && evaluation && !aiLoading && (
         <SpeechFeedback evaluation={evaluation} transcript={fullTranscript} />
       )}
 
-      {phase === "review" && !revealed && (
+      {phase === "review" && !aiLoading && !revealed && (
         <Button variant="outline" onClick={() => setRevealed(true)}>
           Musterantwort anzeigen
         </Button>
@@ -174,7 +207,7 @@ export function SpeakingSession({ exercise, sessionMins }: SpeakingSessionProps)
         </>
       )}
 
-      {phase === "review" && (
+      {phase === "review" && !aiLoading && (
         <div className="flex items-center gap-3">
           <Button variant="outline" onClick={handleReset}>Noch einmal versuchen</Button>
           {saveMessage && (
