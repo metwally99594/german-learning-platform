@@ -10,27 +10,34 @@ export class NotAuthenticatedError extends Error {
 }
 
 /**
- * Resolves the authenticated user's id from the Supabase session and ensures
- * a matching row exists in the app's `users` table (Prisma `User.id` must
- * always equal the Supabase `auth.users.id` — there is no DB trigger syncing
- * them, so this is the sync point). Throws NotAuthenticatedError if there is
- * no session; other errors (e.g. the DB call failing) propagate as-is so
- * callers can tell "not signed in" apart from "database error".
+ * Resolves the authenticated user's id from the Supabase session. Throws
+ * NotAuthenticatedError if there is no session.
  *
- * The split [TIMING] measurement below (real Vercel numbers) showed
- * createClient() costs ~0ms, getUser() costs 20-62ms (a real network call
- * to Supabase's Auth server), and the previous unconditional
- * `prisma.user.upsert()` cost 86-258ms -- ~72% of the whole function, on
- * every single authenticated request, for a user whose row has existed for
- * months. Row creation only needs to happen once, ever, per user, so this
- * is now a findUnique (cheap primary-key read) on the hot path, falling
- * back to upsert -- not a plain create -- only when the row is actually
- * missing, so two concurrent first-requests from a brand-new user can't
- * crash on a duplicate-key error racing each other.
+ * Deliberately does NOT touch Postgres. It used to (first an unconditional
+ * upsert, then a findUnique-with-fallback-upsert after that was measured at
+ * 86-258ms -- ~72% of this function's cost, on every request), but a real
+ * Vercel measurement showed even the findUnique read wasn't free, and the
+ * actual per-user `users` row provisioning already happens exactly once, at
+ * signup (see auth-actions.ts's `signup()`) -- there's no need to re-verify
+ * it exists on every single authenticated request afterward. Prisma
+ * `User.id` mirrors the Supabase auth uid by convention (documented in
+ * schema.prisma); `user.id` here comes straight from Supabase's own
+ * signature-verified session, never from anything client-supplied, so this
+ * is not a trust boundary change -- it's the same identity, just no longer
+ * re-confirmed against a table that signup() already populated.
+ *
+ * Safety net for the row still somehow being missing (e.g. a pre-signup()
+ * legacy account, or manual DB tampering): every write that depends on a
+ * `users` row existing goes through a real Postgres foreign key (e.g.
+ * QuizAttempt.userId -> User.id), so a missing row fails the write cleanly
+ * instead of silently succeeding under the wrong identity. finalizeAttempt
+ * in grammar-actions.ts catches that specific failure (Prisma P2003) and
+ * self-heals via provisionUserRow() below, once, before giving up.
  */
 export const requireUserId = cache(async (): Promise<string> => {
-  // TEMP-DIAGNOSTIC: remove all [TIMING] lines below once the user has
-  // measured the findUnique path and confirmed it resolved the upsert cost.
+  // TEMP-DIAGNOSTIC: remove both [TIMING] lines once the user has confirmed
+  // from Vercel logs that this eliminated the DB round trip from the hot
+  // path (i.e. requireUserId()'s total time now ≈ getUser()'s alone).
   const createClientStart = performance.now();
   const supabase = await createClient();
   console.log(`[TIMING] createClient(): ${(performance.now() - createClientStart).toFixed(1)}ms`);
@@ -45,28 +52,29 @@ export const requireUserId = cache(async (): Promise<string> => {
     throw new NotAuthenticatedError();
   }
 
-  const ensureRowStart = performance.now();
-  const existingUser = await prisma.user.findUnique({
-    where: { id: user.id },
-    select: { id: true },
-  });
-  if (!existingUser) {
-    // Race-safe: if another concurrent request from this same brand-new
-    // user already created the row between the findUnique above and here,
-    // upsert's ON CONFLICT DO UPDATE absorbs that instead of crashing on a
-    // duplicate-key error the way a plain create would.
-    await prisma.user.upsert({
-      where: { id: user.id },
-      update: {},
-      create: {
-        id: user.id,
-        email: user.email ?? "",
-      },
-    });
-  }
-  console.log(
-    `[TIMING] ensureUserRow() (findUnique${existingUser ? "" : " + upsert (new user)"}): ${(performance.now() - ensureRowStart).toFixed(1)}ms`
-  );
-
   return user.id;
 });
+
+/**
+ * Provisions (or repairs) the `users` row for a given, already-verified
+ * user id. Not on the normal request path -- see requireUserId() above.
+ * Called only as a one-time self-heal when a write fails on the User FK
+ * (Prisma P2003), which should be rare: signup() provisions this row at
+ * account creation, and the one known pre-signup()-era orphaned row has
+ * been fixed directly in the DB.
+ */
+export async function provisionUserRow(userId: string): Promise<void> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  await prisma.user.upsert({
+    where: { id: userId },
+    update: {},
+    create: {
+      id: userId,
+      email: user?.email ?? "",
+    },
+  });
+}

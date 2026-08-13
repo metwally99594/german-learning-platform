@@ -4,7 +4,7 @@ import { revalidatePath, unstable_cache } from "next/cache";
 import { cache } from "react";
 import { Prisma, GrammarQuizType } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
-import { requireUserId } from "@/lib/auth/session";
+import { requireUserId, provisionUserRow } from "@/lib/auth/session";
 import { gradeQuiz } from "@/lib/grammar/grading";
 import {
   GrammarExample,
@@ -260,21 +260,37 @@ async function finalizeAttempt(
     return { ...grade, saved: false };
   }
 
+  const attemptData = {
+    userId,
+    quizId: resolved.dbId,
+    score: grade.score,
+    passed: grade.passed,
+    answers: answers as Prisma.InputJsonValue,
+  };
+
   try {
-    await prisma.quizAttempt.create({
-      data: {
-        userId,
-        quizId: resolved.dbId,
-        score: grade.score,
-        passed: grade.passed,
-        answers: answers as Prisma.InputJsonValue,
-      },
-    });
-    if (revalidateOnSave) revalidatePath(revalidateOnSave);
-    return { ...grade, saved: true };
-  } catch {
-    return { ...grade, saved: false, error: "Failed to save your progress." };
+    await prisma.quizAttempt.create({ data: attemptData });
+  } catch (error) {
+    // requireUserId() no longer verifies a `users` row exists (see its
+    // doc comment) -- the normal provisioning path is signup(), so this
+    // should be rare. If the row genuinely is missing, the FK on
+    // QuizAttempt.userId fails the write instead of silently attaching it
+    // to a nonexistent user (Prisma P2003). Self-heal once: provision the
+    // row, retry the exact same insert, and only give up if that fails too.
+    if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2003") {
+      try {
+        await provisionUserRow(userId);
+        await prisma.quizAttempt.create({ data: attemptData });
+      } catch {
+        return { ...grade, saved: false, error: "Failed to save your progress." };
+      }
+    } else {
+      return { ...grade, saved: false, error: "Failed to save your progress." };
+    }
   }
+
+  if (revalidateOnSave) revalidatePath(revalidateOnSave);
+  return { ...grade, saved: true };
 }
 
 // Grades server-side against the authoritative answer key (never trusts a
