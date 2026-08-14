@@ -8,6 +8,7 @@ import { ExampleList } from "@/components/grammar/example-list";
 import { StoryBlock } from "@/components/grammar/story-block";
 import { LessonGateClient } from "@/components/grammar/lesson-gate-client";
 import { Button } from "@/components/ui/button";
+import { SpeakableText } from "@/components/speech/speakable-text";
 
 type PageProps = {
   params: Promise<{ level: string; slug: string }>;
@@ -40,7 +41,7 @@ export default async function GrammarLessonPage({ params }: PageProps) {
         <p className="text-sm text-muted-foreground">الأسبوع {lesson.weekNumber}</p>
         <h1 className="text-3xl font-bold">{lesson.titleAr}</h1>
         <p dir="ltr" className="text-left text-lg text-muted-foreground">
-          {lesson.titleDe}
+          <SpeakableText text={lesson.titleDe} className="text-lg text-muted-foreground" />
         </p>
       </div>
 
@@ -50,6 +51,10 @@ export default async function GrammarLessonPage({ params }: PageProps) {
           <ArabicExplanation text={lesson.explanationAr} />
           <ExampleList examples={lesson.examples} />
           <StoryBlock story={lesson.story} />
+
+          <p className="text-center text-xs text-muted-foreground">
+            اضغط على أي نص ألماني لسماع النطق — ويمكنك تحديد كلمة قبل الضغط لسماع الكلمة فقط.
+          </p>
 
           <Button asChild>
             <Link href={`/grammar/${level}/${slug}/quiz`}>ابدأ اختبار الدرس</Link>

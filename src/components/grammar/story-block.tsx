@@ -1,5 +1,6 @@
 import { GrammarStory } from "@/types/grammar";
 import { cn } from "@/lib/utils";
+import { SpeakableText } from "@/components/speech/speakable-text";
 
 export type StoryBlockProps = {
   story: GrammarStory;
@@ -10,7 +11,7 @@ export function StoryBlock({ story }: StoryBlockProps) {
     <div className="space-y-4 rounded-lg border p-4">
       <div>
         <h3 dir="ltr" className="text-left text-lg font-semibold">
-          {story.titleDe}
+          <SpeakableText text={story.titleDe} className="text-lg font-semibold" />
         </h3>
         <p dir="rtl" className="text-right text-sm text-muted-foreground">
           {story.titleAr}
@@ -25,9 +26,7 @@ export function StoryBlock({ story }: StoryBlockProps) {
               sentence.highlight && "bg-yellow-100 dark:bg-yellow-900/30"
             )}
           >
-            <p dir="ltr" className="text-left">
-              {sentence.de}
-            </p>
+            <SpeakableText text={sentence.de} />
             <p dir="rtl" className="text-right text-sm text-muted-foreground">
               {sentence.ar}
             </p>
