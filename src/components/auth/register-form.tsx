@@ -39,6 +39,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function RegisterForm() {
   const [serverError, setServerError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -51,12 +52,15 @@ export function RegisterForm() {
 
   async function onSubmit(values: FormValues) {
     setServerError(null);
+    setSuccessMessage(null);
     const formData = new FormData();
     formData.append("email", values.email);
     formData.append("password", values.password);
     const result = await signup(formData);
     if (result?.error) {
       setServerError(result.error);
+    } else if (result?.message) {
+      setSuccessMessage(result.message);
     }
   }
 
@@ -110,6 +114,9 @@ export function RegisterForm() {
             />
             {serverError && (
               <p className="text-sm font-medium text-destructive">{serverError}</p>
+            )}
+            {successMessage && (
+              <p className="text-sm font-medium text-green-600">{successMessage}</p>
             )}
             <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
