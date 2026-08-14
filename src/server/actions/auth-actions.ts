@@ -31,23 +31,43 @@ export async function signup(formData: FormData) {
     password: formData.get("password") as string,
   };
 
-  const { data: signUpData, error } = await supabase.auth.signUp(data);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const { data: signUpData, error } = await supabase.auth.signUp({
+    ...data,
+    options: {
+      emailRedirectTo: `${siteUrl}/auth/callback?next=/dashboard`,
+    },
+  });
 
   if (error) {
     return { error: error.message };
   }
 
+  // With email confirmation enabled Supabase creates the user but does not
+  // create a session yet. Do not try to provision the Prisma row or redirect
+  // to a protected page until the confirmation link has been used.
+  if (!signUpData.session) {
+    return {
+      message: "Account created. Please check your email and confirm your address before signing in.",
+    };
+  }
+
   if (signUpData.user) {
     // Prisma's User.id must mirror the Supabase auth uid; provision it here
     // so relations (progress, flashcards, etc.) have a row to attach to.
-    await prisma.user.upsert({
-      where: { id: signUpData.user.id },
-      update: {},
-      create: {
-        id: signUpData.user.id,
-        email: signUpData.user.email ?? data.email,
-      },
-    });
+    try {
+      await prisma.user.upsert({
+        where: { id: signUpData.user.id },
+        update: { email: signUpData.user.email ?? data.email },
+        create: {
+          id: signUpData.user.id,
+          email: signUpData.user.email ?? data.email,
+        },
+      });
+    } catch (provisionError) {
+      console.error("Failed to provision the application user after signup", provisionError);
+      return { error: "Your account was created, but setup is incomplete. Please try signing in again." };
+    }
   }
 
   revalidatePath("/", "layout");
