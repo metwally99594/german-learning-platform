@@ -48,7 +48,7 @@ export async function signup(formData: FormData) {
   // to a protected page until the confirmation link has been used.
   if (!signUpData.session) {
     return {
-      message: "Account created. Please check your email and confirm your address before signing in.",
+      message: "If this email is new, check your inbox to confirm the account. If you already registered, use Sign in instead.",
     };
   }
 
@@ -66,6 +66,14 @@ export async function signup(formData: FormData) {
       });
     } catch (provisionError) {
       console.error("Failed to provision the application user after signup", provisionError);
+      if (
+        provisionError &&
+        typeof provisionError === "object" &&
+        "code" in provisionError &&
+        provisionError.code === "P2002"
+      ) {
+        return { error: "This email is already registered. Please use Sign in instead." };
+      }
       return { error: "Your account was created, but setup is incomplete. Please try signing in again." };
     }
   }
